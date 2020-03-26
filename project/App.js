@@ -6,10 +6,13 @@ import { Ionicons } from '@expo/vector-icons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import BottomTabNavigator from './navigation/BottomTabNavigator';
+import HomePage from './pages/HomePage';
 import useLinking from './navigation/useLinking';
 
 const Stack = createStackNavigator();
+
+// Kept from the installation of the "tabs" template.
+// editted for the project
 
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = React.useState(false);
@@ -43,15 +46,17 @@ export default function App(props) {
     loadResourcesAndDataAsync();
   }, []);
 
+  //When fully loaded, send to HomePage
   if (!isLoadingComplete && !props.skipLoadingScreen) {
     return null;
   } else {
+    // returning the format for the page 
     return (
       <View style={styles.container}>
         {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
         <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
-          <Stack.Navigator>
-            <Stack.Screen name="Root" component={BottomTabNavigator} />
+          <Stack.Navigator screenOptions={{headerShown:false}}>
+            <Stack.Screen name="Root" component={HomePage} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>
