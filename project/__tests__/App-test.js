@@ -4,6 +4,9 @@ import renderer from 'react-test-renderer';
 
 import App from '../App';
 
+// Kept from the installation of the "tabs" template.
+// should be editted to better fit the project
+
 jest.mock('expo', () => ({
   AppLoading: 'AppLoading',
 }));

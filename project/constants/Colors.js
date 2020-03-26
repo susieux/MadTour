@@ -1,3 +1,6 @@
+// Kept from the installation of the "tabs" template.
+// should be editted to better fit the project
+
 const tintColor = '#2f95dc';
 
 export default {
