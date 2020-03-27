@@ -1,13 +1,9 @@
 import * as React from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
-import * as WebBrowser from 'expo-web-browser';
-
-import { MonoText } from '../components/StyledText';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import styleInfo from '../styleInfo.js';
 
-export default function HomePage() {
+export default function HomePage({navigation}) {
   return (
     <View style={styles.container}>
         <View style={styles.contentContainer}>
@@ -19,7 +15,7 @@ export default function HomePage() {
             </Text>
         </View>
         <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() =>navigation.push("Quiz")}>
             <Text style={styles.buttonText}>
                 New Plan
             </Text>
