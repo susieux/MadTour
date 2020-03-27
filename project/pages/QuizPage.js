@@ -1,19 +1,21 @@
 import * as React from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import Slider from 'react-native-slider';
 import { ScrollView } from 'react-native-gesture-handler';
 
 import styleInfo from '../styleInfo.js';
 
 export default function QuizPage() {
-  return (
-    <View style={styles.container}>
-        <View>
-            <Text>
-                The Quiz
-            </Text>
+    return (
+        <View style={styles.container}>
+            <View>
+                <Text>
+                    The Quiz
+                </Text>
+            </View>
+            {qtSlider()}
         </View>
-    </View>
-  );
+    );
 }
 
 /**
@@ -31,8 +33,22 @@ export default function QuizPage() {
  * @param {Number} interval 
  * The distance between each "notch" in the slider using the same units as start and end
  */
-function qtSlider(question, start, end, interval, startText, endText){
-
+function qtSlider(question="Default Question", start=0, end=10, interval=1, startText="0", endText="10") {
+    //the formatting of the
+    return (
+        <View>
+            <Text>
+                {question}
+            </Text>
+            <Slider 
+                minimumValue={start}
+                maximumValue={end}
+                step={interval}
+            >
+                Some text in the slider
+            </Slider>
+        </View>
+    );
 }
 
 /**
@@ -44,33 +60,33 @@ function qtSlider(question, start, end, interval, startText, endText){
  * @param {String[]} ans 
  * Each option the user can select
  */
-function qtRadio(question, ans){
+function qtRadio(question, ans) {
 
 }
 
 //slider
-function qIntensity(){
+function qIntensity() {
 
 }
 
 //slider
-function qDistance(){
+function qDistance() {
 
 }
 
 //ie indoor or outdoor
 //radio button
-function qDoorness(){
+function qDoorness() {
 
 }
 
 //radio button
-function qTransport(){
+function qTransport() {
 
 }
 
 //date picker
-function qTimeFrame(){
+function qTimeFrame() {
 
 }
 
