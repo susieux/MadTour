@@ -62,11 +62,8 @@ export default function App(props) {
           <Stack.Navigator screenOptions={{headerShown:false}}>
             <Stack.Screen name="Root" component={HomePage} />
             <Stack.Screen name="Quiz" component={QuizPage} />
-<<<<<<< HEAD
             <Stack.Screen name="Tabs" component={BottomTabNavigator} />
-=======
             <Stack.Screen name="SavedPlans" component={SavedPlansPage} />
->>>>>>> 3eda0f05a14a2e33549ae417cb32bf16da977ac9
           </Stack.Navigator>
         </NavigationContainer>
       </View>

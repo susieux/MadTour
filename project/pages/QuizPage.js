@@ -7,13 +7,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import styleInfo from '../styleInfo.js';
 
-<<<<<<< HEAD
-export default function QuizPage({navigation}) {
-  return (
-    <ScrollView>
-      <View style={styles.subText}>
-            <Text>
-=======
 const quizStack = createStackNavigator();
 
 const width = Dimensions.get('window');
@@ -22,7 +15,6 @@ export default function QuizPage() {
     return (
         <View style={styles.container}>
             <Text style={styles.mainText}>
->>>>>>> 3eda0f05a14a2e33549ae417cb32bf16da977ac9
                 The Quiz
             </Text>
             <ScrollView
@@ -45,17 +37,7 @@ export default function QuizPage() {
                 {qTimeFrame()}
             </ScrollView>
         </View>
-<<<<<<< HEAD
-      <TouchableOpacity style={styles.button} onPress={() =>navigation.push("Tabs")}>
-            <Text style={styles.buttonText}>
-                Submit Quiz
-            </Text>
-        </TouchableOpacity>
-    </ScrollView>
-  );
-=======
     );
->>>>>>> 3eda0f05a14a2e33549ae417cb32bf16da977ac9
 }
 
 {// contains qt code functions
