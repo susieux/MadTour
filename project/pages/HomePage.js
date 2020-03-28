@@ -1,8 +1,12 @@
 import * as React from 'react';
+<<<<<<< HEAD
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
 import { MonoText } from '../components/StyledText';
+=======
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+>>>>>>> 3eda0f05a14a2e33549ae417cb32bf16da977ac9
 
 import styleInfo from '../styleInfo.js';
 

@@ -7,6 +7,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import BottomTabNavigator from './navigation/BottomTabNavigator';
 import HomePage from './pages/HomePage';
+import QuizPage from './pages/QuizPage';
+import SavedPlansPage from './pages/SavedPlansPage';
+
 import useLinking from './navigation/useLinking';
 import QuizPage from './pages/QuizPage';
 
@@ -59,7 +62,11 @@ export default function App(props) {
           <Stack.Navigator screenOptions={{headerShown:false}}>
             <Stack.Screen name="Root" component={HomePage} />
             <Stack.Screen name="Quiz" component={QuizPage} />
+<<<<<<< HEAD
             <Stack.Screen name="Tabs" component={BottomTabNavigator} />
+=======
+            <Stack.Screen name="SavedPlans" component={SavedPlansPage} />
+>>>>>>> 3eda0f05a14a2e33549ae417cb32bf16da977ac9
           </Stack.Navigator>
         </NavigationContainer>
       </View>
