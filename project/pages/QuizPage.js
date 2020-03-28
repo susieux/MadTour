@@ -14,7 +14,7 @@ export default function QuizPage({navigation}) {
         </View>
       <TouchableOpacity style={styles.button} onPress={() =>navigation.push("Tabs")}>
             <Text style={styles.buttonText}>
-                Sumbit Quiz
+                Submit Quiz
             </Text>
         </TouchableOpacity>
     </ScrollView>
