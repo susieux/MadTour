@@ -4,15 +4,20 @@ import { ScrollView } from 'react-native-gesture-handler';
 
 import styleInfo from '../styleInfo.js';
 
-export default function QuizPage() {
+export default function QuizPage({navigation}) {
   return (
-    <View style={styles.container}>
-        <View>
+    <ScrollView>
+      <View style={styles.subText}>
             <Text>
                 The Quiz
             </Text>
         </View>
-    </View>
+      <TouchableOpacity style={styles.button} onPress={() =>navigation.push("Tabs")}>
+            <Text style={styles.buttonText}>
+                Sumbit Quiz
+            </Text>
+        </TouchableOpacity>
+    </ScrollView>
   );
 }
 
