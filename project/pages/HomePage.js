@@ -15,16 +15,21 @@ export default function HomePage({navigation}) {
             </Text>
         </View>
         <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button} onPress={() =>navigation.push("Quiz")}>
-            <Text style={styles.buttonText}>
-                New Plan
-            </Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>
-                Saved Plans
-            </Text>
-        </TouchableOpacity>
+            <TouchableOpacity style={styles.button} onPress={() =>navigation.push("Quiz")}>
+                <Text style={styles.buttonText}>
+                    New Plan
+                </Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.button} onPress={() =>navigation.push("SavedPlans")}>
+                <Text style={styles.buttonText}>
+                    Saved Plans
+                </Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.button} onPress={() =>navigation.push("Test1")}>
+                <Text style={styles.buttonText}>
+                    Testing
+                </Text>
+            </TouchableOpacity>
         </View>
     </View>
   );

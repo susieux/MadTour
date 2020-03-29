@@ -10,6 +10,8 @@ import HomePage from './pages/HomePage';
 import QuizPage from './pages/QuizPage';
 import SavedPlansPage from './pages/SavedPlansPage';
 
+import testCalendarPicker from './pages/testCalendarPicker';
+
 import useLinking from './navigation/useLinking';
 
 const Stack = createStackNavigator();
@@ -62,6 +64,7 @@ export default function App(props) {
             <Stack.Screen name="Root" component={HomePage} />
             <Stack.Screen name="Quiz" component={QuizPage} />
             <Stack.Screen name="SavedPlans" component={SavedPlansPage} />
+            <Stack.Screen name="Test1" component={testCalendarPicker} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>

@@ -10,7 +10,7 @@ export default function SavedPlansPage({navigation}) {
   );
 }
 
-HomePage.navigationOptions = {
+SavedPlansPage.navigationOptions = {
   header: null,
 };
 
