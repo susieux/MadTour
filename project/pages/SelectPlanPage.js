@@ -17,7 +17,7 @@ export default function SelectPlanPage({navigation}) {
             </Text>
         </TouchableOpacity>
 
-        <ScrollView style={styles.calendarContainer}>
+        <ScrollView>
           {example(navigation)}
         </ScrollView>
 
@@ -39,7 +39,7 @@ function example(navigation){
     return (
       <TouchableOpacity 
         key={value + "Plan"}
-        style={styles.button}
+        style={styles.calendarContainer}
         onPress={()=>navigation.push("Plan")}
       >
         <Text style={styles.mainText}>
