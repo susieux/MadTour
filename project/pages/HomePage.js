@@ -10,7 +10,7 @@ export default function HomePage({navigation}) {
   return (
     <View style={styles.container}>
         <View style={styles.contentContainer}>
-            <Text style={styles.mainText}>
+            <Text style={styles.titleText}>
                 MadTour
             </Text>
             <Text style={styles.subText}>

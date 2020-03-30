@@ -11,14 +11,6 @@ export default function SavedPlansPage({navigation}) {
         </Text>
         <TouchableOpacity 
             style={styles.button}
-            onPress={()=>navigation.popToTop()}
-        >
-            <Text style={styles.mainText}>
-                Restart
-            </Text>
-        </TouchableOpacity>
-        <TouchableOpacity 
-            style={styles.button}
             onPress={()=>navigation.push("Plan")}
         >
             <Text style={styles.mainText}>

@@ -16,7 +16,7 @@ export default function Activities({navigation}) {
             </Text>
         </TouchableOpacity>
         <Text style={styles.mainText}>
-            Currently at Select Event
+            Currently at Select Activities
         </Text>
         <ScrollView>
           {example(navigation)}
@@ -43,9 +43,12 @@ function makeAct(value, navigation){
             // Will need to change this or make it so that it reacts to the info given to it
             onPress={()=>navigation.push("Event")}
         >
-            <Text style={styles.mainText}>
-                {value + " Activity and info"}
-            </Text>
+        <Text style={styles.buttonEventText}>
+          {"Name: " + value}
+        </Text>
+        <Text style={styles.buttonEventText}>
+          {"Times: "}
+        </Text>
         </TouchableOpacity>
   );
 }

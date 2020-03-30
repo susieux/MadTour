@@ -43,9 +43,12 @@ function makeEvent(value, navigation){
       style={styles.button}
       onPress={()=>navigation.push("Event")}
     >
-      <Text style={styles.mainText}>
-        {value + " Event and info"}
-      </Text>
+      <Text style={styles.buttonEventText}>
+          {"Name: " + value}
+        </Text>
+        <Text style={styles.buttonEventText}>
+          {"Times: "}
+        </Text>
     </TouchableOpacity>
   );
 }

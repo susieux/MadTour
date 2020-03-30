@@ -33,6 +33,11 @@ export default {
         borderColor:'#00f',
         borderWidth:2,
     },
+    titleText: {
+        fontSize: 45,
+        color: '#222',
+        textAlign: 'center',
+    },
     //title text
     //header 1
     mainText: {
@@ -59,6 +64,21 @@ export default {
         fontSize: 15,
         color: '#222',
         textAlign: "center"
+    },
+    eventText: {
+        fontSize: 24,
+        color: '#222',
+        textAlign: 'left',
+        marginBottom: 15,
+        fontWeight: 'bold'
+    },
+    buttonEventText: {
+        fontSize: 24,
+        color: '#222',
+        textAlign: 'left',
+        marginBottom: 15,
+        fontWeight: 'bold',
+        marginLeft: 20
     },
     //button formatting
     button: {

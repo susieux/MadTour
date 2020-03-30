@@ -7,9 +7,7 @@ import styleInfo from '../styleInfo.js';
 export default function SelectPlanPage({navigation}) {
   return (
     <View style={styles.container}>
-        <Text style={styles.mainText}>
-            Currently at Select Plan
-        </Text>
+               
         <TouchableOpacity 
             style={styles.button}
             onPress={()=>navigation.popToTop()}
