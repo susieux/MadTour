@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {useEffect} from 'react';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import Slider from 'react-native-slider';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
@@ -10,6 +11,8 @@ import styleInfo from '../styleInfo.js';
 const width = Dimensions.get('window');
 
 export default function QuizPage({navigation}) {
+
+
     return (
         <View style={styles.container}>
             <ScrollView
@@ -64,7 +67,7 @@ export default function QuizPage({navigation}) {
  * The distance between each "notch" in the slider using the same units as start and end
  */
 function qtSlider(question = "Default Question", left = 0, right = 10, start = 5, interval = 1, lText = "0", rText = "10") {
-    const [isSlideValue, setSlideValue] =React.useState(start);;
+    const [isSlideValue, setSlideValue] =React.useState(start);
     return (
         <View style={{ padding: 30, }}>
             <View style={styles.subContainer}>
@@ -75,6 +78,7 @@ function qtSlider(question = "Default Question", left = 0, right = 10, start = 5
                     style={styles.slider}
                     minimumValue={left}
                     maximumValue={right}
+                    thumbTintColor='rgb(252, 0, 0)'
                     value={start}
                     step={interval}
                     onValueChange={(value) => setSlideValue(value)}                    
@@ -117,7 +121,8 @@ function qtRadio(question = "Default Question", buttons = [{ label: "d1", value:
                     //TODO fix this! Gives errors 
                     //"TypeError: Cannot read property 'setState' of undefined"
                     //happens upon pressing the radio button
-                    onPress={(value) => {this.setState({value:value})}}
+                    // onPress={(value) => {this.setState({value:value})}}
+                    onPress={(value) =>{}}
                     //TODO styling
                     //can change color of buttons and the like
                 />
@@ -147,11 +152,12 @@ function qDistance() {
     let q = "How far are you willing to travel from the place you are staying.";
     //these values need to be changed
     let l = 0;
-    let r = 100;
-    let s = 50;
-    let i = 25;
-    let lText = "< 25 miles";
-    let rText = "> 100 miles";
+    let r = 16;
+    let s = 8;
+    let i = 4;
+    // Changed
+    let lText = "< 4 miles";
+    let rText = "> 16 miles";
     return qtSlider(q, l, r, s, i, lText, rText);
 }
 

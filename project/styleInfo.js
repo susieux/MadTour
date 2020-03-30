@@ -67,9 +67,9 @@ export default {
         borderRadius: 100,
         marginBottom: 20
     },
-    //slider formatting
+    //slider formatting background, border
     slider: {
-        color:'#e00',
+        shadowColor:'#e00',
     },
     //separates the button selections
     buttonContainer: {
