@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import Slider from 'react-native-slider';
-import { ScrollView } from 'react-native-gesture-handler';
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import RadioForm, { RadioButton, RadioButtonInput, RadioButtonLabel } from 'react-native-simple-radio-button';
 import CalendarPicker from 'react-native-calendar-picker';
 
@@ -9,12 +9,24 @@ import styleInfo from '../styleInfo.js';
 
 const width = Dimensions.get('window');
 
-export default function QuizPage() {
+export default function QuizPage({navigation}) {
     return (
         <View style={styles.container}>
-            <Text style={styles.mainText}>
-                The Quiz
-            </Text>
+            <View>
+                <TouchableOpacity 
+                    //TODO should be aligned to the left of the title or similar
+                    //possibly use the built in header for this?
+                    style={styles.button}
+                    onPress={()=>navigation.popToTop()}
+                >
+                    <Text style={styles.mainText}>
+                        Back
+                    </Text>
+                </TouchableOpacity>
+                <Text style={styles.mainText, {alignSelf:"center"}}>
+                    The Quiz
+                </Text>
+            </View>
             <ScrollView
                 style={styles.contentContainer}
                 horizontal={true}
@@ -37,6 +49,16 @@ export default function QuizPage() {
                 {qTransport()}
                 {qTimeFrame()}
             </ScrollView>
+            <View>
+                <TouchableOpacity 
+                    style={styles.button}
+                    onPress={()=>navigation.push("SelectEvent")}
+                >
+                    <Text style={styles.mainText}>
+                        Submit
+                    </Text>
+                </TouchableOpacity>
+            </View>
         </View>
     );
 }

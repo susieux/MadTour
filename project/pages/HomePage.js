@@ -43,14 +43,4 @@ HomePage.navigationOptions = {
   header: null,
 };
 
-//use to navigate to the QuizPage
-function navigateToNewPlan(){
-
-}
-
-//use to navigate to the StoredPlansPage
-function navigateToSavedPlan(){
-
-}
-
 const styles = StyleSheet.create(styleInfo);
