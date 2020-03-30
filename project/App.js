@@ -6,9 +6,14 @@ import { Ionicons } from '@expo/vector-icons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
+//import all of out different pages
 import HomePage from './pages/HomePage';
 import QuizPage from './pages/QuizPage';
 import SavedPlansPage from './pages/SavedPlansPage';
+import SelectEventPage from './pages/SelectEventPage';
+import EventPage from './pages/EventPage';
+import SelectPlanPage from './pages/SelectPlanPage';
+import PlanPage from './pages/PlanPage';
 
 import testCalendarPicker from './pages/testCalendarPicker';
 
@@ -65,6 +70,10 @@ export default function App(props) {
             <Stack.Screen name="Quiz" component={QuizPage} />
             <Stack.Screen name="SavedPlans" component={SavedPlansPage} />
             <Stack.Screen name="Test1" component={testCalendarPicker} />
+            <Stack.Screen name="Event" component={EventPage} />
+            <Stack.Screen name="SelectEvent" component={SelectEventPage} />
+            <Stack.Screen name="Plan" component={PlanPage} />
+            <Stack.Screen name="SelectPlan" component={SelectPlanPage} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>

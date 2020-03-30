@@ -3,7 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import styleInfo from '../styleInfo.js';
 
-export default function SavedPlansPage({navigation}) {
+export default function SelectPlanPage({navigation}) {
   return (
     <View style={styles.container}>
         <TouchableOpacity 
@@ -11,33 +11,33 @@ export default function SavedPlansPage({navigation}) {
             onPress={()=>navigation.goBack()}
         >
             <Text style={styles.mainText}>
-                Back
+                Back to SelectEvent
             </Text>
         </TouchableOpacity>
         <Text style={styles.mainText}>
-            Currently at Saved Plans
+            Currently at Select Plan
         </Text>
-        <TouchableOpacity 
-            style={styles.button}
-            onPress={()=>navigation.popToTop()}
-        >
-            <Text style={styles.mainText}>
-                Restart
-            </Text>
-        </TouchableOpacity>
         <TouchableOpacity 
             style={styles.button}
             onPress={()=>navigation.push("Plan")}
         >
             <Text style={styles.mainText}>
-                View Plan
+                Forward to Plan
+            </Text>
+        </TouchableOpacity>
+        <TouchableOpacity 
+            style={styles.button}
+            onPress={()=>navigation.push("SavedPlans")}
+        >
+            <Text style={styles.mainText}>
+                Forward to SavedPlan
             </Text>
         </TouchableOpacity>
     </View>
   );
 }
 
-SavedPlansPage.navigationOptions = {
+SelectPlanPage.navigationOptions = {
   header: null,
 };
 
