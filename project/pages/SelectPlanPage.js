@@ -1,44 +1,59 @@
 import * as React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 
 import styleInfo from '../styleInfo.js';
 
 export default function SelectPlanPage({navigation}) {
   return (
     <View style={styles.container}>
-        <TouchableOpacity 
-            style={styles.button}
-            onPress={()=>navigation.goBack()}
-        >
-            <Text style={styles.mainText}>
-                Back to SelectEvent
-            </Text>
-        </TouchableOpacity>
         <Text style={styles.mainText}>
             Currently at Select Plan
         </Text>
         <TouchableOpacity 
             style={styles.button}
-            onPress={()=>navigation.push("Plan")}
+            onPress={()=>navigation.popToTop()}
         >
             <Text style={styles.mainText}>
-                Forward to Plan
+                Back to Home
             </Text>
         </TouchableOpacity>
-        <TouchableOpacity 
-            style={styles.button}
-            onPress={()=>navigation.push("SavedPlans")}
-        >
-            <Text style={styles.mainText}>
-                Forward to SavedPlan
-            </Text>
-        </TouchableOpacity>
+
+        <ScrollView style={styles.calendarContainer}>
+          {example(navigation)}
+        </ScrollView>
+
     </View>
   );
 }
 
+//To simulate going through and creating a clickable for each button
+function example(navigation){
+    let ret = [];
+    for(let i = 0; i< 10; i++){
+      ret[i] = makeEvent(i, navigation);
+    }
+    return ret;
+  }
+  
+  //Each individual clickable with schedule view?
+  function makeEvent(value, navigation){
+    return (
+      <TouchableOpacity 
+        key={value + "Plan"}
+        style={styles.button}
+        onPress={()=>navigation.push("Plan")}
+      >
+        <Text style={styles.mainText}>
+          {value + " Plan and info"}
+        </Text>
+      </TouchableOpacity>
+    );
+  }
+
 SelectPlanPage.navigationOptions = {
   header: null,
 };
+  
 
 const styles = StyleSheet.create(styleInfo);

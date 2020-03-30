@@ -14,11 +14,10 @@ import SelectEventPage from './pages/SelectEventPage';
 import EventPage from './pages/EventPage';
 import SelectPlanPage from './pages/SelectPlanPage';
 import PlanPage from './pages/PlanPage';
-
+import BottomTabNavigator from './navigation/BottomTabNavigator';
 import testCalendarPicker from './pages/testCalendarPicker';
 
 import useLinking from './navigation/useLinking';
-import QuizPage from './pages/QuizPage';
 
 const Stack = createStackNavigator();
 
@@ -66,14 +65,14 @@ export default function App(props) {
       <View style={styles.container}>
         {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
         <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
-          <Stack.Navigator screenOptions={{headerShown:false}}>
+          <Stack.Navigator screenOptions={{headerShown:true}}>
             <Stack.Screen name="Root" component={HomePage} />
             <Stack.Screen name="Quiz" component={QuizPage} />
             <Stack.Screen name="Tabs" component={BottomTabNavigator} />
             <Stack.Screen name="SavedPlans" component={SavedPlansPage} />
             <Stack.Screen name="Test1" component={testCalendarPicker} />
             <Stack.Screen name="Event" component={EventPage} />
-            <Stack.Screen name="SelectEvent" component={SelectEventPage} />
+            {/* <Stack.Screen name="SelectEvent" component={SelectEventPage} /> Not needed because it's what tabs is, but how we discussed*/}
             <Stack.Screen name="Plan" component={PlanPage} />
             <Stack.Screen name="SelectPlan" component={SelectPlanPage} />
           </Stack.Navigator>

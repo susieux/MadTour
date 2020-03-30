@@ -6,14 +6,6 @@ import styleInfo from '../styleInfo.js';
 export default function SavedPlansPage({navigation}) {
   return (
     <View style={styles.container}>
-        <TouchableOpacity 
-            style={styles.button}
-            onPress={()=>navigation.goBack()}
-        >
-            <Text style={styles.mainText}>
-                Back
-            </Text>
-        </TouchableOpacity>
         <Text style={styles.mainText}>
             Currently at Saved Plans
         </Text>

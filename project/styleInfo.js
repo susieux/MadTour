@@ -26,6 +26,7 @@ export default {
     //Container within the contentContainer
     subContainer: {
         backgroundColor: '#ddd',
+        width: w*.8,
         flex:1,
         padding: 30,
         //using border for debugging
@@ -49,7 +50,7 @@ export default {
     //content text
     //header 3
     text: {
-        fontsize: 10,
+        fontSize: 10,
         color: '#666',
         textAlign: 'center',
     },
@@ -63,7 +64,8 @@ export default {
     button: {
         backgroundColor: '#ddd',
         paddingVertical: 20,
-        borderRadius: 100
+        borderRadius: 100,
+        marginBottom: 20
     },
     //slider formatting
     slider: {
@@ -76,4 +78,13 @@ export default {
         justifyContent: "space-around",
         paddingHorizontal: 20,
     },
+    //background color of where calendars are
+    calendarContainer: {
+        flex: 1,
+        padding: 30,
+        alignContent: 'center',
+        //using border for debugging
+        backgroundColor:'#708090',
+        borderWidth:2,
+    }
 };

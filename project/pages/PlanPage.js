@@ -6,17 +6,17 @@ import styleInfo from '../styleInfo.js';
 export default function PlanPage({navigation}) {
   return (
     <View style={styles.container}>
-        <TouchableOpacity 
-            style={styles.button}
-            onPress={()=>navigation.goBack()}
-        >
-            <Text style={styles.mainText}>
-                Back to SelectPlan or SavedPlanss
-            </Text>
-        </TouchableOpacity>
         <Text style={styles.mainText}>
             Currently at Plan
         </Text>
+        <TouchableOpacity 
+            style={styles.button}
+            onPress={()=> alert("TODO: Save to storage")}
+        >
+            <Text style={styles.mainText}>
+                Save Plan
+            </Text>
+        </TouchableOpacity>
     </View>
   );
 }

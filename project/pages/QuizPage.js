@@ -12,21 +12,6 @@ const width = Dimensions.get('window');
 export default function QuizPage({navigation}) {
     return (
         <View style={styles.container}>
-            <View>
-                <TouchableOpacity 
-                    //TODO should be aligned to the left of the title or similar
-                    //possibly use the built in header for this?
-                    style={styles.button}
-                    onPress={()=>navigation.popToTop()}
-                >
-                    <Text style={styles.mainText}>
-                        Back
-                    </Text>
-                </TouchableOpacity>
-                <Text style={styles.mainText, {alignSelf:"center"}}>
-                    The Quiz
-                </Text>
-            </View>
             <ScrollView
                 style={styles.contentContainer}
                 horizontal={true}
@@ -34,7 +19,7 @@ export default function QuizPage({navigation}) {
                 //these values need to be changed and tweaked
                 //these actually dont work at all
                 //still need to install and implement react-native-snap-carousel
-                snapToInterval={width - 60}
+                // ==============================snapToInterval={width - 60} TODO: This is causing errors===============================================
                 snapToAlignment={"center"}
                 contentInset={{
                     top: 0,
@@ -52,7 +37,7 @@ export default function QuizPage({navigation}) {
             <View>
                 <TouchableOpacity 
                     style={styles.button}
-                    onPress={()=>navigation.push("SelectEvent")}
+                    onPress={()=>navigation.push("Tabs")}
                 >
                     <Text style={styles.mainText}>
                         Submit
@@ -79,6 +64,7 @@ export default function QuizPage({navigation}) {
  * The distance between each "notch" in the slider using the same units as start and end
  */
 function qtSlider(question = "Default Question", left = 0, right = 10, start = 5, interval = 1, lText = "0", rText = "10") {
+    const [isSlideValue, setSlideValue] =React.useState(start);;
     return (
         <View style={{ padding: 30, }}>
             <View style={styles.subContainer}>
@@ -91,15 +77,17 @@ function qtSlider(question = "Default Question", left = 0, right = 10, start = 5
                     maximumValue={right}
                     value={start}
                     step={interval}
-                >
+                    onValueChange={(value) => setSlideValue(value)}                    
+                >                    
                 </Slider>
                 <Text style={styles.text}>
-                    {lText}
-                    Should be on the left
+                    {"Slider value: " + isSlideValue}                    
                 </Text>
                 <Text style={styles.text}>
-                    {rText}
-                    should be on the right
+                    {lText + " should be on the left"}                    
+                </Text>
+                <Text style={styles.text}>
+                    {rText + " should be on the right"}                    
                 </Text>
             </View>
         </View>
