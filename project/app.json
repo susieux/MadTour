@@ -25,7 +25,13 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.CS506.MadTour",
+      "buildNumber": "1.0.0",
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.CS506.MadTour",
+      "versionCode": 1
     },
     "description": ""
   }
