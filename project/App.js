@@ -15,7 +15,7 @@ import EventPage from './pages/EventPage';
 import SelectPlanPage from './pages/SelectPlanPage';
 import PlanPage from './pages/PlanPage';
 import BottomTabNavigator from './navigation/BottomTabNavigator';
-import testCalendarPicker from './pages/testCalendarPicker';
+import testCalendars from './pages/testCalendars';
 
 import useLinking from './navigation/useLinking';
 
@@ -70,7 +70,7 @@ export default function App(props) {
             <Stack.Screen name="Quiz" component={QuizPage} />
             <Stack.Screen name="Tabs" component={BottomTabNavigator} />
             <Stack.Screen name="SavedPlans" component={SavedPlansPage} />
-            <Stack.Screen name="Test1" component={testCalendarPicker} />
+            <Stack.Screen name="Test1" component={testCalendars} />
             <Stack.Screen name="Event" component={EventPage} />
             {/* <Stack.Screen name="SelectEvent" component={SelectEventPage} /> Not needed because it's what tabs is, but how we discussed*/}
             <Stack.Screen name="Plan" component={PlanPage} />

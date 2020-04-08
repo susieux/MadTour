@@ -4,26 +4,24 @@ import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import Slider from 'react-native-slider';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import RadioForm, { RadioButton, RadioButtonInput, RadioButtonLabel } from 'react-native-simple-radio-button';
-import CalendarPicker from 'react-native-calendar-picker';
+import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
 
 import styleInfo from '../styleInfo.js';
+import { render } from 'react-dom';
 
-const width = Dimensions.get('window');
+const width = Dimensions.get('window').width; //this might have fixed the width thing
 
 export default function QuizPage({navigation}) {
-
-
     return (
         <View style={styles.container}>
             <ScrollView
-                style={styles.contentContainer}
+                //style={styles.contentContainer}
                 horizontal={true}
-                //TODO
-                //these values need to be changed and tweaked
-                //these actually dont work at all
-                //still need to install and implement react-native-snap-carousel
-                // ==============================snapToInterval={width - 60} TODO: This is causing errors===============================================
-                snapToAlignment={"center"}
+                showsHorizontalScrollIndicator={false}
+                pagingEnabled={false}
+                snaptoInterval = {200}
+                snapToAlignment = {"center"}
+                decelerationRate = {"fast"}
                 contentInset={{
                     top: 0,
                     left: 30,
@@ -188,7 +186,7 @@ function qTransport() {
 //date picker
 function qTimeFrame() {
     //should implement the calendar picker. 
-    //use testCalendarPicker as a reference.
+    //use testCalendars as a reference.
 }
 
 const styles = StyleSheet.create(styleInfo);

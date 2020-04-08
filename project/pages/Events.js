@@ -16,12 +16,11 @@ export default function Events({navigation}) {
             </Text>
         </TouchableOpacity>
         <Text style={styles.mainText}>
-            Currently at Select Event
+            Currently at Events
         </Text>
         <ScrollView>
           {example(navigation)}
         </ScrollView>
-        
     </View>
   );
 }
