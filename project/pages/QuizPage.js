@@ -1,17 +1,16 @@
 import * as React from 'react';
-import {useEffect} from 'react';
+import { useEffect } from 'react';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import Slider from 'react-native-slider';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import RadioForm, { RadioButton, RadioButtonInput, RadioButtonLabel } from 'react-native-simple-radio-button';
-import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
+import { Calendar, CalendarList, Agenda } from 'react-native-calendars';
 
 import styleInfo from '../styleInfo.js';
-import { render } from 'react-dom';
 
 const width = Dimensions.get('window').width; //this might have fixed the width thing
 
-export default function QuizPage({navigation}) {
+export default function QuizPage({ navigation }) {
     return (
         <View style={styles.container}>
             <ScrollView
@@ -19,9 +18,9 @@ export default function QuizPage({navigation}) {
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}
                 pagingEnabled={false}
-                snaptoInterval = {200}
-                snapToAlignment = {"center"}
-                decelerationRate = {"fast"}
+                snaptoInterval={200}
+                snapToAlignment={"center"}
+                decelerationRate={"fast"}
                 contentInset={{
                     top: 0,
                     left: 30,
@@ -36,9 +35,9 @@ export default function QuizPage({navigation}) {
                 {qTimeFrame()}
             </ScrollView>
             <View>
-                <TouchableOpacity 
+                <TouchableOpacity
                     style={styles.button}
-                    onPress={()=>navigation.push("Tabs")}
+                    onPress={() => navigation.push("Tabs")}
                 >
                     <Text style={styles.mainText}>
                         Submit
@@ -65,7 +64,7 @@ export default function QuizPage({navigation}) {
  * The distance between each "notch" in the slider using the same units as start and end
  */
 function qtSlider(question = "Default Question", left = 0, right = 10, start = 5, interval = 1, lText = "0", rText = "10") {
-    const [isSlideValue, setSlideValue] =React.useState(start);
+    const [isSlideValue, setSlideValue] = React.useState(start);
     return (
         <View style={{ padding: 30, }}>
             <View style={styles.subContainer}>
@@ -79,17 +78,17 @@ function qtSlider(question = "Default Question", left = 0, right = 10, start = 5
                     thumbTintColor='rgb(252, 0, 0)'
                     value={start}
                     step={interval}
-                    onValueChange={(value) => setSlideValue(value)}                    
-                >                    
+                    onValueChange={(value) => setSlideValue(value)}
+                >
                 </Slider>
                 <Text style={styles.text}>
-                    {"Slider value: " + isSlideValue}                    
+                    {"Slider value: " + isSlideValue}
                 </Text>
                 <Text style={styles.text}>
-                    {lText + " should be on the left"}                    
+                    {lText + " should be on the left"}
                 </Text>
                 <Text style={styles.text}>
-                    {rText + " should be on the right"}                    
+                    {rText + " should be on the right"}
                 </Text>
             </View>
         </View>
@@ -108,7 +107,7 @@ function qtSlider(question = "Default Question", left = 0, right = 10, start = 5
  */
 function qtRadio(question = "Default Question", buttons = [{ label: "d1", value: 0 }, { label: "d2", value: 1 }]) {
     return (
-        <View style={{padding:30}}>
+        <View style={{ padding: 30 }}>
             <View style={styles.subContainer}>
                 <Text style={styles.subText}>
                     {question}
@@ -120,9 +119,9 @@ function qtRadio(question = "Default Question", buttons = [{ label: "d1", value:
                     //"TypeError: Cannot read property 'setState' of undefined"
                     //happens upon pressing the radio button
                     // onPress={(value) => {this.setState({value:value})}}
-                    onPress={(value) =>{}}
-                    //TODO styling
-                    //can change color of buttons and the like
+                    onPress={(value) => { }}
+                //TODO styling
+                //can change color of buttons and the like
                 />
             </View>
         </View>
@@ -164,9 +163,9 @@ function qDistance() {
 function qDoorness() {
     let question = "Do you prefer indoor or outdoor activities?";
     let props = [
-        {label: "Indoor", value: 0},
-        {label: "Outdoor", value: 0},
-        {label: "No Preference", value: 1}
+        { label: "Indoor", value: 0 },
+        { label: "Outdoor", value: 0 },
+        { label: "No Preference", value: 1 }
     ]
     return qtRadio(question, props);
 }
@@ -175,18 +174,22 @@ function qDoorness() {
 function qTransport() {
     let question = "Which form of transport will you use mainly?";
     let props = [
-        {label: "Car", value: 0},
-        {label: "Bus", value: 0},
-        {label: "Walk", value: 0},
-        {label: "Variety", value: 1},
+        { label: "Car", value: 0 },
+        { label: "Bus", value: 0 },
+        { label: "Walk", value: 0 },
+        { label: "Variety", value: 1 },
     ]
     return qtRadio(question, props);
 }
 
 //date picker
-function qTimeFrame() {
+function qTimeFrame(){
     //should implement the calendar picker. 
     //use testCalendars as a reference.
+    return (
+        <View style={styles.container}>
+        </View>
+    );
 }
 
 const styles = StyleSheet.create(styleInfo);

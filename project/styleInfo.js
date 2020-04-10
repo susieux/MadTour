@@ -99,7 +99,7 @@ export default {
         paddingHorizontal: 20,
     },
     //background color of where calendars are
-    calendarContainer: {
+    calendar: {
         flex: 1,
         padding: 30,
         alignContent: 'center',
