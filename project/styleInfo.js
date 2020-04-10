@@ -98,6 +98,12 @@ export default {
         justifyContent: "space-around",
         paddingHorizontal: 20,
     },
+    eventContainer: {
+        backgroundColor: '#aaa',
+        paddingVertical: 20,
+        marginBottom: 20,
+        borderRadius:20,
+    },
     //background color of where calendars are
     calendar: {
         flex: 1,
