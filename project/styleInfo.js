@@ -73,7 +73,7 @@ export default {
         fontWeight: 'bold'
     },
     buttonEventText: {
-        fontSize: 24,
+        fontSize: 15,
         color: '#222',
         textAlign: 'left',
         marginBottom: 15,
@@ -85,7 +85,8 @@ export default {
         backgroundColor: '#ddd',
         paddingVertical: 20,
         borderRadius: 100,
-        marginBottom: 20
+        marginBottom: 15,
+        marginTop: 15,
     },
     //slider formatting background, border
     slider: {
@@ -112,5 +113,7 @@ export default {
         //using border for debugging
         backgroundColor:'#708090',
         borderWidth:2,
-    }
+    },
+    image: { 
+    },
 };

@@ -187,7 +187,12 @@ function qTimeFrame(){
     //should implement the calendar picker. 
     //use testCalendars as a reference.
     return (
-        <View style={styles.container}>
+        <View style={{ padding: 30 }}>
+            <View style={styles.subContainer}>
+                <Text style={styles.subText}>
+                    Pick a time frame.
+                </Text>
+            </View>
         </View>
     );
 }

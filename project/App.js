@@ -65,16 +65,47 @@ export default function App(props) {
       <View style={styles.container}>
         {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
         <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
-          <Stack.Navigator screenOptions={{headerShown:true}}>
-            <Stack.Screen name="Root" component={HomePage} />
-            <Stack.Screen name="Quiz" component={QuizPage} />
-            <Stack.Screen name="Tabs" component={BottomTabNavigator} />
-            <Stack.Screen name="SavedPlans" component={SavedPlansPage} />
-            <Stack.Screen name="Test1" component={testCalendars} />
-            <Stack.Screen name="Event" component={EventPage} />
-            {/* <Stack.Screen name="SelectEvent" component={SelectEventPage} /> Not needed because it's what tabs is, but how we discussed*/}
-            <Stack.Screen name="Plan" component={PlanPage} />
-            <Stack.Screen name="SelectPlan" component={SelectPlanPage} />
+          <Stack.Navigator screenOptions={{headerShown:true}}> 
+            <Stack.Screen 
+                name="Root" 
+                component={HomePage}
+                options = {{title: 'Welcome'}} 
+            />
+            <Stack.Screen 
+                name="Quiz" 
+                component={QuizPage}
+                options = {{title: ''}}
+            />
+            <Stack.Screen 
+                name="Tabs" 
+                component={BottomTabNavigator}
+                options = {{title:'Select Events for the trip'}}
+            />
+            <Stack.Screen 
+                name="SavedPlans" 
+                component={SavedPlansPage} 
+                options = {{title:''}}
+            />
+            <Stack.Screen 
+                name="Test1" 
+                component={testCalendars} 
+                options = {{title:''}}
+            />
+            <Stack.Screen 
+                name="Event" 
+                component={EventPage} 
+                options = {{title:''}}
+            />
+            <Stack.Screen 
+                name="Plan" 
+                component={PlanPage} 
+                options = {{title:''}}
+            />
+            <Stack.Screen 
+                name="SelectPlan" 
+                component={SelectPlanPage} 
+                options = {{title:''}}
+            />
           </Stack.Navigator>
         </NavigationContainer>
       </View>

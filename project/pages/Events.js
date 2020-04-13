@@ -2,6 +2,9 @@ import * as React from 'react';
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
+import logoHead from '../assets/images/Logo-MadTour-w.png';
+import logo1 from '../assets/images/Logo-Square-w.png';
+
 import styleInfo from '../styleInfo.js';
 
 //breaks mobile
@@ -11,65 +14,75 @@ import styleInfo from '../styleInfo.js';
 let filters; //import from QuizPage
 let event = getEvents(filters);
 
-export default function Events({navigation}) {
-  return (
-    <View style={styles.container}>
-      <TouchableOpacity 
-            style={styles.button}
-            onPress={()=>navigation.push("SelectPlan")}
-        >
-            <Text style={styles.mainText}>
-                Select Plan
-            </Text>
-        </TouchableOpacity>
-        <Text style={styles.mainText}>
-            Currently at Events
-        </Text>
-        <ScrollView
-            showsVerticalScrollIndicator={false}
-        >
-          {example(navigation)}
-        </ScrollView>
-    </View>
-  );
+export default function Events({ navigation }) {
+    return (
+        <View style={styles.container}>
+            <Image
+                source = {logoHead}
+                style = {{flex: 0.5, borderColor:"yellow", borderWidth:3}}
+            />
+            <TouchableOpacity
+                style={styles.button}
+                onPress={() => navigation.push("SelectPlan")}
+            >
+                <Text style={styles.buttonText}>
+                    Select Plan
+                </Text>
+            </TouchableOpacity>
+            <ScrollView
+                style = {styles.contentContainer}
+                showsVerticalScrollIndicator={false}
+            >
+                {listEvents(navigation)}
+            </ScrollView>
+        </View>
+    );
 }
 
 //To simulate going through and creating a clickable for each button
-function example(navigation){
-  let ret = [];
-  for(let i = 0; i< 10; i++){
-    ret[i] = makeEvent(i, navigation);
-  }
-  return ret;
+function listEvents(navigation) {
+    let ret = [];
+    for (let i = 0; i < 10; i++) {
+        ret[i] = makeEvent(i, navigation);
+    }
+    return ret;
 }
 
 //Each individual clickable with basic event info shown. Info will be where value is display event, time, and location?
-function makeEvent(value, navigation){
-  return (
-    <TouchableOpacity 
-      key={value + "act"}
-      style={styles.eventContainer}
-      onPress={()=>navigation.push("Event")}
-    >
-        <Text style={styles.buttonEventText}>
-            {value + " the coolest event of the year"}
-        </Text>
-        <Text style={styles.buttonEventText}>
-            {"Date: "}
-        </Text>
-        <Text style={styles.buttonEventText}>
-            {"Time: "}
-        </Text>
-        <Text style={styles.buttonEventText}>
-            {"Event Tags"}
-        </Text>
-        <View style={styles.subContainer,{flex:0.1,backgroundColor:'#0f0'}}> 
-        </View>
-    </TouchableOpacity>
-  );
+function makeEvent(value, navigation) {
+    let tags = "";
+    for (let i = (Math.floor(Math.random() * 10 + 1)); i > 0; i--) {
+        tags = tags + "tag " + i + ", ";
+    }
+    return (
+        <TouchableOpacity
+            key={value + "act"}
+            style={styles.eventContainer}
+            onPress={() => navigation.push("Event")}
+        >
+            <Text style={styles.buttonEventText}>
+                {value + " the coolest event of the year"}
+            </Text>
+            <Text style={styles.buttonEventText}>
+                {"Date: "}
+            </Text>
+            <Text style={styles.buttonEventText}>
+                {"Time: "}
+            </Text>
+            <Text style={styles.buttonEventText}>
+                {tags}
+            </Text>
+            <View style={styles.subContainer, { flex: 0.1, backgroundColor: '#0f0' }}>
+            </View>
+            <Image
+                source={logo1}
+                style={{ flex: 0.5, flexDirection: "row" }}
+            />
+        </TouchableOpacity>
+    );
 }
 
-function getEvents(){
+function getEvents() {
     //retrieve the events from the site and place in the json file
     // backend stuff
     //retrieve data into the events page 
