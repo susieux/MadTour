@@ -5,8 +5,6 @@ const w = Dimensions.get('screen').width;
 export default {
     //main view
     //the whole page
-    //Colors: white: #efefef, grey: #b8b8b8, pinkwhite: #fad1d1,
-    //pink: ff9999, red: c62828, redpink: d32f2f
     container: {
         flex: 1,
         backgroundColor: '#d32f2f',
@@ -84,10 +82,6 @@ export default {
         marginLeft: 20
     },
     //button formatting
-    //borderRightColor
-    //overlayColor
-    //shadowColor Offset Opacity Radius
-    //tintColor
     button: {
         backgroundColor: '#b8b8b8',
         paddingVertical: 20,
