@@ -4,6 +4,13 @@ import { ScrollView } from 'react-native-gesture-handler';
 
 import styleInfo from '../styleInfo.js';
 
+//breaks mobile
+//const fs = require('fs');
+
+//data storage
+let filters; //import from QuizPage
+let event = getEvents(filters);
+
 export default function Events({navigation}) {
   return (
     <View style={styles.container}>
@@ -16,12 +23,13 @@ export default function Events({navigation}) {
             </Text>
         </TouchableOpacity>
         <Text style={styles.mainText}>
-            Currently at Select Event
+            Currently at Events
         </Text>
-        <ScrollView>
+        <ScrollView
+            showsVerticalScrollIndicator={false}
+        >
           {example(navigation)}
         </ScrollView>
-        
     </View>
   );
 }
@@ -40,17 +48,54 @@ function makeEvent(value, navigation){
   return (
     <TouchableOpacity 
       key={value + "act"}
-      style={styles.button}
+      style={styles.eventContainer}
       onPress={()=>navigation.push("Event")}
     >
-      <Text style={styles.buttonEventText}>
-          {"Name: " + value}
+        <Text style={styles.buttonEventText}>
+            {value + " the coolest event of the year"}
         </Text>
         <Text style={styles.buttonEventText}>
-          {"Times: "}
+            {"Date: "}
         </Text>
+        <Text style={styles.buttonEventText}>
+            {"Time: "}
+        </Text>
+        <Text style={styles.buttonEventText}>
+            {"Event Tags"}
+        </Text>
+        <View style={styles.subContainer,{flex:0.1,backgroundColor:'#0f0'}}> 
+        </View>
     </TouchableOpacity>
   );
+}
+
+function getEvents(){
+    //retrieve the events from the site and place in the json file
+    // backend stuff
+    //retrieve data into the events page 
+
+    /*
+    * somehow doesnt work? Node should be installed on my pc and should come with javascript>
+    *
+    const fs = require('fs');
+    var jsonString;
+    fs.readFile('..../cPanel/event1.json', (err, jsonString) => {
+        if (err) {
+            console.log("File read failed:", err);
+            return;
+        }
+        try{
+            var eventData = JSON.parse(jsonString).docs.docs;
+            eventData.forEach((e) => {
+                console.log(e._id);
+            });
+        }
+        catch(err){
+            console.log("Error parsing JSON file:",err);
+        }
+        //console.log('File data:', jsonString);
+    })
+    */
 }
 
 const styles = StyleSheet.create(styleInfo);
