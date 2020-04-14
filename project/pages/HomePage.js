@@ -10,9 +10,7 @@ export default function HomePage({navigation}) {
   return (
     <View style={styles.container}>
         <View style={styles.contentContainer}>
-            <Text style={styles.titleText}>
-                MadTour
-            </Text>
+            <Image source = {require('../assets/images/Logo-MadTour-d.png')} style={styles.images} />
             <Text style={styles.subText}>
                 The tour planner for Madison, Wisconsin
             </Text>
