@@ -14,6 +14,7 @@ let event = getEvents(filters);
 export default function Events({navigation}) {
   return (
     <View style={styles.container}>
+      <View style={styles.buttonContainer}>
       <TouchableOpacity 
             style={styles.button}
             onPress={()=>navigation.push("SelectPlan")}
@@ -22,6 +23,7 @@ export default function Events({navigation}) {
                 Select Plan
             </Text>
         </TouchableOpacity>
+        </View>
         <Text style={styles.mainText}>
             Currently at Events
         </Text>

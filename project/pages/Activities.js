@@ -7,6 +7,7 @@ import styleInfo from '../styleInfo.js';
 export default function Activities({navigation}) {
   return (
     <View style={styles.container}>
+      <View style={styles.buttonContainer}>
       <TouchableOpacity 
             style={styles.button}
             onPress={()=>navigation.push("SelectPlan")}
@@ -15,6 +16,7 @@ export default function Activities({navigation}) {
                 Select Plan
             </Text>
         </TouchableOpacity>
+        </View>
         <Text style={styles.mainText}>
             Currently at Select Activities
         </Text>

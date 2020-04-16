@@ -6,19 +6,19 @@ export default {
     //main view
     //the whole page
     container: {
-        flex: 1,
-        backgroundColor: '#d32f2f',
+        flex:1,
+        backgroundColor: '#fafafa',
         padding: 20,
         //using border for debugging
-        borderColor:'#fff',
-        borderWidth: 2,
+        // borderColor:'#000',
+        // borderWidth: 2,
     },
     //view inside the view
     //used to separate the pages into groups
     contentContainer: {
-        flex: 1,
-        paddingVertical: 30,
-        paddingHorizontal: 0,
+        flex:1.4,
+        paddingVertical: 10,
+        paddingHorizontal: 10,
         alignContent: 'center',
         //using border for debugging
         borderColor:'#b8b8b8',
@@ -34,6 +34,24 @@ export default {
         borderColor:'#efefef',
         borderWidth:2,
     },
+    //container for logo within contentContainer
+    logoContainer:{
+        flex:1,
+        alignItems:'center',
+        justifyContent:'flex-start',
+        //using border for debugging
+        // borderColor:'#fff',
+        // borderWidth:5,
+    },
+    logosquare:{
+        width:240,
+        height:240,
+    },
+    logo:{
+        width:280,
+        height:70,
+    },
+
     titleText: {
         fontSize: 45,
         color: '#222',
@@ -63,7 +81,7 @@ export default {
     //text for the buttons
     buttonText: {
         fontSize: 23,
-        color: '#222',
+        color: '#ffffff',
         textAlign: "center",
     },
     eventText: {
@@ -83,11 +101,16 @@ export default {
     },
     //button formatting
     button: {
-        backgroundColor: '#b8b8b8',
-        paddingVertical: 20,
+        backgroundColor: '#757575',
+        paddingVertical: 12,
         borderRadius: 100,
-        marginBottom: 20,
-        borderWidth: 1,
+        marginVertical: 10,
+        //shadow option
+        shadowColor: 'rgba(0, 0, 0, 0.5)',
+        shadowOpacity: 0.8,
+        elevation: 6,
+        shadowRadius: 15 ,
+        shadowOffset : { width: 0, height: 8},
     },
     //slider formatting background, border
     slider: {
@@ -95,10 +118,9 @@ export default {
     },
     //separates the button selections
     buttonContainer: {
-        flex: 1,
         flexDirection: "column",
         justifyContent: "space-around",
-        paddingHorizontal: 20,
+        paddingHorizontal:50,
     },
     eventContainer: {
         backgroundColor: '#aaa',
@@ -108,7 +130,7 @@ export default {
     },
     //background color of where calendars are
     calendar: {
-        flex: 1,
+        flex:1,
         borderRadius:20,
         padding: 30,
         paddingHorizontal: 30,
