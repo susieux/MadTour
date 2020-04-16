@@ -3,7 +3,7 @@ import {StyleSheet, View, ScrollView, Text} from 'react-native';
 import {Calendar} from 'react-native-calendars';
 
 
-export default class testCalendars extends Component {
+export default class TestCalendars extends Component {
   constructor(props) {
     super(props);
     
@@ -18,10 +18,9 @@ export default class testCalendars extends Component {
 
   render() {
     return (
-      <ScrollView showsVerticalScrollIndicator={false} >
-        <Text style={styles.text}>Calendar with selectable date</Text>
+      <View showsVerticalScrollIndicator={false}>
         <Calendar
-          current={'2020-02-02'}
+          current={'2020-04-13'}
           style={styles.calendar}
           hideExtraDays
           onDayPress={this.onDayPress}
@@ -34,14 +33,14 @@ export default class testCalendars extends Component {
           }}
         />
 
-        <Text style={styles.text}>Calendar with week numbers</Text>
+        {/* <Text style={styles.text}>Calendar with week numbers</Text>
         <Calendar
           style={styles.calendar}
           hideExtraDays
           showWeekNumbers
-        />
+        /> */}
 
-        <Text style={styles.text}>Calendar with marked dates and hidden arrows</Text>
+        {/* <Text style={styles.text}>Calendar with marked dates and hidden arrows</Text>
         <Calendar
           style={styles.calendar}
           current={'2012-05-16'}
@@ -261,19 +260,24 @@ export default class testCalendars extends Component {
               </View>
             );
           }}
-        />
-      </ScrollView>
+        /> */}
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
   calendar: {
-    marginBottom: 10
+    transform: [{ scale: 1.2 }],
+    marginTop: 70,
+    marginRight: 30,
+    margin: 30,
+    alignItems: "center"
+
   },
   text: {
     textAlign: 'center',
-    padding: 10,
+    padding: 0,
     backgroundColor: 'lightgrey',
     fontSize: 16
   }

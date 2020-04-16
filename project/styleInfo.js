@@ -7,7 +7,7 @@ export default {
     //the whole page
     container: {
         flex: 1,
-        backgroundColor: '#d00',
+        backgroundColor: '#d32f2f',
         padding: 20,
         //using border for debugging
         borderColor:'#fff',
@@ -17,20 +17,21 @@ export default {
     //used to separate the pages into groups
     contentContainer: {
         flex: 1,
-        padding: 30,
+        paddingVertical: 30,
+        paddingHorizontal: 0,
         alignContent: 'center',
         //using border for debugging
-        borderColor:'#0f0',
+        borderColor:'#b8b8b8',
         borderWidth:2,
     },
     //Container within the contentContainer
     subContainer: {
-        backgroundColor: '#ddd',
+        backgroundColor: '#b8b8b8',
         width: w*.8,
         flex:1,
         padding: 30,
         //using border for debugging
-        borderColor:'#00f',
+        borderColor:'#efefef',
         borderWidth:2,
     },
     titleText: {
@@ -61,19 +62,19 @@ export default {
     },
     //text for the buttons
     buttonText: {
-        fontSize: 15,
+        fontSize: 23,
         color: '#222',
-        textAlign: "center"
+        textAlign: "center",
     },
     eventText: {
-        fontSize: 24,
+        fontSize: 23,
         color: '#222',
         textAlign: 'left',
         marginBottom: 15,
         fontWeight: 'bold'
     },
     buttonEventText: {
-        fontSize: 15,
+        fontSize: 23,
         color: '#222',
         textAlign: 'left',
         marginBottom: 15,
@@ -82,11 +83,11 @@ export default {
     },
     //button formatting
     button: {
-        backgroundColor: '#ddd',
+        backgroundColor: '#b8b8b8',
         paddingVertical: 20,
         borderRadius: 100,
-        marginBottom: 15,
-        marginTop: 15,
+        marginBottom: 20,
+        borderWidth: 1,
     },
     //slider formatting background, border
     slider: {
@@ -108,12 +109,16 @@ export default {
     //background color of where calendars are
     calendar: {
         flex: 1,
+        borderRadius:20,
         padding: 30,
+        paddingHorizontal: 30,
         alignContent: 'center',
         //using border for debugging
         backgroundColor:'#708090',
         borderWidth:2,
     },
-    image: { 
-    },
+    images: {
+        transform: [{scale: .7}],
+        marginLeft: -w/5.5
+    }
 };
