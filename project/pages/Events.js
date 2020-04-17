@@ -14,29 +14,29 @@ import styleInfo from '../styleInfo.js';
 let filters; //import from QuizPage
 let event = getEvents(filters);
 
-export default function Events({ navigation }) {
-    return (
-        <View style={styles.container}>
-            <Image
-                source = {logoHead}
-                style = {{flex: 0.5, borderColor:"yellow", borderWidth:3}}
-            />
-            <TouchableOpacity
-                style={styles.button}
-                onPress={() => navigation.push("SelectPlan")}
-            >
-                <Text style={styles.buttonText}>
-                    Select Plan
-                </Text>
-            </TouchableOpacity>
-            <ScrollView
-                style = {styles.contentContainer}
-                showsVerticalScrollIndicator={false}
-            >
-                {listEvents(navigation)}
-            </ScrollView>
+export default function Events({navigation}) {
+  return (
+    <View style={styles.container}>
+      <View style={styles.buttonContainer}>
+      <TouchableOpacity 
+            style={styles.button}
+            onPress={()=>navigation.push("SelectPlan")}
+        >
+            <Text style={styles.mainText}>
+                Select Plan
+            </Text>
+        </TouchableOpacity>
         </View>
-    );
+        <Text style={styles.mainText}>
+            Currently at Events
+        </Text>
+        <ScrollView
+            showsVerticalScrollIndicator={false}
+        >
+          {example(navigation)}
+        </ScrollView>
+    </View>
+  );
 }
 
 //To simulate going through and creating a clickable for each button

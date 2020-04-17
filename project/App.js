@@ -18,6 +18,7 @@ import BottomTabNavigator from './navigation/BottomTabNavigator';
 import testCalendars from './pages/testCalendars';
 
 import useLinking from './navigation/useLinking';
+import { BorderlessButton } from 'react-native-gesture-handler';
 
 const Stack = createStackNavigator();
 
@@ -65,7 +66,15 @@ export default function App(props) {
       <View style={styles.container}>
         {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
         <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
-          <Stack.Navigator screenOptions={{headerShown:true}}> 
+        <Stack.Navigator screenOptions={{headerShown:true},
+              {
+                headerStyle: {backgroundColor: '#b6131d',},
+                headerTintColor: '#fff', 
+                headerTitleStyle: {
+                  fontWeight: 'bold',
+                },
+              }
+        }>
             <Stack.Screen 
                 name="Root" 
                 component={HomePage}
@@ -116,6 +125,6 @@ export default function App(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#fafafa',
   },
 });
