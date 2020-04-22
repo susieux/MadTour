@@ -1,0 +1,16 @@
+{
+    "results": [
+        {
+            "intensity": 5,
+            "distance": "East 100 mile",
+            "inOutDoor": "indoor",
+            "transport": "bus"
+        },
+        {
+            "intensity": 10,
+            "distance": "North 20 mile",
+            "inOutDoor": "outdoor",
+            "transport": "taxi"
+        }
+    ]
+}

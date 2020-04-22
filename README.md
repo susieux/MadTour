@@ -4,6 +4,8 @@
 
 The rest of the space should be used for documentation files and the like
 
+Use /project/assets/images/colorscheme=06.png for colors
+
 
 Page Descriptions
     App

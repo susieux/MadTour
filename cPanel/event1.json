@@ -1,0 +1,1657 @@
+{
+  "docs": {
+    "count": 3075,
+    "docs": [
+      {
+        "_id": "5e7dd9f15461f68003d8d059",
+        "address1": "3241 Garver Green",
+        "zip": "53704",
+        "startDate": "2020-01-04T06:00:00.000Z",
+        "media_raw": [
+          {
+            "mediaurl": "https://assets.simpleviewinc.com/simpleview/image/upload/crm/madison/fresh-microgreens-from-Garden-to-Be_16284BDE-264D-45DB-9E77CD88A39113AD_e6dcebae-4256-4540-b8bdf17ab3470adb.jpg",
+            "sortorder": 0,
+            "mediatype": "Image"
+          },
+          {
+            "mediaurl": "https://assets.simpleviewinc.com/simpleview/image/upload/crm/madison/local-eggs_782F4A22-6794-4A74-9D1EAB6065E7D5BD_ec2d2c5e-59c2-486f-9336b82c643633a7.jpg",
+            "sortorder": 0,
+            "mediatype": "Image"
+          }
+        ],
+        "recurrence": "Recurring weekly on Saturday",
+        "city": "Madison",
+        "typeName": "Special Event",
+        "eventTypeId": 3,
+        "recId": "48471",
+        "listing_id": 178068,
+        "recurType": 3,
+        "endDate": "2020-04-05T04:59:59.000Z",
+        "startTime": "08:00:00",
+        "location": "Garver Feed Mill",
+        "times": "From: 08:00 AM to 12:00 PM",
+        "categories": [
+          {
+            "catName": "General & Community Events",
+            "catId": "1"
+          },
+          {
+            "catName": "Kids & Families",
+            "catId": "3"
+          },
+          {
+            "catName": "Food & Drink",
+            "catId": "11"
+          },
+          {
+            "catName": "Holiday/Seasonal",
+            "catId": "25"
+          },
+          {
+            "catName": "Free Event",
+            "catId": "26"
+          }
+        ],
+        "endTime": "12:00:00",
+        "title": "Dane County Farmers' Market Late Winter Market",
+        "udfs_object": {
+          "1256": {
+            "name": "Expected Attendance",
+            "value": 800,
+            "digits": 0,
+            "fieldid": 1256,
+            "typeid": 4,
+            "type": "Number",
+            "value_raw": 800,
+            "value_string": "800"
+          },
+          "1257": {
+            "listid": 11691,
+            "name": "Calendar Assignment",
+            "value": "Main Only",
+            "digits": 0,
+            "fieldid": 1257,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11691,
+              "value": "Main Only"
+            },
+            "value_string": "Main Only"
+          },
+          "1267": {
+            "listid": 11703,
+            "name": "Event Location",
+            "value": "Near East Side",
+            "digits": 0,
+            "fieldid": 1267,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11703,
+              "value": "Near East Side"
+            },
+            "value_string": "Near East Side"
+          },
+          "1283": {
+            "name": "User Group Calendar Assignment",
+            "valuearray": [
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              }
+            ],
+            "digits": 0,
+            "fieldid": 1283,
+            "typeid": 12,
+            "type": "Multi-Select",
+            "value_raw": [
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              }
+            ],
+            "value_string": "Public (default)"
+          }
+        },
+        "sites": [
+          "primary",
+          "primary20"
+        ],
+        "rank": 1,
+        "recid": "48471",
+        "loc": {
+          "type": "Point",
+          "coordinates": [
+            -89.33428379999998,
+            43.0947589
+          ]
+        },
+        "nextDate": "2020-03-29T04:59:59.000Z",
+        "date": "2020-03-29T04:59:59.000Z",
+        "listing": {
+          "_id": "5e5d6060cdbd808b372e2d6a",
+          "recid": 178068,
+          "title": "Dane County Farmers' Market",
+          "id": "5e5d6060cdbd808b372e2d6a",
+          "detailURL": "/listings/dane-county-farmers-market/178068/",
+          "genericUrl": "/listings/dane-county-farmers-market/178068/",
+          "url": "/listings/dane-county-farmers-market/178068/",
+          "absolute_url": "https://www.visitmadison.com/listings/dane-county-farmers-market/178068/",
+          "isListing": true,
+          "hasTripAdvisor": false,
+          "hasYelp": false
+        },
+        "id": "5e7dd9f15461f68003d8d059",
+        "slug": "dane-county-farmers-market-late-winter-market",
+        "url": "/event/dane-county-farmers-market-late-winter-market/48471/",
+        "genericUrl": "/event/dane-county-farmers-market-late-winter-market/48471/",
+        "absoluteUrl": "https://www.visitmadison.com/event/dane-county-farmers-market-late-winter-market/48471/",
+        "teaser": "",
+        "longitude": -89.33428379999998,
+        "latitude": 43.0947589
+      },
+      {
+        "_id": "5e7e74795461f68003a8658c",
+        "address1": "525 W. Johnson St.",
+        "zip": "53703",
+        "startDate": "2017-01-28T06:00:00.000Z",
+        "media_raw": [
+          {
+            "mediaurl": "https://assets.simpleviewinc.com/simpleview/image/upload/crm/madison/Dinner-Detectives-640x4050_cacd5874-5056-a36a-0845e8b71ac6be2e.jpg",
+            "sortorder": 0,
+            "mediatype": "Image"
+          }
+        ],
+        "recurrence": "Recurring weekly on Saturday",
+        "city": "Madison",
+        "typeName": "Special Event",
+        "eventTypeId": 3,
+        "recId": "40646",
+        "state": "WI",
+        "listing_id": 177545,
+        "recurType": 3,
+        "startTime": "18:00:00",
+        "location": "DoubleTree by Hilton Madison",
+        "times": "6PM to 9PM",
+        "categories": [
+          {
+            "catName": "Food & Drink",
+            "catId": "11"
+          },
+          {
+            "catName": "Entertainment & Nightlife",
+            "catId": "15"
+          },
+          {
+            "catName": "Theater & Performing Arts",
+            "catId": "16"
+          }
+        ],
+        "endTime": "21:00:00",
+        "title": "Dinner Detective Murder Mystery Show",
+        "udfs_object": {
+          "1256": {
+            "name": "Expected Attendance",
+            "value": 80,
+            "digits": 0,
+            "fieldid": 1256,
+            "typeid": 4,
+            "type": "Number",
+            "value_raw": 80,
+            "value_string": "80"
+          },
+          "1257": {
+            "listid": 11691,
+            "name": "Calendar Assignment",
+            "value": "Main Only",
+            "digits": 0,
+            "fieldid": 1257,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11691,
+              "value": "Main Only"
+            },
+            "value_string": "Main Only"
+          },
+          "1267": {
+            "listid": 11698,
+            "name": "Event Location",
+            "value": "Downtown",
+            "digits": 0,
+            "fieldid": 1267,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11698,
+              "value": "Downtown"
+            },
+            "value_string": "Downtown"
+          },
+          "1283": {
+            "name": "User Group Calendar Assignment",
+            "valuearray": [
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              }
+            ],
+            "digits": 0,
+            "fieldid": 1283,
+            "typeid": 12,
+            "type": "Multi-Select",
+            "value_raw": [
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              }
+            ],
+            "value_string": "Public (default)"
+          }
+        },
+        "sites": [
+          "primary",
+          "primary20"
+        ],
+        "rank": 1,
+        "recid": "40646",
+        "loc": {
+          "type": "Point",
+          "coordinates": [
+            -89.3943673,
+            43.0714285
+          ]
+        },
+        "nextDate": "2020-03-29T04:59:59.000Z",
+        "date": "2020-03-29T04:59:59.000Z",
+        "listing": {
+          "_id": "5e5d605ecdbd808b372e25ee",
+          "recid": 177545,
+          "title": "DoubleTree by Hilton Madison Downtown",
+          "id": "5e5d605ecdbd808b372e25ee",
+          "detailURL": "/listings/doubletree-by-hilton-madison-downtown/177545/",
+          "genericUrl": "/listings/doubletree-by-hilton-madison-downtown/177545/",
+          "url": "/listings/doubletree-by-hilton-madison-downtown/177545/",
+          "absolute_url": "https://www.visitmadison.com/listings/doubletree-by-hilton-madison-downtown/177545/",
+          "isListing": true,
+          "hasTripAdvisor": false,
+          "hasYelp": false
+        },
+        "id": "5e7e74795461f68003a8658c",
+        "slug": "dinner-detective-murder-mystery-show",
+        "url": "/event/dinner-detective-murder-mystery-show/40646/",
+        "genericUrl": "/event/dinner-detective-murder-mystery-show/40646/",
+        "absoluteUrl": "https://www.visitmadison.com/event/dinner-detective-murder-mystery-show/40646/",
+        "teaser": "",
+        "longitude": -89.3943673,
+        "latitude": 43.0714285
+      },
+      {
+        "_id": "5e7e3bcb5461f68003e9d455",
+        "address1": "119 E. Main St.",
+        "zip": "53703",
+        "startDate": "2020-01-25T06:00:00.000Z",
+        "recurrence": "Recurring monthly on the 4th Saturday",
+        "city": "Madison",
+        "typeName": "Special Event",
+        "eventTypeId": 3,
+        "recId": "48580",
+        "state": "WI",
+        "listing_id": 181811,
+        "recurType": 5,
+        "startTime": "12:00:00",
+        "location": "The Rigby Pub, Grill and Event Space",
+        "times": "From: 12:00 PM to 02:00 PM",
+        "categories": [
+          {
+            "catName": "Arts & Culture",
+            "catId": "2"
+          },
+          {
+            "catName": "Free Event",
+            "catId": "26"
+          }
+        ],
+        "endTime": "14:00:00",
+        "title": "Drag Brunch",
+        "udfs_object": {
+          "1256": {
+            "name": "Expected Attendance",
+            "value": 100,
+            "digits": 0,
+            "fieldid": 1256,
+            "typeid": 4,
+            "type": "Number",
+            "value_raw": 100,
+            "value_string": "100"
+          },
+          "1257": {
+            "listid": 11691,
+            "name": "Calendar Assignment",
+            "value": "Main Only",
+            "digits": 0,
+            "fieldid": 1257,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11691,
+              "value": "Main Only"
+            },
+            "value_string": "Main Only"
+          },
+          "1267": {
+            "listid": 11698,
+            "name": "Event Location",
+            "value": "Downtown",
+            "digits": 0,
+            "fieldid": 1267,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11698,
+              "value": "Downtown"
+            },
+            "value_string": "Downtown"
+          },
+          "1283": {
+            "name": "User Group Calendar Assignment",
+            "valuearray": [
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              }
+            ],
+            "digits": 0,
+            "fieldid": 1283,
+            "typeid": 12,
+            "type": "Multi-Select",
+            "value_raw": [
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              }
+            ],
+            "value_string": "Public (default)"
+          }
+        },
+        "sites": [
+          "primary",
+          "primary20"
+        ],
+        "rank": 1,
+        "recid": "48580",
+        "loc": {
+          "type": "Point",
+          "coordinates": [
+            -89.38108239999997,
+            43.0749694
+          ]
+        },
+        "nextDate": "2020-03-29T04:59:59.000Z",
+        "date": "2020-03-29T04:59:59.000Z",
+        "listing": {
+          "_id": "5e5d606bcdbd808b372e5f39",
+          "recid": 181811,
+          "title": "The Rigby Pub, Grill and Event Space",
+          "id": "5e5d606bcdbd808b372e5f39",
+          "detailURL": "/listings/the-rigby-pub-grill-and-event-space/181811/",
+          "genericUrl": "/listings/the-rigby-pub-grill-and-event-space/181811/",
+          "url": "/listings/the-rigby-pub-grill-and-event-space/181811/",
+          "absolute_url": "https://www.visitmadison.com/listings/the-rigby-pub-grill-and-event-space/181811/",
+          "isListing": true,
+          "hasTripAdvisor": false,
+          "hasYelp": false
+        },
+        "id": "5e7e3bcb5461f68003e9d455",
+        "slug": "drag-brunch",
+        "url": "/event/drag-brunch/48580/",
+        "genericUrl": "/event/drag-brunch/48580/",
+        "absoluteUrl": "https://www.visitmadison.com/event/drag-brunch/48580/",
+        "teaser": "",
+        "longitude": -89.38108239999997,
+        "latitude": 43.0749694
+      },
+      {
+        "_id": "5e7e3bcb5461f68003e9d4c3",
+        "address1": "119 E. Main St.",
+        "zip": "53703",
+        "startDate": "2020-03-28T05:00:00.000Z",
+        "media_raw": [
+          {
+            "mediaurl": "https://assets.simpleviewinc.com/simpleview/image/upload/crm/madison/received_989516878097729_299AA40C-7F5D-4B45-AD8AD6159D6FBE21_15b79c0c-67f4-4b27-beba6dd529004201.jpg",
+            "sortorder": 0,
+            "mediatype": "Image"
+          },
+          {
+            "mediaurl": "https://assets.simpleviewinc.com/simpleview/image/upload/crm/madison/The-Rigby2_759731a3-5056-a36a-08f4bf4474f498ca.png",
+            "sortorder": 0,
+            "mediatype": "Image"
+          }
+        ],
+        "city": "Madison",
+        "typeName": "Special Event",
+        "eventTypeId": 3,
+        "recId": "48886",
+        "state": "WI",
+        "listing_id": 181811,
+        "recurType": 99,
+        "endDate": "2020-03-29T04:59:59.000Z",
+        "startTime": "11:00:00",
+        "location": "The Rigby Pub, Grill and Event Space",
+        "times": "From: 11:00 AM to 02:00 PM",
+        "categories": [
+          {
+            "catName": "Arts & Culture",
+            "catId": "2"
+          },
+          {
+            "catName": "Free Event",
+            "catId": "26"
+          }
+        ],
+        "endTime": "14:00:00",
+        "title": "Drag Brunch",
+        "udfs_object": {
+          "1256": {
+            "name": "Expected Attendance",
+            "value": 100,
+            "digits": 0,
+            "fieldid": 1256,
+            "typeid": 4,
+            "type": "Number",
+            "value_raw": 100,
+            "value_string": "100"
+          },
+          "1257": {
+            "listid": 11691,
+            "name": "Calendar Assignment",
+            "value": "Main Only",
+            "digits": 0,
+            "fieldid": 1257,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11691,
+              "value": "Main Only"
+            },
+            "value_string": "Main Only"
+          },
+          "1267": {
+            "listid": 11698,
+            "name": "Event Location",
+            "value": "Downtown",
+            "digits": 0,
+            "fieldid": 1267,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11698,
+              "value": "Downtown"
+            },
+            "value_string": "Downtown"
+          },
+          "1283": {
+            "name": "User Group Calendar Assignment",
+            "valuearray": [
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              }
+            ],
+            "digits": 0,
+            "fieldid": 1283,
+            "typeid": 12,
+            "type": "Multi-Select",
+            "value_raw": [
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              }
+            ],
+            "value_string": "Public (default)"
+          }
+        },
+        "sites": [
+          "primary",
+          "primary20"
+        ],
+        "rank": 1,
+        "recid": "48886",
+        "loc": {
+          "type": "Point",
+          "coordinates": [
+            -89.3810824,
+            43.0749694
+          ]
+        },
+        "nextDate": "2020-03-29T04:59:59.000Z",
+        "date": "2020-03-29T04:59:59.000Z",
+        "listing": {
+          "_id": "5e5d606bcdbd808b372e5f39",
+          "recid": 181811,
+          "title": "The Rigby Pub, Grill and Event Space",
+          "id": "5e5d606bcdbd808b372e5f39",
+          "detailURL": "/listings/the-rigby-pub-grill-and-event-space/181811/",
+          "genericUrl": "/listings/the-rigby-pub-grill-and-event-space/181811/",
+          "url": "/listings/the-rigby-pub-grill-and-event-space/181811/",
+          "absolute_url": "https://www.visitmadison.com/listings/the-rigby-pub-grill-and-event-space/181811/",
+          "isListing": true,
+          "hasTripAdvisor": false,
+          "hasYelp": false
+        },
+        "id": "5e7e3bcb5461f68003e9d4c3",
+        "slug": "drag-brunch",
+        "url": "/event/drag-brunch/48886/",
+        "genericUrl": "/event/drag-brunch/48886/",
+        "absoluteUrl": "https://www.visitmadison.com/event/drag-brunch/48886/",
+        "teaser": "",
+        "longitude": -89.3810824,
+        "latitude": 43.0749694
+      },
+      {
+        "_id": "5e7571c15461f68003631841",
+        "address1": "10229 Sharp Road",
+        "zip": "53572",
+        "startDate": "2020-03-28T05:00:00.000Z",
+        "media_raw": [
+          {
+            "mediaurl": "https://assets.simpleviewinc.com/simpleview/image/upload/crm/madison/campo_logo_gmvb062_4b0908c7-5056-a36a-0877c5d962373a37.jpg",
+            "sortorder": 0,
+            "mediatype": "Image"
+          }
+        ],
+        "city": "Mount Horeb",
+        "typeName": "Special Event",
+        "eventTypeId": 3,
+        "recId": "49194",
+        "state": "WI",
+        "listing_id": 181613,
+        "recurType": 0,
+        "endDate": "2020-03-29T04:59:59.000Z",
+        "startTime": "18:00:00",
+        "location": "Campo di Bella Winery & Farm to Table",
+        "categories": [
+          {
+            "catName": "Food & Drink",
+            "catId": "11"
+          }
+        ],
+        "endTime": "21:00:00",
+        "title": "Farm to Table Dinner - Spezzatino",
+        "udfs_object": {
+          "1256": {
+            "name": "Expected Attendance",
+            "value": 25,
+            "digits": 0,
+            "fieldid": 1256,
+            "typeid": 4,
+            "type": "Number",
+            "value_raw": 25,
+            "value_string": "25"
+          },
+          "1257": {
+            "listid": 11691,
+            "name": "Calendar Assignment",
+            "value": "Main Only",
+            "digits": 0,
+            "fieldid": 1257,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11691,
+              "value": "Main Only"
+            },
+            "value_string": "Main Only"
+          },
+          "1267": {
+            "listid": 11697,
+            "name": "Event Location",
+            "value": "Surrounding",
+            "digits": 0,
+            "fieldid": 1267,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11697,
+              "value": "Surrounding"
+            },
+            "value_string": "Surrounding"
+          },
+          "1283": {
+            "name": "User Group Calendar Assignment",
+            "valuearray": [
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              }
+            ],
+            "digits": 0,
+            "fieldid": 1283,
+            "typeid": 12,
+            "type": "Multi-Select",
+            "value_raw": [
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              }
+            ],
+            "value_string": "Public (default)"
+          }
+        },
+        "sites": [
+          "primary",
+          "primary20"
+        ],
+        "rank": 1,
+        "recid": "49194",
+        "loc": {
+          "type": "Point",
+          "coordinates": [
+            -89.7765019,
+            42.967144
+          ]
+        },
+        "nextDate": "2020-03-29T04:59:59.000Z",
+        "date": "2020-03-29T04:59:59.000Z",
+        "listing": {
+          "_id": "5e5d606bcdbd808b372e5ed5",
+          "recid": 181613,
+          "title": "Campo di Bella Winery & Farm to Table",
+          "id": "5e5d606bcdbd808b372e5ed5",
+          "detailURL": "/listings/campo-di-bella-winery-%26-farm-to-table/181613/",
+          "genericUrl": "/listings/campo-di-bella-winery-%26-farm-to-table/181613/",
+          "url": "/listings/campo-di-bella-winery-%26-farm-to-table/181613/",
+          "absolute_url": "https://www.visitmadison.com/listings/campo-di-bella-winery-%26-farm-to-table/181613/",
+          "isListing": true,
+          "hasTripAdvisor": false,
+          "hasYelp": false
+        },
+        "id": "5e7571c15461f68003631841",
+        "slug": "farm-to-table-dinner-spezzatino",
+        "url": "/event/farm-to-table-dinner-spezzatino/49194/",
+        "genericUrl": "/event/farm-to-table-dinner-spezzatino/49194/",
+        "absoluteUrl": "https://www.visitmadison.com/event/farm-to-table-dinner-spezzatino/49194/",
+        "teaser": "",
+        "longitude": -89.7765019,
+        "latitude": 42.967144
+      },
+      {
+        "_id": "5e75f0425461f680035cb6f9",
+        "address1": "10 State Street",
+        "zip": "53703",
+        "startDate": "2019-04-01T05:00:00.000Z",
+        "media_raw": [
+          {
+            "mediaurl": "https://assets.simpleviewinc.com/simpleview/image/upload/crm/madison/IMG_38520_8e3126e9-5056-a36a-0895bce6bb7a073e.jpg",
+            "sortorder": 0,
+            "mediatype": "Image"
+          }
+        ],
+        "recurrence": "Recurring daily",
+        "city": "Madison",
+        "typeName": "Special Event",
+        "eventTypeId": 3,
+        "recId": "46535",
+        "state": "WI",
+        "recurType": 1,
+        "startTime": "08:00:00",
+        "categories": [
+          {
+            "catName": "General & Community Events",
+            "catId": "1"
+          },
+          {
+            "catName": "Arts & Culture",
+            "catId": "2"
+          },
+          {
+            "catName": "Kids & Families",
+            "catId": "3"
+          },
+          {
+            "catName": "Education & Lectures",
+            "catId": "8"
+          },
+          {
+            "catName": "Nature & Outdoors",
+            "catId": "9"
+          },
+          {
+            "catName": "Gallery & Exhibitions",
+            "catId": "12"
+          },
+          {
+            "catName": "Tours & Walks",
+            "catId": "13"
+          }
+        ],
+        "endTime": "22:00:00",
+        "title": "Madison Scavenger Hunt: Musical Madison",
+        "udfs_object": {
+          "1256": {
+            "name": "Expected Attendance",
+            "value": 100,
+            "digits": 0,
+            "fieldid": 1256,
+            "typeid": 4,
+            "type": "Number",
+            "value_raw": 100,
+            "value_string": "100"
+          },
+          "1257": {
+            "listid": 11691,
+            "name": "Calendar Assignment",
+            "value": "Main Only",
+            "digits": 0,
+            "fieldid": 1257,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11691,
+              "value": "Main Only"
+            },
+            "value_string": "Main Only"
+          },
+          "1267": {
+            "listid": 11698,
+            "name": "Event Location",
+            "value": "Downtown",
+            "digits": 0,
+            "fieldid": 1267,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11698,
+              "value": "Downtown"
+            },
+            "value_string": "Downtown"
+          },
+          "1269": {
+            "name": "Family Friendly",
+            "value": true,
+            "digits": 0,
+            "fieldid": 1269,
+            "typeid": 11,
+            "type": "Yes/No",
+            "value_raw": true,
+            "value_string": "Yes"
+          },
+          "1283": {
+            "name": "User Group Calendar Assignment",
+            "valuearray": [
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              }
+            ],
+            "digits": 0,
+            "fieldid": 1283,
+            "typeid": 12,
+            "type": "Multi-Select",
+            "value_raw": [
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              }
+            ],
+            "value_string": "Public (default)"
+          }
+        },
+        "sites": [
+          "primary",
+          "primary20"
+        ],
+        "rank": 1,
+        "recid": "46535",
+        "loc": {
+          "type": "Point",
+          "coordinates": [
+            -89.3862126,
+            43.0747316
+          ]
+        },
+        "nextDate": "2020-03-22T04:59:59.000Z",
+        "date": "2020-03-29T04:59:59.000Z",
+        "id": "5e75f0425461f680035cb6f9",
+        "slug": "madison-scavenger-hunt%3a-musical-madison",
+        "url": "/event/madison-scavenger-hunt%3a-musical-madison/46535/",
+        "genericUrl": "/event/madison-scavenger-hunt%3a-musical-madison/46535/",
+        "absoluteUrl": "https://www.visitmadison.com/event/madison-scavenger-hunt%3a-musical-madison/46535/",
+        "teaser": "",
+        "longitude": -89.3862126,
+        "latitude": 43.0747316
+      },
+      {
+        "_id": "5e768b085461f680039fbae3",
+        "address1": "1224 Williamson St",
+        "zip": "53703",
+        "startDate": "2020-02-01T06:00:00.000Z",
+        "media_raw": [
+          {
+            "mediaurl": "https://assets.simpleviewinc.com/simpleview/image/upload/crm/madison/Maggie-Cousin_7bbd776a-5056-a36a-08036fa1e9d80375.jpg",
+            "sortorder": 0,
+            "mediatype": "Image"
+          }
+        ],
+        "city": "Madison",
+        "typeName": "Special Event",
+        "eventTypeId": 3,
+        "recId": "48821",
+        "state": "WI",
+        "listing_id": 181877,
+        "recurType": 99,
+        "endDate": "2020-05-24T04:59:59.000Z",
+        "startTime": "17:00:00",
+        "location": "Café CODA",
+        "times": "1st and 4th Saturdays, 5 - 7 PM",
+        "categories": [
+          {
+            "catName": "Kids & Families",
+            "catId": "3"
+          },
+          {
+            "catName": "Music & Concerts",
+            "catId": "14"
+          },
+          {
+            "catName": "Entertainment & Nightlife",
+            "catId": "15"
+          }
+        ],
+        "endTime": "19:00:00",
+        "title": "Millennial Jazz Hosted By the Maggie Cousin Quartet",
+        "udfs_object": {
+          "1256": {
+            "name": "Expected Attendance",
+            "value": 20,
+            "digits": 0,
+            "fieldid": 1256,
+            "typeid": 4,
+            "type": "Number",
+            "value_raw": 20,
+            "value_string": "20"
+          },
+          "1257": {
+            "listid": 11691,
+            "name": "Calendar Assignment",
+            "value": "Main Only",
+            "digits": 0,
+            "fieldid": 1257,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11691,
+              "value": "Main Only"
+            },
+            "value_string": "Main Only"
+          },
+          "1267": {
+            "listid": 11698,
+            "name": "Event Location",
+            "value": "Downtown",
+            "digits": 0,
+            "fieldid": 1267,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11698,
+              "value": "Downtown"
+            },
+            "value_string": "Downtown"
+          },
+          "1269": {
+            "name": "Family Friendly",
+            "value": true,
+            "digits": 0,
+            "fieldid": 1269,
+            "typeid": 11,
+            "type": "Yes/No",
+            "value_raw": true,
+            "value_string": "Yes"
+          },
+          "1283": {
+            "name": "User Group Calendar Assignment",
+            "valuearray": [
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              }
+            ],
+            "digits": 0,
+            "fieldid": 1283,
+            "typeid": 12,
+            "type": "Multi-Select",
+            "value_raw": [
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              }
+            ],
+            "value_string": "Public (default)"
+          }
+        },
+        "sites": [
+          "primary",
+          "primary20"
+        ],
+        "rank": 1,
+        "recid": "48821",
+        "loc": {
+          "type": "Point",
+          "coordinates": [
+            -89.36369150000002,
+            43.0839048
+          ]
+        },
+        "nextDate": "2020-03-29T04:59:59.000Z",
+        "date": "2020-03-29T04:59:59.000Z",
+        "listing": {
+          "_id": "5e5d606bcdbd808b372e5f57",
+          "recid": 181877,
+          "title": "Café CODA",
+          "id": "5e5d606bcdbd808b372e5f57",
+          "detailURL": "/listings/caf%c3%a9-coda/181877/",
+          "genericUrl": "/listings/caf%c3%a9-coda/181877/",
+          "url": "/listings/caf%c3%a9-coda/181877/",
+          "absolute_url": "https://www.visitmadison.com/listings/caf%c3%a9-coda/181877/",
+          "isListing": true,
+          "hasTripAdvisor": false,
+          "hasYelp": false
+        },
+        "id": "5e768b085461f680039fbae3",
+        "slug": "millennial-jazz-hosted-by-the-maggie-cousin-quartet",
+        "url": "/event/millennial-jazz-hosted-by-the-maggie-cousin-quartet/48821/",
+        "genericUrl": "/event/millennial-jazz-hosted-by-the-maggie-cousin-quartet/48821/",
+        "absoluteUrl": "https://www.visitmadison.com/event/millennial-jazz-hosted-by-the-maggie-cousin-quartet/48821/",
+        "teaser": "",
+        "longitude": -89.36369150000002,
+        "latitude": 43.0839048
+      },
+      {
+        "_id": "5e7d309b5461f680034de495",
+        "address1": "1450 Monroe St",
+        "zip": "53703",
+        "startDate": "2020-03-28T05:00:00.000Z",
+        "media_raw": [
+          {
+            "mediaurl": "https://assets.simpleviewinc.com/simpleview/image/upload/crm/madison/UW_Volleyball_credit_JeffMiller_UWCommuncations_0f52d683-5056-a36a-08c6ab27e102d587.jpg",
+            "sortorder": 0,
+            "mediatype": "Image"
+          }
+        ],
+        "city": "Madison",
+        "typeName": "Special Event",
+        "eventTypeId": 3,
+        "recId": "49037",
+        "state": "WI",
+        "recurType": 0,
+        "endDate": "2020-03-29T04:59:59.000Z",
+        "startTime": "19:00:00",
+        "location": "UW Field House",
+        "times": " ",
+        "categories": [
+          {
+            "catName": "Kids & Families",
+            "catId": "3"
+          },
+          {
+            "catName": "Sports & Recreation",
+            "catId": "4"
+          }
+        ],
+        "title": "UW Volleyball vs Milwaukee",
+        "udfs_object": {
+          "1256": {
+            "name": "Expected Attendance",
+            "value": 1000,
+            "digits": 0,
+            "fieldid": 1256,
+            "typeid": 4,
+            "type": "Number",
+            "value_raw": 1000,
+            "value_string": "1000"
+          },
+          "1257": {
+            "listid": 11693,
+            "name": "Calendar Assignment",
+            "value": "Main and Sports",
+            "digits": 0,
+            "fieldid": 1257,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11693,
+              "value": "Main and Sports"
+            },
+            "value_string": "Main and Sports"
+          },
+          "1258": {
+            "name": "Convention Calendar",
+            "value": true,
+            "digits": 0,
+            "fieldid": 1258,
+            "typeid": 11,
+            "type": "Yes/No",
+            "value_raw": true,
+            "value_string": "Yes"
+          },
+          "1259": {
+            "name": "Show on Sports Site:",
+            "value": true,
+            "digits": 0,
+            "fieldid": 1259,
+            "typeid": 11,
+            "type": "Yes/No",
+            "value_raw": true,
+            "value_string": "Yes"
+          },
+          "1267": {
+            "listid": 11698,
+            "name": "Event Location",
+            "value": "Downtown",
+            "digits": 0,
+            "fieldid": 1267,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11698,
+              "value": "Downtown"
+            },
+            "value_string": "Downtown"
+          },
+          "1283": {
+            "name": "User Group Calendar Assignment",
+            "valuearray": [
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              },
+              {
+                "listid": 11723,
+                "value": "MASC"
+              }
+            ],
+            "digits": 0,
+            "fieldid": 1283,
+            "typeid": 12,
+            "type": "Multi-Select",
+            "value_raw": [
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              },
+              {
+                "listid": 11723,
+                "value": "MASC"
+              }
+            ],
+            "value_string": "Public (default), MASC"
+          }
+        },
+        "sites": [
+          "primary",
+          "primary20"
+        ],
+        "rank": 1,
+        "recid": "49037",
+        "loc": {
+          "type": "Point",
+          "coordinates": [
+            -89.4126493,
+            43.068519
+          ]
+        },
+        "nextDate": "2020-03-29T04:59:59.000Z",
+        "date": "2020-03-29T04:59:59.000Z",
+        "id": "5e7d309b5461f680034de495",
+        "slug": "uw-volleyball-vs-milwaukee",
+        "url": "/event/uw-volleyball-vs-milwaukee/49037/",
+        "genericUrl": "/event/uw-volleyball-vs-milwaukee/49037/",
+        "absoluteUrl": "https://www.visitmadison.com/event/uw-volleyball-vs-milwaukee/49037/",
+        "teaser": "",
+        "longitude": -89.4126493,
+        "latitude": 43.068519
+      },
+      {
+        "_id": "5e75480d5461f68003f6fee1",
+        "address1": "100 N. Hamilton St.",
+        "zip": "53703",
+        "startDate": "2019-12-14T06:00:00.000Z",
+        "recurrence": "Recurring weekly on Saturday",
+        "city": "Madison",
+        "typeName": "Special Event",
+        "eventTypeId": 3,
+        "recId": "48523",
+        "state": "WI",
+        "listing_id": 177956,
+        "recurType": 3,
+        "endDate": "2020-05-31T04:59:59.000Z",
+        "startTime": "13:00:00",
+        "location": "Madison Children's Museum",
+        "categories": [
+          {
+            "catName": "General & Community Events",
+            "catId": "1"
+          },
+          {
+            "catName": "Arts & Culture",
+            "catId": "2"
+          },
+          {
+            "catName": "Kids & Families",
+            "catId": "3"
+          }
+        ],
+        "endTime": "15:00:00",
+        "title": "Weekend Wonders",
+        "udfs_object": {
+          "1256": {
+            "name": "Expected Attendance",
+            "value": 50,
+            "digits": 0,
+            "fieldid": 1256,
+            "typeid": 4,
+            "type": "Number",
+            "value_raw": 50,
+            "value_string": "50"
+          },
+          "1257": {
+            "listid": 11691,
+            "name": "Calendar Assignment",
+            "value": "Main Only",
+            "digits": 0,
+            "fieldid": 1257,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11691,
+              "value": "Main Only"
+            },
+            "value_string": "Main Only"
+          },
+          "1267": {
+            "listid": 11698,
+            "name": "Event Location",
+            "value": "Downtown",
+            "digits": 0,
+            "fieldid": 1267,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11698,
+              "value": "Downtown"
+            },
+            "value_string": "Downtown"
+          },
+          "1269": {
+            "name": "Family Friendly",
+            "value": true,
+            "digits": 0,
+            "fieldid": 1269,
+            "typeid": 11,
+            "type": "Yes/No",
+            "value_raw": true,
+            "value_string": "Yes"
+          },
+          "1283": {
+            "name": "User Group Calendar Assignment",
+            "valuearray": [
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              }
+            ],
+            "digits": 0,
+            "fieldid": 1283,
+            "typeid": 12,
+            "type": "Multi-Select",
+            "value_raw": [
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              }
+            ],
+            "value_string": "Public (default)"
+          }
+        },
+        "sites": [
+          "primary",
+          "primary20"
+        ],
+        "rank": 1,
+        "recid": "48523",
+        "loc": {
+          "type": "Point",
+          "coordinates": [
+            -89.38439460000001,
+            43.0769396
+          ]
+        },
+        "nextDate": "2020-03-22T04:59:59.000Z",
+        "date": "2020-03-29T04:59:59.000Z",
+        "listing": {
+          "_id": "5e5d6060cdbd808b372e2d43",
+          "recid": 177956,
+          "title": "Madison Children's Museum",
+          "id": "5e5d6060cdbd808b372e2d43",
+          "detailURL": "/listings/madison-childrens-museum/177956/",
+          "genericUrl": "/listings/madison-childrens-museum/177956/",
+          "url": "/listings/madison-childrens-museum/177956/",
+          "absolute_url": "https://www.visitmadison.com/listings/madison-childrens-museum/177956/",
+          "isListing": true,
+          "hasTripAdvisor": false,
+          "hasYelp": false
+        },
+        "id": "5e75480d5461f68003f6fee1",
+        "slug": "weekend-wonders",
+        "url": "/event/weekend-wonders/48523/",
+        "genericUrl": "/event/weekend-wonders/48523/",
+        "absoluteUrl": "https://www.visitmadison.com/event/weekend-wonders/48523/",
+        "teaser": "",
+        "longitude": -89.38439460000001,
+        "latitude": 43.0769396
+      },
+      {
+        "_id": "5e7539905461f68003ce4cb3",
+        "address1": "13 Atlas Court",
+        "zip": "53714",
+        "startDate": "2020-01-11T06:00:00.000Z",
+        "media_raw": [
+          {
+            "mediaurl": "https://assets.simpleviewinc.com/simpleview/image/upload/crm/madison/Wisconsin-State-USBC-Vert-RGB_1_101_3c4d958d-5056-a36a-082eeddf1d6c556f.png",
+            "sortorder": 0,
+            "mediatype": "Image"
+          },
+          {
+            "mediaurl": "https://assets.simpleviewinc.com/simpleview/image/upload/crm/madison/Wisconsin-State-USBC-Vert-RGB_1_102_400273cc-5056-a36a-0827056a8d0bc22d.png",
+            "sortorder": 0,
+            "mediatype": "Image"
+          }
+        ],
+        "recurrence": "Recurring weekly on Sunday, Saturday",
+        "city": "Madison",
+        "typeName": "Special Event",
+        "eventTypeId": 3,
+        "recId": "48632",
+        "state": "WI",
+        "recurType": 3,
+        "endDate": "2020-05-04T04:59:59.000Z",
+        "location": "Dream Lanes",
+        "categories": [
+          {
+            "catName": "Sports & Recreation",
+            "catId": "4"
+          }
+        ],
+        "title": "Wisconsin State Bowling Association 2020 Open State Bowling Tournament",
+        "udfs_object": {
+          "1256": {
+            "name": "Expected Attendance",
+            "value": 7000,
+            "digits": 0,
+            "fieldid": 1256,
+            "typeid": 4,
+            "type": "Number",
+            "value_raw": 7000,
+            "value_string": "7000"
+          },
+          "1257": {
+            "listid": 11693,
+            "name": "Calendar Assignment",
+            "value": "Main and Sports",
+            "digits": 0,
+            "fieldid": 1257,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11693,
+              "value": "Main and Sports"
+            },
+            "value_string": "Main and Sports"
+          },
+          "1259": {
+            "name": "Show on Sports Site:",
+            "value": true,
+            "digits": 0,
+            "fieldid": 1259,
+            "typeid": 11,
+            "type": "Yes/No",
+            "value_raw": true,
+            "value_string": "Yes"
+          },
+          "1267": {
+            "listid": 11699,
+            "name": "Event Location",
+            "value": "East Side",
+            "digits": 0,
+            "fieldid": 1267,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11699,
+              "value": "East Side"
+            },
+            "value_string": "East Side"
+          },
+          "1283": {
+            "name": "User Group Calendar Assignment",
+            "valuearray": [
+              {
+                "listid": 11723,
+                "value": "MASC"
+              },
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              }
+            ],
+            "digits": 0,
+            "fieldid": 1283,
+            "typeid": 12,
+            "type": "Multi-Select",
+            "value_raw": [
+              {
+                "listid": 11723,
+                "value": "MASC"
+              },
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              }
+            ],
+            "value_string": "MASC, Public (default)"
+          }
+        },
+        "sites": [
+          "primary",
+          "primary20"
+        ],
+        "rank": 1,
+        "recid": "48632",
+        "loc": {
+          "type": "Point",
+          "coordinates": [
+            -89.3068682,
+            43.0867933
+          ]
+        },
+        "nextDate": "2020-03-22T04:59:59.000Z",
+        "date": "2020-03-29T04:59:59.000Z",
+        "id": "5e7539905461f68003ce4cb3",
+        "slug": "wisconsin-state-bowling-association-2020-open-state-bowling-tournament",
+        "url": "/event/wisconsin-state-bowling-association-2020-open-state-bowling-tournament/48632/",
+        "genericUrl": "/event/wisconsin-state-bowling-association-2020-open-state-bowling-tournament/48632/",
+        "absoluteUrl": "https://www.visitmadison.com/event/wisconsin-state-bowling-association-2020-open-state-bowling-tournament/48632/",
+        "teaser": "",
+        "longitude": -89.3068682,
+        "latitude": 43.0867933
+      },
+      {
+        "_id": "5e7e3bcb5461f68003e9d2b5",
+        "address1": "119 E. Main St.",
+        "zip": "53703",
+        "startDate": "2019-02-03T06:00:00.000Z",
+        "media_raw": [
+          {
+            "mediaurl": "https://assets.simpleviewinc.com/simpleview/image/upload/crm/madison/brunch-rigby-640x405_4c5ea742-5056-a36a-0889581883105ea2.jpg",
+            "sortorder": 0,
+            "mediatype": "Image"
+          }
+        ],
+        "recurrence": "Recurring weekly on Sunday",
+        "city": "Madison",
+        "typeName": "Special Event",
+        "eventTypeId": 3,
+        "recId": "40969",
+        "state": "WI",
+        "listing_id": 181811,
+        "recurType": 3,
+        "endDate": "2020-11-30T05:59:59.000Z",
+        "startTime": "10:00:00",
+        "location": "The Rigby Pub, Grill and Event Space",
+        "times": "From: 10:00 AM to 02:00 PM",
+        "categories": [
+          {
+            "catName": "Kids & Families",
+            "catId": "3"
+          },
+          {
+            "catName": "Food & Drink",
+            "catId": "11"
+          }
+        ],
+        "endTime": "14:00:00",
+        "title": "Beatles Brunch",
+        "udfs_object": {
+          "1256": {
+            "name": "Expected Attendance",
+            "value": 25,
+            "digits": 0,
+            "fieldid": 1256,
+            "typeid": 4,
+            "type": "Number",
+            "value_raw": 25,
+            "value_string": "25"
+          },
+          "1257": {
+            "listid": 11691,
+            "name": "Calendar Assignment",
+            "value": "Main Only",
+            "digits": 0,
+            "fieldid": 1257,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11691,
+              "value": "Main Only"
+            },
+            "value_string": "Main Only"
+          },
+          "1267": {
+            "listid": 11698,
+            "name": "Event Location",
+            "value": "Downtown",
+            "digits": 0,
+            "fieldid": 1267,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11698,
+              "value": "Downtown"
+            },
+            "value_string": "Downtown"
+          },
+          "1283": {
+            "name": "User Group Calendar Assignment",
+            "valuearray": [
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              }
+            ],
+            "digits": 0,
+            "fieldid": 1283,
+            "typeid": 12,
+            "type": "Multi-Select",
+            "value_raw": [
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              }
+            ],
+            "value_string": "Public (default)"
+          }
+        },
+        "sites": [
+          "primary",
+          "primary20"
+        ],
+        "rank": 1,
+        "recid": "40969",
+        "loc": {
+          "type": "Point",
+          "coordinates": [
+            -89.3811201,
+            43.0749898
+          ]
+        },
+        "nextDate": "2020-03-30T04:59:59.000Z",
+        "date": "2020-03-30T04:59:59.000Z",
+        "listing": {
+          "_id": "5e5d606bcdbd808b372e5f39",
+          "recid": 181811,
+          "title": "The Rigby Pub, Grill and Event Space",
+          "id": "5e5d606bcdbd808b372e5f39",
+          "detailURL": "/listings/the-rigby-pub-grill-and-event-space/181811/",
+          "genericUrl": "/listings/the-rigby-pub-grill-and-event-space/181811/",
+          "url": "/listings/the-rigby-pub-grill-and-event-space/181811/",
+          "absolute_url": "https://www.visitmadison.com/listings/the-rigby-pub-grill-and-event-space/181811/",
+          "isListing": true,
+          "hasTripAdvisor": false,
+          "hasYelp": false
+        },
+        "id": "5e7e3bcb5461f68003e9d2b5",
+        "slug": "beatles-brunch",
+        "url": "/event/beatles-brunch/40969/",
+        "genericUrl": "/event/beatles-brunch/40969/",
+        "absoluteUrl": "https://www.visitmadison.com/event/beatles-brunch/40969/",
+        "teaser": "",
+        "longitude": -89.3811201,
+        "latitude": 43.0749898
+      },
+      {
+        "_id": "5e7d22e25461f680032659f5",
+        "address2": "201 State St.",
+        "address1": "Overture Center for the Arts, 3rd Floor",
+        "zip": "53703",
+        "startDate": "2020-02-14T06:00:00.000Z",
+        "media_raw": [
+          {
+            "mediaurl": "https://assets.simpleviewinc.com/simpleview/image/upload/crm/madison/Lapham.Meteor_C8755686-4677-48FF-A45D2832278EE730_98e25bb7-adef-4d55-a02c2ac247559af6.png",
+            "sortorder": 0,
+            "mediatype": "Image"
+          }
+        ],
+        "recurrence": "Recurring daily",
+        "city": "Madison",
+        "typeName": "Special Event",
+        "eventTypeId": 3,
+        "recId": "48315",
+        "state": "WI",
+        "recurType": 1,
+        "endDate": "2020-04-06T04:59:59.000Z",
+        "startTime": "12:00:00",
+        "location": "James Watrous Gallery",
+        "times": "W-Th 12-5   •   Fr-Sa 12-8   •   Su 12-5",
+        "categories": [
+          {
+            "catName": "General & Community Events",
+            "catId": "1"
+          },
+          {
+            "catName": "Arts & Culture",
+            "catId": "2"
+          },
+          {
+            "catName": "Kids & Families",
+            "catId": "3"
+          },
+          {
+            "catName": "Gallery & Exhibitions",
+            "catId": "12"
+          },
+          {
+            "catName": "Free Event",
+            "catId": "26"
+          }
+        ],
+        "endTime": "17:00:00",
+        "title": "Collections & Connections",
+        "udfs_object": {
+          "1256": {
+            "name": "Expected Attendance",
+            "value": 500,
+            "digits": 0,
+            "fieldid": 1256,
+            "typeid": 4,
+            "type": "Number",
+            "value_raw": 500,
+            "value_string": "500"
+          },
+          "1257": {
+            "listid": 11691,
+            "name": "Calendar Assignment",
+            "value": "Main Only",
+            "digits": 0,
+            "fieldid": 1257,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11691,
+              "value": "Main Only"
+            },
+            "value_string": "Main Only"
+          },
+          "1267": {
+            "listid": 11698,
+            "name": "Event Location",
+            "value": "Downtown",
+            "digits": 0,
+            "fieldid": 1267,
+            "typeid": 7,
+            "type": "Dropdown",
+            "value_raw": {
+              "listid": 11698,
+              "value": "Downtown"
+            },
+            "value_string": "Downtown"
+          },
+          "1283": {
+            "name": "User Group Calendar Assignment",
+            "valuearray": [
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              }
+            ],
+            "digits": 0,
+            "fieldid": 1283,
+            "typeid": 12,
+            "type": "Multi-Select",
+            "value_raw": [
+              {
+                "listid": 11722,
+                "value": "Public (default)"
+              }
+            ],
+            "value_string": "Public (default)"
+          }
+        },
+        "sites": [
+          "primary",
+          "primary20"
+        ],
+        "rank": 1,
+        "recid": "48315",
+        "loc": {
+          "type": "Point",
+          "coordinates": [
+            -89.38918380000001,
+            43.07427670000001
+          ]
+        },
+        "nextDate": "2020-03-27T04:59:59.000Z",
+        "date": "2020-03-30T04:59:59.000Z",
+        "id": "5e7d22e25461f680032659f5",
+        "slug": "collections-%26-connections",
+        "url": "/event/collections-%26-connections/48315/",
+        "genericUrl": "/event/collections-%26-connections/48315/",
+        "absoluteUrl": "https://www.visitmadison.com/event/collections-%26-connections/48315/",
+        "teaser": "",
+        "longitude": -89.38918380000001,
+        "latitude": 43.07427670000001
+      }
+    ]
+  }
+}

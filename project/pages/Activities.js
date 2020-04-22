@@ -7,6 +7,7 @@ import styleInfo from '../styleInfo.js';
 export default function Activities({navigation}) {
   return (
     <View style={styles.container}>
+      <View style={styles.buttonContainer}>
       <TouchableOpacity 
             style={styles.button}
             onPress={()=>navigation.push("SelectPlan")}
@@ -14,7 +15,8 @@ export default function Activities({navigation}) {
             <Text style={styles.mainText}>
                 Select Plan
             </Text>
-        </TouchableOpacity>
+      </TouchableOpacity>
+        </View>
         <Text style={styles.mainText}>
             Currently at Select Activities
         </Text>
@@ -37,18 +39,24 @@ function example(navigation){
 //Each individual clickable with basic event info shown. Info will be where value is display event, time, and location?
 function makeAct(value, navigation){
   return (
-    <TouchableOpacity 
+    <TouchableOpacity
             key={value + "act"}
-            style={styles.button}
-            // Will need to change this or make it so that it reacts to the info given to it
-            onPress={()=>navigation.push("Event")}
+            style={styles.eventContainer}
+            onPress={() => navigation.push("Event")}
         >
-        <Text style={styles.buttonEventText}>
-          {"Name: " + value}
-        </Text>
-        <Text style={styles.buttonEventText}>
-          {"Times: "}
-        </Text>
+            <Text style={styles.buttonEventText}>
+                {value + " the coolest activity of the year"}
+            </Text>
+            <Text style={styles.buttonEventText}>
+                {"Date: "}
+            </Text>
+            <Text style={styles.buttonEventText}>
+                {"Time: "}
+            </Text>
+            
+            <View style={styles.subContainer, { flex: 0.1, backgroundColor: '#0f0' }}>
+            </View>
+            
         </TouchableOpacity>
   );
 }

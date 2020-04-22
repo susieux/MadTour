@@ -5,14 +5,15 @@ import Slider from 'react-native-slider';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import RadioForm, { RadioButton, RadioButtonInput, RadioButtonLabel } from 'react-native-simple-radio-button';
 import CalendarPicker from 'react-native-calendar-picker';
+import TestCalendars from './testCalendars'
+
 
 import styleInfo from '../styleInfo.js';
+import testCalendars from './testCalendars';
 
 const width = Dimensions.get('window');
 
 export default function QuizPage({navigation}) {
-
-
     return (
         <View style={styles.container}>
             <ScrollView
@@ -36,8 +37,8 @@ export default function QuizPage({navigation}) {
                 {qDoorness()}
                 {qTransport()}
                 {qTimeFrame()}
-            </ScrollView>
-            <View>
+            </ScrollView>            
+            <View style={styles.buttonContainer}>
                 <TouchableOpacity 
                     style={styles.button}
                     onPress={()=>navigation.push("Tabs")}
@@ -189,6 +190,8 @@ function qTransport() {
 function qTimeFrame() {
     //should implement the calendar picker. 
     //use testCalendarPicker as a reference.
+    
+    return <TestCalendars/>;
 }
 
 const styles = StyleSheet.create(styleInfo);
