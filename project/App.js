@@ -17,7 +17,6 @@ import PlanPage from './pages/PlanPage';
 import BottomTabNavigator from './navigation/BottomTabNavigator';
 import testCalendars from './pages/testCalendars';
 
-import useLinking from './navigation/useLinking';
 import { BorderlessButton } from 'react-native-gesture-handler';
 
 const Stack = createStackNavigator();
@@ -29,7 +28,6 @@ export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = React.useState(false);
   const [initialNavigationState, setInitialNavigationState] = React.useState();
   const containerRef = React.useRef();
-  const { getInitialState } = useLinking(containerRef);
 
   // Load any resources or data that we need prior to rendering the app
   React.useEffect(() => {
