@@ -10,11 +10,7 @@ export default function HomePage({navigation}) {
   return (
     <View style={styles.container}>
         <View style={styles.contentContainer}>
-            <View style={styles.logoContainer}>
-                <Image style={styles.logosquare} source={require('../assets/images/Logo-Square-w.png')}></Image>
-                <Image style={styles.logo} source={require('../assets/images/MadTour-w.png')}></Image>
-            </View>
-            {/* <Image source = {require('../assets/images/Logo-MadTour-d.png')} style={styles.images} /> */}
+            <Image source = {require('../assets/images/Logo-MadTour-d.png')} style={styles.images} />
             <Text style={styles.subText}>
                 The tour planner for Madison, Wisconsin
             </Text>
