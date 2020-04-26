@@ -6,7 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-//import all of out different pages
+//import all of our different pages
 import HomePage from './pages/HomePage';
 import QuizPage from './pages/QuizPage';
 import SavedPlansPage from './pages/SavedPlansPage';
@@ -16,8 +16,6 @@ import SelectPlanPage from './pages/SelectPlanPage';
 import PlanPage from './pages/PlanPage';
 import BottomTabNavigator from './navigation/BottomTabNavigator';
 import testCalendars from './pages/testCalendars';
-
-import { BorderlessButton } from 'react-native-gesture-handler';
 
 const Stack = createStackNavigator();
 

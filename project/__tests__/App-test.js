@@ -11,13 +11,13 @@ jest.mock('expo', () => ({
   AppLoading: 'AppLoading',
 }));
 
-jest.mock('../navigation/AppNavigator', () => 'AppNavigator');
+//jest.mock('../navigation/AppNavigator', () => 'AppNavigator');
 
 describe('App', () => {
   jest.useFakeTimers();
 
   beforeEach(() => {
-    NavigationTestUtils.resetInternalState();
+    //NavigationTestUtils.resetInternalState();
   });
 
   it(`renders the loading screen`, () => {
