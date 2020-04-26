@@ -17,6 +17,8 @@ import PlanPage from './pages/PlanPage';
 import BottomTabNavigator from './navigation/BottomTabNavigator';
 import testCalendars from './pages/testCalendars';
 
+import useLinking from './navigation/useLinking';
+
 const Stack = createStackNavigator();
 
 // Kept from the installation of the "tabs" template.
@@ -26,6 +28,7 @@ export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = React.useState(false);
   const [initialNavigationState, setInitialNavigationState] = React.useState();
   const containerRef = React.useRef();
+  const { getInitialState } = useLinking(containerRef);
 
   // Load any resources or data that we need prior to rendering the app
   React.useEffect(() => {

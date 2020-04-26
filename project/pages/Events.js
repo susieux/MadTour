@@ -33,7 +33,7 @@ export default function Events({navigation}) {
         <ScrollView
             showsVerticalScrollIndicator={false}
         >
-          {listEvents(navigation)}
+          {example(navigation)}
         </ScrollView>
     </View>
   );
@@ -76,7 +76,7 @@ function makeEvent(value, navigation) {
             </View>
             <Image
                 source={logo1}
-                style={styles.logosquare}
+                style={{ flex: 0.5, flexDirection: "row" }}
             />
         </TouchableOpacity>
     );

@@ -153,5 +153,10 @@ export default {
         //using border for debugging
         backgroundColor:'#708090',
         borderWidth:2,
+    },
+    images: {
+        transform: [{scale: .7}],
+        marginLeft: -w/5.5,
+        marginRight: w/5.5,
     }
 };
