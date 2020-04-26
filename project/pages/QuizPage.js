@@ -7,6 +7,7 @@ import RadioForm, { RadioButton, RadioButtonInput, RadioButtonLabel } from 'reac
 import CalendarPicker from 'react-native-calendar-picker';
 import TestCalendars from './testCalendars'
 
+
 import styleInfo from '../styleInfo.js';
 import testCalendars from './testCalendars';
 
@@ -37,7 +38,7 @@ export default function QuizPage({navigation}) {
                 {qTransport()}
                 {qTimeFrame()}
             </ScrollView>            
-            <View>
+            <View style={styles.buttonContainer}>
                 <TouchableOpacity 
                     style={styles.button}
                     onPress={()=>navigation.push("Tabs")}
