@@ -11,7 +11,7 @@ export default function EventPage({navigation}) {
             style={styles.button}
             onPress={()=> alert("TODO: Save to storage")}
         >
-            <Text style={styles.mainText}>
+            <Text style={styles.buttonText}>
                 Add to Plan
             </Text>
         </TouchableOpacity>

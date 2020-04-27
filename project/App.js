@@ -81,12 +81,12 @@ export default function App(props) {
             <Stack.Screen 
                 name="Quiz" 
                 component={QuizPage}
-                options = {{title: ''}}
+                options = {{title: 'Quiz'}}
             />
             <Stack.Screen 
                 name="Tabs" 
                 component={BottomTabNavigator}
-                options = {{title:'Select Events for the trip'}}
+                options = {{title:'Select Events & Activities'}}
             />
             <Stack.Screen 
                 name="SavedPlans" 

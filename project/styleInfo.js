@@ -1,59 +1,91 @@
 //all default style information used in the formatting of the pages
 import { Dimensions } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
+
 const w = Dimensions.get('screen').width;
+const h = Dimensions.get('screen').height;
 
 const colors = {
     bg: '#fad1d1', //light pink for backgrounds
     bgMid: '#ff9999', //darker pink used as a middle red for backgrounds
     bgAccent: '#e57373', //even darker red to accent the bgMid color
     mainFill: '#c62828', //main red for logos and important pieces
-    white:'#efefef', //a very off white to be used in place of white
-    black:'#101010',
+    offwhite:'#efefef', //a very off white to be used in place of white
+    white:'#ffffff',
+    black:'#212121',
     subBlack:'#202020',
     gray:'#757575',
     debugGreen:'#0f0',
     debugBlue:'#00f',
     debugYellow:'#ff0',
+
+    pLight:'#ef5046',
+    pMain:'#b6131d',
+    pDark:'#7e0000',
+
+    sLight:'#a4a4a4',
+    sMain:'#757575',
+    sDark:'#494949',
+    test:'#efefef',
 }
 
 export default {
     //main view
     //the whole page
     container: {
-        flex: 1,
+        flex:1,
         backgroundColor: colors.white,
-        padding: 20,
+        // paddingVertical:10,
+        paddingHorizontal:20,
         //using border for debugging
-        borderColor:colors.debugGreen,
-        borderWidth: 2,
+        // borderColor:colors.debugGreen,
+        // borderWidth: 2,
     },
     //view inside the view
     //used to separate the pages into groups
     contentContainer: {
-        flex:1.4,
-        paddingVertical: 10,
-        paddingHorizontal: 10,
+        flex:1.75,
+        // paddingHorizontal: 10,
         alignContent: 'center',
         //using border for debugging
-        borderColor:colors.debugYellow,
-        borderWidth:2,
+        // borderColor:colors.debugYellow,
+        // borderWidth:2,
     },
-    //Container within the contentContainer
-    subContainer: {
-        backgroundColor: colors.bgMid,
-        width: w*.8,
-        flex:1,
-        padding: 30,
+    //special container for quiz page instead of contentContainer
+    quizContainer:{
+        paddingVertical:14,
+        paddingHorizontal:20,
         //using border for debugging
-        borderColor:colors.debugBlue,
-        borderWidth:2,
+        // backgroundColor:'#708090',
+        // borderWidth:2,
+    },
+    //Container within the contentContainer - used mainly for quiz scroll section
+    subContainer: {
+        backgroundColor: colors.test,
+        width: w*.8,
+        borderRadius:12,
+        flex:1,
+        // paddingHorizontal: 40,
+        paddingBottom:20,
+        // justifyContent:'space-evenly',
+        //shadow option
+        shadowColor: '#000',
+        shadowOpacity: 0.5,
+        elevation: 10,
+        shadowRadius: 20 ,
+        shadowOffset : { width: 0, height: 2},
+        //using border for debugging
+        // borderColor:colors.debugBlue,
+        // borderWidth:2,
+
     },
     //container for logo within contentContainer
     logoContainer:{
         flex:1,
         alignItems:'center',
-        justifyContent:'flex-start',
+        justifyContent:'space-evenly',
+        paddingBottom:10,
         //using border for debugging
         // borderColor:'#fff',
         // borderWidth:5,
@@ -64,7 +96,7 @@ export default {
     },
     logo:{
         width:280,
-        height:70,
+        height:60,
     },
 
     titleText: {
@@ -73,53 +105,65 @@ export default {
         textAlign: 'center',
     },
     //title text
-    //header 1
     mainText: {
-        fontSize: 20,
+        fontSize: RFValue(20,h),
         color: colors.black,
         textAlign: 'center',
+    },
+    //header title
+    headText:{
+        fontSize: RFValue(18,h),
+        color: colors.subBlack,
+        textAlign: "center",
     },
     //"sub" title text
     //header2
     subText: {
-        fontSize: 15,
+        fontSize: RFValue(14,h),
         color: colors.subBlack,
         textAlign: "center",
     },
     //content text
-    //header 3
+    //body
     text: {
-        fontSize: 10,
+        fontSize: RFValue(12,h),
         color: colors.black,
         textAlign: 'center',
     },
     //text for the buttons
     buttonText: {
-        fontSize: 23,
-        color: colors.subBlack,
+        fontSize: RFValue(24,h),
+        fontWeight:'bold',
+        color: colors.offwhite,
         textAlign: "center",
     },
     eventText: {
-        fontSize: 23,
+        fontSize: RFValue(22,h),
         color: colors.subBlack,
         textAlign: 'left',
-        marginBottom: 15,
+        marginBottom: 6,
         fontWeight: 'bold'
     },
+    buttonHeaderEventText:{
+        fontSize: RFValue(22,h),
+        color: colors.subBlack,
+        textAlign: 'center',
+        marginBottom: 6,
+        fontWeight: 'bold',
+    },
     buttonEventText: {
-        fontSize: 23,
+        fontSize: RFValue(20,h),
         color: colors.subBlack,
         textAlign: 'left',
-        marginBottom: 15,
-        fontWeight: 'bold',
-        marginLeft: 20
+        marginBottom: 10,
+        marginLeft: 20,
     },
     //button formatting
     button: {
-        backgroundColor: colors.gray,
-        paddingVertical: 20,
-        borderRadius: 100,
-        marginVertical: 10,
+        backgroundColor: colors.pMain,
+        paddingVertical: 14,
+        marginHorizontal:10,
+        borderRadius:12,
         //shadow option
         shadowColor: 'rgba(0, 0, 0, 0.5)',
         shadowOpacity: 0.8,
@@ -127,31 +171,78 @@ export default {
         shadowRadius: 15 ,
         shadowOffset : { width: 0, height: 8},
     },
+    questionText:{
+        fontSize: RFValue(26,h),
+        fontWeight:'bold',
+        lineHeight:30,
+        color: colors.white,
+        textAlign: 'center',
+        backgroundColor:colors.pDark,
+        paddingVertical:40,
+        paddingHorizontal:30,
+        borderTopLeftRadius:12,
+        borderTopRightRadius:12,
+        //using border for debugging
+        // borderColor:colors.debugBlue,
+        // borderWidth:2,
+    },
     //slider formatting background, border
+    sliderContainer:{
+        flex:1,
+        justifyContent:'center',
+        paddingHorizontal:40,
+        //using border for debugging
+        // borderColor:colors.debugBlue,
+        // borderWidth:2,
+    },
     slider: {
         shadowColor:'#e00',
     },
-    //separates the button selections
-    buttonContainer: {
+    sliderEndText:{
+        fontSize: RFValue(14,h),
+        color: colors.black,
+        justifyContent:'space-between',
+        flexDirection:'row',
+    },
+    //different flex size for homepage button
+    homeButtonContainer: {
+        flex:1.1,
         flexDirection: "column",
         justifyContent: "space-around",
-        paddingHorizontal:50,
+        paddingHorizontal:52,
+    },
+     //button containers for all other buttons
+    buttonContainer: {
+        flex:0.2,
+        flexDirection: "column",
+        justifyContent: "space-around",
+        paddingHorizontal:52,
     },
     eventContainer: {
-        backgroundColor: '#aaa',
+        backgroundColor: colors.test,
         paddingVertical: 20,
         marginBottom: 20,
         borderRadius:20,
-    },
-    //background color of where calendars are
-    calendar: {
-        flex:1,
-        borderRadius:20,
-        padding: 30,
-        paddingHorizontal: 30,
-        alignContent: 'center',
+        //shadow option
+        shadowColor: '#000',
+        shadowOpacity: 0.5,
+        elevation: 10,
+        shadowRadius: 20 ,
+        shadowOffset : { width: 0, height: 2},
         //using border for debugging
-        backgroundColor:'#708090',
+        borderColor:colors.debugBlue,
         borderWidth:2,
-    }
+    },
+    //calendar stuff
+    calendar: {
+        transform: [{ scale: 1.4 }],
+        marginTop: 68,
+        marginRight: 50,
+        margin:40,
+        alignContent: "center",
+        borderRadius:12,
+        backgroundColor:colors.test,
+        paddingTop:2,
+        paddingBottom:10,
+      },
 };

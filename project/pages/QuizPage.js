@@ -27,9 +27,9 @@ export default function QuizPage({navigation}) {
                 snapToAlignment={"center"}
                 contentInset={{
                     top: 0,
-                    left: 30,
+                    left: 20,
                     bottom: 0,
-                    right: 30,
+                    right: 20,
                 }}
             >
                 {qIntensity()}
@@ -43,7 +43,7 @@ export default function QuizPage({navigation}) {
                     style={styles.button}
                     onPress={()=>navigation.push("Tabs")}
                 >
-                    <Text style={styles.mainText}>
+                    <Text style={styles.buttonText}>
                         Submit
                     </Text>
                 </TouchableOpacity>
@@ -70,30 +70,35 @@ export default function QuizPage({navigation}) {
 function qtSlider(question = "Default Question", left = 0, right = 10, start = 5, interval = 1, lText = "0", rText = "10") {
     const [isSlideValue, setSlideValue] =React.useState(start);
     return (
-        <View style={{ padding: 30, }}>
+        <View style={styles.quizContainer}>
             <View style={styles.subContainer}>
-                <Text style={styles.subText}>
-                    {question}
-                </Text>
-                <Slider
-                    style={styles.slider}
-                    minimumValue={left}
-                    maximumValue={right}
-                    thumbTintColor='rgb(252, 0, 0)'
-                    value={start}
-                    step={interval}
-                    onValueChange={(value) => setSlideValue(value)}                    
-                >                    
-                </Slider>
-                <Text style={styles.text}>
+                    <Text style={styles.questionText}>
+                        {question}
+                    </Text>
+                <View style={styles.sliderContainer}>
+                    <Slider
+                        style={styles.slider}
+                        minimumValue={left}
+                        maximumValue={right}
+                        thumbTintColor='#b6131d'
+                        value={start}
+                        step={interval}
+                        onValueChange={(value) => setSlideValue(value)}                    
+                    >                    
+                    </Slider>
+                    <View style={styles.sliderEndText}>
+                    <Text>
+                        {lText}                                       
+                    </Text>
+                    <Text>
+                        {rText}                    
+                    </Text>
+                    </View>
+                </View>
+                <Text style={styles.headText}>
                     {"Slider value: " + isSlideValue}                    
                 </Text>
-                <Text style={styles.text}>
-                    {lText + " should be on the left"}                    
-                </Text>
-                <Text style={styles.text}>
-                    {rText + " should be on the right"}                    
-                </Text>
+                
             </View>
         </View>
     );
@@ -111,11 +116,12 @@ function qtSlider(question = "Default Question", left = 0, right = 10, start = 5
  */
 function qtRadio(question = "Default Question", buttons = [{ label: "d1", value: 0 }, { label: "d2", value: 1 }]) {
     return (
-        <View style={{padding:30}}>
+        <View style={styles.quizContainer}>
             <View style={styles.subContainer}>
-                <Text style={styles.subText}>
+                <Text style={styles.questionText}>
                     {question}
                 </Text>
+                <View style={styles.sliderContainer}>
                 <RadioForm
                     radio_props={buttons}
                     initial={0}
@@ -126,7 +132,11 @@ function qtRadio(question = "Default Question", buttons = [{ label: "d1", value:
                     onPress={(value) =>{}}
                     //TODO styling
                     //can change color of buttons and the like
+                    buttonColor={'#757575'}
+                    selectedButtonColor={'#b6131d'}
+                    labelStyle={{fontSize:20,color:'#212121'}}
                 />
+                </View>
             </View>
         </View>
     );

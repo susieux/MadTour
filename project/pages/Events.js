@@ -17,20 +17,20 @@ let event = getEvents(filters);
 export default function Events({navigation}) {
   return (
     <View style={styles.container}>
-      <View style={styles.buttonContainer}>
-      <TouchableOpacity 
+        <View style={styles.buttonContainer}>
+            <TouchableOpacity 
             style={styles.button}
             onPress={()=>navigation.push("SelectPlan")}
-        >
-            <Text style={styles.mainText}>
-                Select Plan
-            </Text>
-        </TouchableOpacity>
+            >
+                <Text style={styles.buttonText}>
+                    Select Plan
+                </Text>
+            </TouchableOpacity>
         </View>
-        <Text style={styles.mainText}>
+        {/* <Text style={styles.mainText}>
             Currently at Events
-        </Text>
-        <ScrollView
+        </Text> */}
+        <ScrollView style={styles.contentContainer}
             showsVerticalScrollIndicator={false}
         >
           {listEvents(navigation)}
@@ -60,7 +60,7 @@ function makeEvent(value, navigation) {
             style={styles.eventContainer}
             onPress={() => navigation.push("Event")}
         >
-            <Text style={styles.buttonEventText}>
+            <Text style={styles.buttonHeaderEventText}>
                 {value + " the coolest event of the year"}
             </Text>
             <Text style={styles.buttonEventText}>

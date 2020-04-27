@@ -12,15 +12,15 @@ export default function Activities({navigation}) {
             style={styles.button}
             onPress={()=>navigation.push("SelectPlan")}
         >
-            <Text style={styles.mainText}>
+            <Text style={styles.buttonText}>
                 Select Plan
             </Text>
       </TouchableOpacity>
         </View>
-        <Text style={styles.mainText}>
+        {/* <Text style={styles.mainText}>
             Currently at Select Activities
-        </Text>
-        <ScrollView>
+        </Text> */}
+        <ScrollView style={styles.contentContainer}>
           {example(navigation)}
         </ScrollView>
     </View>
@@ -44,7 +44,7 @@ function makeAct(value, navigation){
             style={styles.eventContainer}
             onPress={() => navigation.push("Event")}
         >
-            <Text style={styles.buttonEventText}>
+            <Text style={styles.buttonHeaderEventText}>
                 {value + " the coolest activity of the year"}
             </Text>
             <Text style={styles.buttonEventText}>

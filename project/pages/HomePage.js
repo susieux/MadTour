@@ -13,13 +13,12 @@ export default function HomePage({navigation}) {
             <View style={styles.logoContainer}>
                 <Image style={styles.logosquare} source={require('../assets/images/Logo-Square-w.png')}></Image>
                 <Image style={styles.logo} source={require('../assets/images/MadTour-w.png')}></Image>
-            </View>
-            {/* <Image source = {require('../assets/images/Logo-MadTour-d.png')} style={styles.images} /> */}
-            <Text style={styles.subText}>
-                The tour planner for Madison, Wisconsin
+                <Text style={styles.headText}>
+                The tour planner for Madison, WI
             </Text>
+            </View>
         </View>
-        <View style={styles.buttonContainer}>
+        <View style={styles.homeButtonContainer}>
             <TouchableOpacity style={styles.button} onPress={() =>navigation.push("Quiz")}>
                 <Text style={styles.buttonText}>
                     New Plan

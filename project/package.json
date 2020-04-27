@@ -15,11 +15,11 @@
     ],
     "collectCoverage": true,
     "collectCoverageFrom": [
-    "**/*.{js,jsx}",
-    "!**/coverage/**",
-    "!**/node_modules/**",
-    "!**/babel.config.js",
-    "!**/jest.setup.js"
+      "**/*.{js,jsx}",
+      "!**/coverage/**",
+      "!**/node_modules/**",
+      "!**/babel.config.js",
+      "!**/jest.setup.js"
     ]
   },
   "dependencies": {
@@ -42,6 +42,7 @@
     "react-native-calendar-picker": "^6.0.6",
     "react-native-calendars": "^1.265.0",
     "react-native-gesture-handler": "~1.5.0",
+    "react-native-responsive-fontsize": "^0.4.3",
     "react-native-safe-area-context": "0.6.0",
     "react-native-screens": "2.0.0-alpha.12",
     "react-native-simple-radio-button": "^2.7.4",

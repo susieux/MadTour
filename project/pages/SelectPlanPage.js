@@ -12,12 +12,12 @@ export default function SelectPlanPage({navigation}) {
             style={styles.button}
             onPress={()=>navigation.popToTop()}
         >
-            <Text style={styles.mainText}>
+            <Text style={styles.buttonText}>
                 Back to Home
             </Text>
         </TouchableOpacity>
       </View>  
-        <ScrollView>
+        <ScrollView style={styles.contentContainer}>
           {example(navigation)}
         </ScrollView>
 

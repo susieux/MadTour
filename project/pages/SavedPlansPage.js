@@ -6,17 +6,19 @@ import styleInfo from '../styleInfo.js';
 export default function SavedPlansPage({navigation}) {
   return (
     <View style={styles.container}>
-        <Text style={styles.mainText}>
+      <Text style={styles.mainText}>
             Currently at Saved Plans
         </Text>
+        <View style={styles.buttonContainer}>
         <TouchableOpacity 
             style={styles.button}
             onPress={()=>navigation.push("Plan")}
         >
-            <Text style={styles.mainText}>
+            <Text style={styles.buttonText}>
                 View Plan
             </Text>
         </TouchableOpacity>
+        </View>
     </View>
   );
 }
