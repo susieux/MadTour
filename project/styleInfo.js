@@ -230,8 +230,8 @@ export default {
         shadowRadius: 20 ,
         shadowOffset : { width: 0, height: 2},
         //using border for debugging
-        borderColor:colors.debugBlue,
-        borderWidth:2,
+        // borderColor:colors.debugBlue,
+        // borderWidth:2,
     },
     //calendar stuff
     calendar: {
