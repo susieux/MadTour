@@ -7,15 +7,17 @@ const w = Dimensions.get('screen').width;
 const h = Dimensions.get('screen').height;
 
 const colors = {
-    bg: '#fad1d1', //light pink for backgrounds
-    bgMid: '#ff9999', //darker pink used as a middle red for backgrounds
-    bgAccent: '#e57373', //even darker red to accent the bgMid color
-    mainFill: '#c62828', //main red for logos and important pieces
-    offwhite:'#efefef', //a very off white to be used in place of white
+    // bg: '#fad1d1', //light pink for backgrounds
+    // bgMid: '#ff9999', //darker pink used as a middle red for backgrounds
+    // bgAccent: '#e57373', //even darker red to accent the bgMid color
+    // mainFill: '#c62828', //main red for logos and important pieces
+    // offwhite:'#efefef', //a very off white to be used in place of white
+    // gray:'#757575',
+    
     white:'#ffffff',
     black:'#212121',
     subBlack:'#202020',
-    gray:'#757575',
+    
     debugGreen:'#0f0',
     debugBlue:'#00f',
     debugYellow:'#ff0',
@@ -23,11 +25,11 @@ const colors = {
     pLight:'#ef5046',
     pMain:'#b6131d',
     pDark:'#7e0000',
-
     sLight:'#a4a4a4',
     sMain:'#757575',
     sDark:'#494949',
-    test:'#efefef',
+    
+    background:'#efefef',
 }
 
 export default {
@@ -62,7 +64,7 @@ export default {
     },
     //Container within the contentContainer - used mainly for quiz scroll section
     subContainer: {
-        backgroundColor: colors.test,
+        backgroundColor: colors.background,
         width: w*.8,
         borderRadius:12,
         flex:1,
@@ -219,7 +221,7 @@ export default {
         paddingHorizontal:52,
     },
     eventContainer: {
-        backgroundColor: colors.test,
+        backgroundColor: colors.background,
         paddingVertical: 20,
         marginBottom: 20,
         borderRadius:20,
@@ -241,7 +243,7 @@ export default {
         margin:40,
         alignContent: "center",
         borderRadius:12,
-        backgroundColor:colors.test,
+        backgroundColor:colors.background,
         paddingTop:2,
         paddingBottom:10,
       },
