@@ -2,6 +2,9 @@ import * as React from 'react';
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
+import logoHead from '../assets/images/Logo-MadTour-w.png';
+import logo1 from '../assets/images/TeaCeremony_2A474C47-DA94-4597-880F93834B4BDF83_69fcd7bc-6119-47f9-be9038ee43093548.jpg';
+
 import styleInfo from '../styleInfo.js';
 
 //breaks mobile
@@ -14,62 +17,102 @@ let event = getEvents(filters);
 export default function Events({navigation}) {
   return (
     <View style={styles.container}>
-      <TouchableOpacity 
+        <View style={styles.buttonContainer}>
+            <TouchableOpacity 
             style={styles.button}
             onPress={()=>navigation.push("SelectPlan")}
-        >
-            <Text style={styles.mainText}>
-                Select Plan
-            </Text>
-        </TouchableOpacity>
-        <Text style={styles.mainText}>
+            >
+                <Text style={styles.buttonText}>
+                    Select Plan
+                </Text>
+            </TouchableOpacity>
+        </View>
+        {/* <Text style={styles.mainText}>
             Currently at Events
-        </Text>
-        <ScrollView
+        </Text> */}
+        <ScrollView style={styles.contentContainer}
             showsVerticalScrollIndicator={false}
         >
-          {example(navigation)}
+          {listEvents(navigation)}
         </ScrollView>
     </View>
   );
 }
 
 //To simulate going through and creating a clickable for each button
-function example(navigation){
-  let ret = [];
-  for(let i = 0; i< 10; i++){
-    ret[i] = makeEvent(i, navigation);
-  }
-  return ret;
+function listEvents(navigation) {
+    let ret = [];
+    for (let i = 0; i < 10; i++) {
+        ret[i] = makeEvent(i, navigation);
+    }
+    return ret;
 }
 
 //Each individual clickable with basic event info shown. Info will be where value is display event, time, and location?
-function makeEvent(value, navigation){
-  return (
-    <TouchableOpacity 
-      key={value + "act"}
-      style={styles.eventContainer}
-      onPress={()=>navigation.push("Event")}
-    >
-        <Text style={styles.buttonEventText}>
-            {value + " the coolest event of the year"}
-        </Text>
-        <Text style={styles.buttonEventText}>
-            {"Date: "}
-        </Text>
-        <Text style={styles.buttonEventText}>
-            {"Time: "}
-        </Text>
-        <Text style={styles.buttonEventText}>
-            {"Event Tags"}
-        </Text>
-        <View style={styles.subContainer,{flex:0.1,backgroundColor:'#0f0'}}> 
-        </View>
-    </TouchableOpacity>
-  );
+function makeEvent(value, navigation) {
+    let tags = "";
+    for (let i = (Math.floor(Math.random() * 3 + 1)); i > 0; i--) {
+        if(i=1){
+            tags = 'Arts & Crafts';
+        }
+        else if(i=2){
+            tags = 'Bars & Nightlife';
+        }
+        else if(i=3){
+            tags = 'Breweries, Wineries & Distilleries';
+        }
+        // if(i=4){
+        //     tags = 'Galleries & Museum';
+        // }
+        // if(i=5){
+        //     tags = 'Guided Tours';
+        // }
+        // if(i=6){
+        //     tags = 'Health & Welness';
+        // }
+        // if(i=7){
+        //     tags = 'Local';
+        // }
+        // if(i=8){
+        //     tags = 'Performing Arts';
+        // }
+        // if(i=9){
+        //     tags = 'Special Events';
+        // }
+        // if(i=10){
+        //     tags = 'Sports & Recreation';
+        // }
+        // tags = tags + "tag " + i + ", ";
+    }
+    return (
+        <TouchableOpacity
+            key={value + "act"}
+            style={styles.eventContainer}
+            onPress={() => navigation.push("Event")}
+        >
+            <Text style={styles.buttonHeaderEventText}>
+                {"Chinese Tea Ceremony"}
+            </Text>
+            <Text style={styles.buttonEventText}>
+                {"Date: April 18, 2020"}
+            </Text>
+            <Text style={styles.buttonEventText}>
+                {"Location: 800 Langdon St."}
+            </Text>
+            <Text style={styles.buttonEventText}>
+                {tags}
+            </Text>
+            <View style={styles.subContainer, { flex: 0.1, backgroundColor: '#0f0' }}>
+            </View>
+            <Image
+                source={logo1}
+                style={styles.logosquare}
+            />
+        </TouchableOpacity>
+    );
 }
 
-function getEvents(){
+function getEvents() {
     //retrieve the events from the site and place in the json file
     // backend stuff
     //retrieve data into the events page 

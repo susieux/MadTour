@@ -6,16 +6,21 @@ import styleInfo from '../styleInfo.js';
 export default function PlanPage({navigation}) {
   return (
     <View style={styles.container}>        
+        <View style={styles.buttonContainer}>
         <TouchableOpacity 
             style={styles.button}
-            onPress={()=> alert("TODO: Save to storage")}
+            onPress={()=> alert("Saved to Saved Schedules")}
         >
-            <Text style={styles.mainText}>
+            <Text style={styles.buttonText}>
                 Save Plan
             </Text>
         </TouchableOpacity>
+        </View>
         <Text style={styles.eventText}>
-          {"Name: "}
+          {"Event 1"}
+        </Text>
+        <Text style={styles.eventText}>
+          {"Name: Betty Lou Cruises"}
         </Text>
         <Text style={styles.eventText}>
           {"Times: "}
@@ -24,7 +29,19 @@ export default function PlanPage({navigation}) {
           {"Distance: "}
         </Text>
         <Text style={styles.eventText}>
-          {"Summary: "}
+          {""}
+        </Text>
+        <Text style={styles.eventText}>
+          {"Event 2"}
+        </Text>
+        <Text style={styles.eventText}>
+          {"Name: Chinese Tea Ceremony"}
+        </Text>
+        <Text style={styles.eventText}>
+          {"Times: "}
+        </Text>
+        <Text style={styles.eventText}>
+          {"Distance: "}
         </Text>
     </View>
   );

@@ -7,17 +7,17 @@ import styleInfo from '../styleInfo.js';
 export default function SelectPlanPage({navigation}) {
   return (
     <View style={styles.container}>
-               
+      <View style={styles.buttonContainer}> 
         <TouchableOpacity 
             style={styles.button}
             onPress={()=>navigation.popToTop()}
         >
-            <Text style={styles.mainText}>
+            <Text style={styles.buttonText}>
                 Back to Home
             </Text>
         </TouchableOpacity>
-
-        <ScrollView>
+      </View>  
+        <ScrollView style={styles.contentContainer}>
           {example(navigation)}
         </ScrollView>
 
