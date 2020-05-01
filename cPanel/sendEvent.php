@@ -73,23 +73,36 @@ $sql = substr($sql, 0, -3) . ") ORDER BY e.title ASC";
 
 $result = mysqli_query($conn, $sql);
 
-$rows = array();
-while($r = mysqli_fetch_assoc($result)) {
-    $rows[] = $r;
+// In case of an empty query
+if (mysqli_num_rows($result) == 0) { 
+    if ($conn -> query($sql) !== FALSE) {
+        echo "message: No events satisfy all conditions";
+        // echo json_encode(array("events" => []));
+    }
+    else {
+         echo "Error: " .$sql . "<br>". $conn->error;
+     }
 }
 
-// echo json_encode(array($rows));
-
-if ($conn -> query($sql) !== FALSE) {
-     header('Content-Type: application/json');
-    // echo json_encode(array(
-    //     'message' => 'Submitted',
-    //     ));
-    echo json_encode(array("events" =>$rows));
- }
- else {
-     echo "Error: " .$sql . "<br>". $conn->error;
- }
+else {
+    $rows = array();
+    while($r = mysqli_fetch_assoc($result)) {
+        $rows[] = $r;
+    }
+    
+    // echo json_encode(array($rows));
+    
+    if ($conn -> query($sql) !== FALSE) {
+         header('Content-Type: application/json');
+        // echo json_encode(array(
+        //     'message' => 'Submitted',
+        //     ));
+        echo json_encode(array("events" =>$rows));
+     }
+     else {
+         echo "Error: " .$sql . "<br>". $conn->error;
+     }
+}
 
 $conn->close();
 ?>

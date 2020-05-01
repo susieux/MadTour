@@ -42,25 +42,38 @@ $sql = substr($sql, 0, -3) . ")";
 
 $result = mysqli_query($conn, $sql);
 
-$rows = array();
-while($r = mysqli_fetch_assoc($result)) {
-    $rows[] = $r;
+// In case of an empty query
+if (mysqli_num_rows($result) == 0) { 
+    if ($conn -> query($sql) !== FALSE) {
+        echo "No attractions satisfy all conditions";
+        // echo json_encode(array("attractions" => []));
+    }
+    else {
+         echo "Error: " .$sql . "<br>". $conn->error;
+     }
 }
 
-echo json_encode(array("attraction" => $rows));
-
-// if ($conn -> query($sql) !== FALSE) {
-//      header('Content-Type: application/json');
-//     // echo json_encode(array(
-//     //     'message' => 'Submitted',
-//     //     ));
-//     echo "if";
-//     echo json_encode(array($rows));
-//  }
-//  else {
-//      echo "else";
-//      echo "Error: " .$sql . "<br>". $conn->error;
-//  }
+else {
+    $rows = array();
+    while($r = mysqli_fetch_assoc($result)) {
+        $rows[] = $r;
+    }
+    
+    echo json_encode(array("attraction" => $rows));
+    
+    // if ($conn -> query($sql) !== FALSE) {
+    //      header('Content-Type: application/json');
+    //     // echo json_encode(array(
+    //     //     'message' => 'Submitted',
+    //     //     ));
+    //     echo "if";
+    //     echo json_encode(array($rows));
+    //  }
+    //  else {
+    //      echo "else";
+    //      echo "Error: " .$sql . "<br>". $conn->error;
+    //  }
+}
 
 $conn->close();
 ?>
