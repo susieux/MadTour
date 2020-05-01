@@ -1,78 +1,125 @@
 The PHP files are all stored in the phpMyAdmin folder.
 
 * conn.php is used to connect the server to the evat (event/attraction) database.
-* json_mysql_event.php and json_mysql_event_categories.php are used to store json info into corresponding databases.
-* event1.json and attraction1.json store data retrieved from the visit Madison website using web scrapper. This is used by the above 2 PHP files.
+* json_mysql_event.php, json_mysql_attraction.php and json_mysql_event_categories.php are used to store json info into corresponding databases.
+* event1.json and attraction1.json are sample json files which store data retrieved from the visit Madison website using web scrapper. They are used by the above 2 PHP files.
+* sendAttraction.php and sendEvent.php can interpret user's quiz result and return the corresponding events and attractions as json files to the frontend.
 * sendQuizResult.php is used to store user quiz responses, a sample response json file is shown in result.json.
-
+* visitMadison.py is the web scrapper we used to retrieve data from the visit Madison website. Simply run the script, it will get all events and attractions information until one year from now, and store the json files in two folders: event and attraction.
 
 
 JSON relevant info
 example taken from the element of event1.json but with some information removed for better readability
-        "address1": "3241 Garver Green",
-        "zip": "53704",
-        "startDate": "2020-01-04T06:00:00.000Z",
-        "media_raw": [
-          {
-            "mediaurl": "https://assets.simpleviewinc.com/simpleview/image/upload/crm/madison/fresh-microgreens-from-Garden-to-Be_16284BDE-264D-45DB-9E77CD88A39113AD_e6dcebae-4256-4540-b8bdf17ab3470adb.jpg",
-            "sortorder": 0,
-            "mediatype": "Image"
-          },
-          {
-            "mediaurl": "https://assets.simpleviewinc.com/simpleview/image/upload/crm/madison/local-eggs_782F4A22-6794-4A74-9D1EAB6065E7D5BD_ec2d2c5e-59c2-486f-9336b82c643633a7.jpg",
-            "sortorder": 0,
-            "mediatype": "Image"
-          }
-        ],
-        "recurrence": "Recurring weekly on Saturday",
-        "city": "Madison",
-        "typeName": "Special Event",
-        "eventTypeId": 3,
-        "recId": "48471",
-        "listing_id": 178068,
-        "recurType": 3,
-        "endDate": "2020-04-05T04:59:59.000Z",
-        "startTime": "08:00:00",
-        "location": "Garver Feed Mill",
-        "times": "From: 08:00 AM to 12:00 PM",
-        "categories": [
-          {
-            "catName": "General & Community Events",
-            "catId": "1"
-          },
-          {
-            "catName": "Kids & Families",
-            "catId": "3"
-          },
-          {
-            "catName": "Food & Drink",
-            "catId": "11"
-          },
-          {
-            "catName": "Holiday/Seasonal",
-            "catId": "25"
-          },
-          {
-            "catName": "Free Event",
-            "catId": "26"
-          }
-        ],
-        "endTime": "12:00:00",
-        "title": "Dane County Farmers' Market Late Winter Market",
-        "rank": 1,
-        "recid": "48471",
-        "loc": {
-          "type": "Point",
-          "coordinates": [
-            -89.33428379999998,
-            43.0947589
-          ]
-        },
-        "nextDate": "2020-03-29T04:59:59.000Z",
-        "date": "2020-03-29T04:59:59.000Z",
-        "id": "5e7dd9f15461f68003d8d059",
-        "url": "/event/dane-county-farmers-market-late-winter-market/48471/", //add this to the end of "https://www.visitmadison.com" 
-        "genericUrl": "/event/dane-county-farmers-market-late-winter-market/48471/",
-        "teaser": "",
-        "longitude": -89.33428379999998,
-        "latitude": 43.0947589
+        {
+            "_id": "5e94cf7b001ce5a7db8df246",
+            "startDate": "2020-04-14T05:00:00.000Z",
+            "media_raw": [
+                {
+                    "mediaurl": "https://assets.simpleviewinc.com/simpleview/image/upload/crm/madison/badgertalks-20_8bb51b5b-5056-a36a-0888745e087a1c66.jpg",
+                    "sortorder": 0,
+                    "mediatype": "Image"
+                }
+            ],
+            "typeName": "Special Event",
+            "eventTypeId": 3,
+            "recId": "49309",
+            "recurType": 0,
+            "endDate": "2020-04-15T04:59:59.000Z",
+            "startTime": "12:00:00",
+            "location": "Wherever you self-quarantine",
+            "times": "From: 12:00 PM to 12:45 PM",
+            "categories": [
+                {
+                    "catName": "Education & Lectures",
+                    "catId": "8"
+                },
+                {
+                    "catName": "Food & Drink",
+                    "catId": "11"
+                },
+                {
+                    "catName": "Free Event",
+                    "catId": "26"
+                },
+                {
+                    "catName": "Virtual Event",
+                    "catId": "29"
+                }
+            ],
+            "endTime": "12:45:00",
+            "title": "Badger Talks LIVE: Nutrition to Support Maximum Wellness During Challenging Times",
+            "udfs_object": {
+                "1256": {
+                    "name": "Expected Attendance",
+                    "value": 20,
+                    "digits": 0,
+                    "fieldid": 1256,
+                    "typeid": 4,
+                    "type": "Number",
+                    "value_raw": 20,
+                    "value_string": "20"
+                },
+                "1257": {
+                    "listid": 11691,
+                    "name": "Calendar Assignment",
+                    "value": "Main Only",
+                    "digits": 0,
+                    "fieldid": 1257,
+                    "typeid": 7,
+                    "type": "Dropdown",
+                    "value_raw": {
+                        "listid": 11691,
+                        "value": "Main Only"
+                    },
+                    "value_string": "Main Only"
+                },
+                "1267": {
+                    "listid": 13190,
+                    "name": "Event Location",
+                    "value": "Virtual Event",
+                    "digits": 0,
+                    "fieldid": 1267,
+                    "typeid": 7,
+                    "type": "Dropdown",
+                    "value_raw": {
+                        "listid": 13190,
+                        "value": "Virtual Event"
+                    },
+                    "value_string": "Virtual Event"
+                },
+                "1283": {
+                    "name": "User Group Calendar Assignment",
+                    "valuearray": [
+                        {
+                            "listid": 11722,
+                            "value": "Public (default)"
+                        }
+                    ],
+                    "digits": 0,
+                    "fieldid": 1283,
+                    "typeid": 12,
+                    "type": "Multi-Select",
+                    "value_raw": [
+                        {
+                            "listid": 11722,
+                            "value": "Public (default)"
+                        }
+                    ],
+                    "value_string": "Public (default)"
+                }
+            },
+            "sites": [
+                "primary",
+                "primary20"
+            ],
+            "rank": 1,
+            "recid": "49309",
+            "nextDate": "2020-04-15T04:59:59.000Z",
+            "date": "2020-04-15T04:59:59.000Z",
+            "id": "5e94cf7b001ce5a7db8df246",
+            "slug": "badger-talks-live%3a-nutrition-to-support-maximum-wellness-during-challenging-times",
+            "url": "/event/badger-talks-live%3a-nutrition-to-support-maximum-wellness-during-challenging-times/49309/",
+            "genericUrl": "/event/badger-talks-live%3a-nutrition-to-support-maximum-wellness-during-challenging-times/49309/",
+            "absoluteUrl": "https://www.visitmadison.com/event/badger-talks-live%3a-nutrition-to-support-maximum-wellness-during-challenging-times/49309/",
+            "teaser": ""
+        }
