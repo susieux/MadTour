@@ -33,47 +33,35 @@ if ($_POST["aSports"] == "true"){
     array_push($arr, 'Sports & Recreation');
 }
 
-$sql = "SELECT attrName, url, address, zip, phone, catName FROM attraction WHERE catName IN ('";
-
-foreach ($arr as $cat){
-    $sql .= $cat . "', '";
+// user didn't select any category, return everything
+if (count($arr) == 0){
+    $sql = "SELECT attrName, url, address, zip, phone, catName FROM attraction ORDER BY attrName";
+    // echo "No category chosen, here's all events on the chosen date.";
 }
-$sql = substr($sql, 0, -3) . ")";
+
+else{
+    $sql = "SELECT attrName, url, address, zip, phone, catName FROM attraction WHERE catName IN ('";
+    
+    foreach ($arr as $cat){
+        $sql .= $cat . "', '";
+    }
+    $sql = substr($sql, 0, -3) . ") ORDER BY attrName";
+}
 
 $result = mysqli_query($conn, $sql);
 
 // In case of an empty query
 if (mysqli_num_rows($result) == 0) { 
-    if ($conn -> query($sql) !== FALSE) {
-        echo "No attractions satisfy all conditions";
-        // echo json_encode(array("attractions" => []));
-    }
-    else {
-         echo "Error: " .$sql . "<br>". $conn->error;
-     }
+    $sql = "SELECT e.title, e.date, e.start_time, e.end_time, e.address, e.zip, e.location FROM event AS e, category AS c WHERE c.eventId = e.id AND e.date = $time ORDER BY e.title ASC";
+    $result = mysqli_query($conn, $sql);
 }
 
-else {
-    $rows = array();
-    while($r = mysqli_fetch_assoc($result)) {
-        $rows[] = $r;
-    }
-    
-    echo json_encode(array("attraction" => $rows));
-    
-    // if ($conn -> query($sql) !== FALSE) {
-    //      header('Content-Type: application/json');
-    //     // echo json_encode(array(
-    //     //     'message' => 'Submitted',
-    //     //     ));
-    //     echo "if";
-    //     echo json_encode(array($rows));
-    //  }
-    //  else {
-    //      echo "else";
-    //      echo "Error: " .$sql . "<br>". $conn->error;
-    //  }
+$rows = array();
+while($r = mysqli_fetch_assoc($result)) {
+    $rows[] = $r;
 }
+
+echo json_encode(array("attraction" => $rows));
 
 $conn->close();
 ?>

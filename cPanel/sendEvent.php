@@ -64,45 +64,45 @@ if ($_POST["eVirtual"] == "true"){
     array_push($arr, 'Virtual Event');
 }
 
-$sql = "SELECT e.title, e.date, e.start_time, e.end_time, e.address, e.zip, e.location FROM event AS e, category AS c WHERE c.eventId = e.id AND e.date = $time AND c.catName IN ('";
-
-foreach ($arr as $cat){
-    $sql .= $cat . "', '";
+// user didn't select any category, return everything
+if (count($arr) == 0){
+    $sql = "SELECT e.title, e.date, e.start_time, e.end_time, e.address, e.zip, e.location FROM event AS e, category AS c WHERE c.eventId = e.id AND e.date = $time ORDER BY e.title ASC";
+    // echo "No category chosen, here's all events on the chosen date.";
 }
-$sql = substr($sql, 0, -3) . ") ORDER BY e.title ASC";
+
+else{
+    $sql = "SELECT e.title, e.date, e.start_time, e.end_time, e.address, e.zip, e.location FROM event AS e, category AS c WHERE c.eventId = e.id AND e.date = $time AND c.catName IN ('";
+    
+    foreach ($arr as $cat){
+        $sql .= $cat . "', '";
+    }
+    $sql = substr($sql, 0, -3) . ") ORDER BY e.title ASC";
+}
 
 $result = mysqli_query($conn, $sql);
 
-// In case of an empty query
+// In case of an empty query, return everything
 if (mysqli_num_rows($result) == 0) { 
-    if ($conn -> query($sql) !== FALSE) {
-        echo "message: No events satisfy all conditions";
-        // echo json_encode(array("events" => []));
-    }
-    else {
-         echo "Error: " .$sql . "<br>". $conn->error;
-     }
+    $sql = "SELECT e.title, e.date, e.start_time, e.end_time, e.address, e.zip, e.location FROM event AS e, category AS c WHERE c.eventId = e.id AND e.date = $time ORDER BY e.title ASC";
+    $result = mysqli_query($conn, $sql);
 }
 
-else {
-    $rows = array();
-    while($r = mysqli_fetch_assoc($result)) {
-        $rows[] = $r;
-    }
-    
-    // echo json_encode(array($rows));
-    
-    if ($conn -> query($sql) !== FALSE) {
-         header('Content-Type: application/json');
-        // echo json_encode(array(
-        //     'message' => 'Submitted',
-        //     ));
-        echo json_encode(array("events" =>$rows));
-     }
-     else {
-         echo "Error: " .$sql . "<br>". $conn->error;
-     }
+$rows = array();
+while($r = mysqli_fetch_assoc($result)) {
+    $rows[] = $r;
 }
+// echo json_encode(array($rows));
+
+if ($conn -> query($sql) !== FALSE) {
+     header('Content-Type: application/json');
+    // echo json_encode(array(
+    //     'message' => 'Submitted',
+    //     ));
+    echo json_encode(array("events" =>$rows));
+ }
+ else {
+     echo "Error: " .$sql . "<br>". $conn->error;
+ }
 
 $conn->close();
 ?>
