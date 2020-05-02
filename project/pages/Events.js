@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import logoHead from '../assets/images/Logo-MadTour-w.png';
 import logo1 from '../assets/images/Logo-Square-w.png';
 
@@ -10,11 +11,13 @@ import styleInfo from '../styleInfo.js';
 //breaks mobile
 //const fs = require('fs');
 
-//data storage
-let filters; //import from QuizPage
-let event = getEvents(filters);
 
-export default function Events({navigation}) {
+
+
+export default function Events({ navigation, route }) {
+    // const { events } = route.params;
+    // let str = JSON.stringify(events);
+    // console.log(str);
   return (
     <View style={styles.container}>
         <View style={styles.buttonContainer}>
@@ -82,33 +85,40 @@ function makeEvent(value, navigation) {
     );
 }
 
-function getEvents() {
+function getEvents({ route, navigation }) {
+    const { itemId } = this.props.route.params.event;
+    console.log(itemId);
+
+
+
+
+
+
+
+
     //retrieve the events from the site and place in the json file
     // backend stuff
     //retrieve data into the events page 
 
-    /*
-    * somehow doesnt work? Node should be installed on my pc and should come with javascript>
-    *
-    const fs = require('fs');
-    var jsonString;
-    fs.readFile('..../cPanel/event1.json', (err, jsonString) => {
-        if (err) {
-            console.log("File read failed:", err);
-            return;
-        }
-        try{
-            var eventData = JSON.parse(jsonString).docs.docs;
-            eventData.forEach((e) => {
-                console.log(e._id);
-            });
-        }
-        catch(err){
-            console.log("Error parsing JSON file:",err);
-        }
-        //console.log('File data:', jsonString);
-    })
-    */
+    // const fs = require('fs');
+    // var jsonString;
+    // fs.readFile('..../cPanel/event1.json', (err, jsonString) => {
+    //     if (err) {
+    //         console.log("File read failed:", err);
+    //         return;
+    //     }
+    //     try{
+    //         var eventData = JSON.parse(jsonString).docs.docs;
+    //         eventData.forEach((e) => {
+    //             console.log(e._id);
+    //         });
+    //     }
+    //     catch(err){
+    //         console.log("Error parsing JSON file:",err);
+    //     }
+    //     //console.log('File data:', jsonString);
+    // })
+    
 }
 
 const styles = StyleSheet.create(styleInfo);

@@ -5,17 +5,15 @@ import { StyleSheet, Text, View, Dimensions, Alert } from 'react-native';
 import Slider from 'react-native-slider';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import RadioForm, { RadioButton, RadioButtonInput, RadioButtonLabel } from 'react-native-simple-radio-button';
-import CalendarPicker from 'react-native-calendar-picker';
+import { Calendar } from 'react-native-calendars';
 import TestCalendars from './testCalendars'
-
-
+import { useNavigation } from '@react-navigation/native';
 import styleInfo from '../styleInfo.js';
-import testCalendars from './testCalendars';
 
 const width = Dimensions.get('window');
 
-export default function QuizPage({ navigation }) {
-    //Lixing
+export default function QuizPage({navigation}) {
+    //Attraction attributes
     const [aArt, setaArt] = useState(false);
     const [aBars, setaBars] = useState(false);
     const [aBrew, setaBrew] = useState(false);
@@ -26,7 +24,7 @@ export default function QuizPage({ navigation }) {
     const [aPerform, setaPerform] = useState(false);
     const [aSpecial, setaSpecial] = useState(false);
     const [aSports, setaSports] = useState(false);
-
+    //Event attributes
     const [eAnnual, seteAnnual] = useState(false);
     const [eArt, seteArt] = useState(false);
     const [eEducation, seteEducation] = useState(false);
@@ -47,7 +45,8 @@ export default function QuizPage({ navigation }) {
     const [eTours, seteTours] = useState(false);
     const [eTrivia, seteTrivia] = useState(false);
     const [eVirtual, seteVirtual] = useState(false);
-    //End
+    //Date picker
+    const [startDate, setStartDate] = useState(new Date());
     return (
         <View style={styles.container}>
             <ScrollView
@@ -73,6 +72,9 @@ export default function QuizPage({ navigation }) {
                         <Text style={styles.questionText}>
                             Choose the type of attraction you like
                 </Text>
+                        <Text style={styles.subText}>
+                            Scroll to see all the options
+                            </Text>
                         <ScrollView>
                             <CheckBox
                                 title='Arts & Crafts'
@@ -80,7 +82,7 @@ export default function QuizPage({ navigation }) {
                                 uncheckedIcon='circle-o'
                                 checkedIcon='dot-circle-o'
                                 onPress={() => {
-                                    
+
                                     setaArt(!aArt);
                                 }}
                             />
@@ -191,6 +193,9 @@ export default function QuizPage({ navigation }) {
                         <Text style={styles.questionText}>
                             Choose the type of event you like
                 </Text>
+                        <Text style={styles.subText}>
+                            Scroll to see all the options
+                            </Text>
                         <ScrollView >
                             <CheckBox
                                 title='Annual Events'
@@ -415,21 +420,48 @@ export default function QuizPage({ navigation }) {
                         </ScrollView>
                     </View>
                 </View>
-                {qTimeFrame()}
+                <View showsVerticalScrollIndicator={false}>
+                    <View style={styles.quizContainer}>
+                        {/* <View style ={styles.subContainer}> */}
+                        <Calendar
+                            current={startDate}
+                            hideExtraDays
+                            onDayPress={(date) => setStartDate(date)}
+                            markedDates={{
+                                [startDate.dateString]: {
+                                    selected: true,
+                                    disableTouchEvent: true,
+                                    selectedDotColor: 'orange'
+                                }
+                            }}
+                            style={styles.calendar}
+                            theme={{
+                                monthTextColor: '#7e0000',
+                                textMonthFontWeight: 'bold',
+                                textMonthFontSize: 18,
+                                todayTextColor: '#7e0000',
+                                textDayHeaderFontWeight: 'bold',
+                                dayTextColor: '#494949',
+                                selectedDayBackgroundColor: '#ef5046',
+                            }}
+                        />
+                    </View>
+                    {/* </View> */}
+                </View>
             </ScrollView>
             <View style={styles.buttonContainer}>
                 <TouchableOpacity
                     style={styles.button}
-                    onPress={submit.bind(aArt,aArt, aBars, aBrew, aGalleries, aGuidedTour, aHealth, aLocal, aPerform, aSpecial, aSports,
-                        eAnnual,eArt,eEducation,eEntertainment,eFairs,eFood,eGallery,eGeneral,eHoliday,eKids,eLocal,eMusic,
-                        eNature,eShopping, eTheater,eTours,eTrivia,eVirtual)}
+                    onPress={submit.bind(aArt, aArt, aBars, aBrew, aGalleries, aGuidedTour, aHealth, aLocal, aPerform, aSpecial, aSports,
+                        eAnnual, eArt, eEducation, eEntertainment, eFairs, eFood, eGallery, eGeneral, eHoliday, eKids, eLocal, eMusic,
+                        eNature, eShopping, eTheater, eTours, eTrivia, eVirtual, startDate,navigation)}
                 >
                     <Text style={styles.buttonText}>
                         Submit
                     </Text>
                 </TouchableOpacity>
             </View>
-        </View>
+        </View >
     );
 }
 
@@ -486,8 +518,9 @@ function qtSlider(question = "Default Question", left = 0, right = 10, start = 5
 }
 //Used to send user's info as JSON to the backend
 function submit(aArt, aBars, aBrew, aGalleries, aGuidedTour, aHealth, aLocal, aPerform, aSpecial, aSports,
-    eAnnual,eArt,eEducation,eEntertainment,eFairs,eFood,eGallery,eGeneral,eHoliday,eKids,eLocal,eMusic,
-    eNature,eShopping, eTheater,eTours,eTrivia,eVirtual) {
+    eAnnual, eArt, eEducation, eEntertainment, eFairs, eFood, eGallery, eGeneral, eHoliday, eKids, eLocal, eMusic,
+    eNature, eShopping, eTheater, eTours, eTrivia, eVirtual, startDate,navigation) {
+    //Data storage
     //Send attraction
     var formdataA = new FormData();
     formdataA.append("aArt", aArt);
@@ -503,18 +536,19 @@ function submit(aArt, aBars, aBrew, aGalleries, aGuidedTour, aHealth, aLocal, aP
     formdataA.append("aBars", aBars);
 
     var requestOptions = {
-      method: 'POST',
-      body: formdataA,
-      redirect: 'follow'
+        method: 'POST',
+        body: formdataA,
+        redirect: 'follow'
     };
-    
-    fetch("http://shifanzhou.com/sendAttraction.php", requestOptions)
-      .then(response => response.text())
-      .then(result => console.log(result))
-      .catch(error => console.log('error', error));
 
-      //Send events
+    fetch("http://shifanzhou.com/sendAttraction.php", requestOptions)
+        .then(response => response.json())
+        .then(result =>navigation.navigate('Tabs',{screen:'Activities',params:{attraction:result}}))
+        .catch(error => console.log('error', error));
+
+    //Send events
     var formdataE = new FormData();
+    let time = "'" + startDate.dateString + "'";
     formdataE.append("eAnnual", eAnnual);
     formdataE.append("eArt", eArt);
     formdataE.append("eEducation", eEducation);
@@ -529,21 +563,21 @@ function submit(aArt, aBars, aBrew, aGalleries, aGuidedTour, aHealth, aLocal, aP
     formdataE.append("eMusic", eMusic);
     formdataE.append("eNature", eNature);
     formdataE.append("eShopping", eShopping);
-    formdataE.append(" eTheater",  eTheater);
+    formdataE.append(" eTheater", eTheater);
     formdataE.append("eTours", eTours);
     formdataE.append("eTrivia", eTrivia);
     formdataE.append("eVirtual", eVirtual);
-
+    formdataE.append("time", time);
     var requestOptionsE = {
-      method: 'POST',
-      body: formdataE,
-      redirect: 'follow'
+        method: 'POST',
+        body: formdataE,
+        redirect: 'follow'
     };
-    
+
     fetch("http://shifanzhou.com/sendEvent.php", requestOptionsE)
-      .then(response => response.text())
-      .then(result => console.log(result))
-      .catch(error => console.log('error', error));
+        .then(response => response.json())
+        .then(result =>navigation.navigate('Tabs',{screen:'Events',params:{events:result}}))
+        .catch(error => console.log(error));
 }
 /**
  * Used to generalize questions that can have the input of Radio Buttons
@@ -642,7 +676,34 @@ function qTimeFrame() {
     //should implement the calendar picker. 
     //use testCalendarPicker as a reference.
 
-    return <TestCalendars />;
+    return (<View showsVerticalScrollIndicator={false}>
+        <View style={styles.quizContainer}>
+            {/* <View style ={styles.subContainer}> */}
+            <Calendar
+                current={startDate}
+                hideExtraDays
+                onChange={date => setStartDate(date)}
+                markedDates={{
+                    [this.state.selected]: {
+                        selected: true,
+                        disableTouchEvent: true,
+                        selectedDotColor: 'orange'
+                    }
+                }}
+                style={styles.calendar}
+                theme={{
+                    monthTextColor: '#7e0000',
+                    textMonthFontWeight: 'bold',
+                    textMonthFontSize: 18,
+                    todayTextColor: '#7e0000',
+                    textDayHeaderFontWeight: 'bold',
+                    dayTextColor: '#494949',
+                    selectedDayBackgroundColor: '#ef5046',
+                }}
+            />
+        </View>
+        {/* </View> */}
+    </View>);
 }
 
 const styles = StyleSheet.create(styleInfo);
