@@ -29,7 +29,7 @@
 
   <meta name="viewport" content="width=device-width">
   
-  <title>MadTour/json_mysql_event.php at Lixing · susieux/MadTour</title>
+  <title>MadTour/json_mysql_attraction.php at Lixing · susieux/MadTour</title>
     <meta name="description" content="MadTour, a tour planning mobile application for visitors to Madison, WI :airplane: :world_map: - susieux/MadTour">
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
   <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
@@ -39,10 +39,10 @@
     <meta property="og:image" content="https://avatars3.githubusercontent.com/u/24953710?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="susieux/MadTour" /><meta property="og:url" content="https://github.com/susieux/MadTour" /><meta property="og:description" content="MadTour, a tour planning mobile application for visitors to Madison, WI :airplane: :world_map: - susieux/MadTour" />
 
   <link rel="assets" href="https://github.githubassets.com/">
-  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6NTI5MTU5NzMyOjJhZGVhYTFhNDRmYzU5YTdiY2JhZjVlOTIyYjU3ZTMyMmNmNzcxYjc3Mjk0MDJkMGVlOWZlN2E5ZDRlNjUzOGI=--9323a356324e7be4081ac129a860db0443537170">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6NTI5MTU5NzMyOjUxMjBlNTQzMjY3NTA1Mjk1YjRhZWZjNTg1NmQ0MzI3NjdlNTdkYzYxNzQ4MzA3MTg3MWE2NGFkNzFkMzhiMGM=--36528e6d47909860f80b679f1133854214dadc71">
   <link rel="sudo-modal" href="/sessions/sudo_modal">
 
-  <meta name="request-id" content="ED99:7451:604560:9104F7:5EACFBE1" data-pjax-transient="true" /><meta name="html-safe-nonce" content="69eaccd98391edf1a210e4e4ac897cdc5bd79e50" data-pjax-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS9zdXNpZXV4L01hZFRvdXIvdHJlZS9MaXhpbmcvY1BhbmVsIiwicmVxdWVzdF9pZCI6IkVEOTk6NzQ1MTo2MDQ1NjA6OTEwNEY3OjVFQUNGQkUxIiwidmlzaXRvcl9pZCI6IjQ4MDY3MjE2NjYwMzY4NDI1NTEiLCJyZWdpb25fZWRnZSI6ImlhZCIsInJlZ2lvbl9yZW5kZXIiOiJpYWQifQ==" data-pjax-transient="true" /><meta name="visitor-hmac" content="20f176bb3c3c0009cc838164a3cbfbe71de85ec1dd588bdc595a9d616a5ec643" data-pjax-transient="true" />
+  <meta name="request-id" content="ED99:7451:60431C:910282:5EACFBDB" data-pjax-transient="true" /><meta name="html-safe-nonce" content="69eaccd98391edf1a210e4e4ac897cdc5bd79e50" data-pjax-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS9zdXNpZXV4L01hZFRvdXIvdHJlZS9MaXhpbmcvY1BhbmVsIiwicmVxdWVzdF9pZCI6IkVEOTk6NzQ1MTo2MDQzMUM6OTEwMjgyOjVFQUNGQkRCIiwidmlzaXRvcl9pZCI6IjQ4MDY3MjE2NjYwMzY4NDI1NTEiLCJyZWdpb25fZWRnZSI6ImlhZCIsInJlZ2lvbl9yZW5kZXIiOiJpYWQifQ==" data-pjax-transient="true" /><meta name="visitor-hmac" content="3c5d87e841a0f6c6254de4927dca30e03796c5c19e1fe20b2c42f36e68b95752" data-pjax-transient="true" />
 
 
 
@@ -76,21 +76,21 @@
 
       <meta name="expected-hostname" content="github.com">
 
-      <meta name="js-proxy-site-detection-payload" content="NzZiMmRlZDA3NjhiMjYyMzYzM2FkY2Y3MjhjNTY3ZWU5NzZiZTM2ZmFmZTBlNWY5OWEwZTE0ZTU3ODU0ZWY4Y3x7InJlbW90ZV9hZGRyZXNzIjoiNTAuOTMuMjIyLjE2IiwicmVxdWVzdF9pZCI6IkVEOTk6NzQ1MTo2MDQ1NjA6OTEwNEY3OjVFQUNGQkUxIiwidGltZXN0YW1wIjoxNTg4Mzk0OTg2LCJob3N0IjoiZ2l0aHViLmNvbSJ9">
+      <meta name="js-proxy-site-detection-payload" content="N2M2OGM1Yzg4NGMyNTQwZTA4NmYzNGVkMTVkZmU1OWNmNWM0Yzk3ODc2MTQ1MTc2NTdjNTM2NzI1ODgxYmFhYnx7InJlbW90ZV9hZGRyZXNzIjoiNTAuOTMuMjIyLjE2IiwicmVxdWVzdF9pZCI6IkVEOTk6NzQ1MTo2MDQzMUM6OTEwMjgyOjVFQUNGQkRCIiwidGltZXN0YW1wIjoxNTg4Mzk0OTc3LCJob3N0IjoiZ2l0aHViLmNvbSJ9">
 
     <meta name="enabled-features" content="MARKETPLACE_TRENDING_SOCIAL_PROOF,MARKETPLACE_RECOMMENDATIONS,MARKETPLACE_PENDING_INSTALLATIONS,GHE_CLOUD_TRIAL,PAGE_STALE_CHECK">
 
   <meta http-equiv="x-pjax-version" content="c4225fc3c5010019067425065faf9eb2">
   
 
-      <link href="https://github.com/susieux/MadTour/commits/Lixing.atom?token=AI3YKOUS7A2CSYUMIYZDQIF4XDVPS" rel="alternate" title="Recent Commits to MadTour:Lixing" type="application/atom+xml">
+      <link href="https://github.com/susieux/MadTour/commits/Lixing.atom?token=AI3YKOWPZ5YD6Z2ZECV4O754XDVPC" rel="alternate" title="Recent Commits to MadTour:Lixing" type="application/atom+xml">
 
   <meta name="go-import" content="github.com/susieux/MadTour git https://github.com/susieux/MadTour.git">
 
   <meta name="octolytics-dimension-user_id" content="24953710" /><meta name="octolytics-dimension-user_login" content="susieux" /><meta name="octolytics-dimension-repository_id" content="244774036" /><meta name="octolytics-dimension-repository_nwo" content="susieux/MadTour" /><meta name="octolytics-dimension-repository_public" content="false" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="244774036" /><meta name="octolytics-dimension-repository_network_root_nwo" content="susieux/MadTour" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
 
 
-    <link rel="canonical" href="https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_event.php" data-pjax-transient>
+    <link rel="canonical" href="https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_attraction.php" data-pjax-transient>
 
 
   <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
@@ -164,7 +164,7 @@
           spellcheck="false"
           autocomplete="off"
           >
-          <input type="hidden" value="xIoM+BO2fQx2v8fSno13FAZcZaC2dsW56BYqa/z9Yy2VdhNY+vOWt6vz2OnJHGKlxHWjdtA8mfYKyTfMni2IvQ==" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" />
+          <input type="hidden" value="ZPYNtnrP+9uPtx96vqRSv2rx2h3P04w6SCRXGGFStaI1ChIWk4oQYFL7AEHpNUcOqNgcy6mZ0HWq+0q/A4JeMg==" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" />
           <input type="hidden" class="js-site-search-type-field" name="type" >
             <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
 
@@ -315,7 +315,7 @@
       <img class="avatar avatar-user" height="20" width="20" alt="@jikaizhang" src="https://avatars1.githubusercontent.com/u/37193018?s=60&amp;u=2c03a175a59f4f303247b45df99334a683f9e9ec&amp;v=4" />
       jikaizhang
 </a>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="MwgqlLF4WBSlHTpAU0T7joEvm5f2hOKh+OxkL6kQaZB0xttii0xUGs+WQn5q4/h1quxQZ/ndvAZyI8x3WkTIPQ==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="rnzIQp7/fDQARURPWp7elKQkKIj5qAq+z11xuzgkmPbpsjm0pMtwOmrOPHFjOd1vj+fjePbxVBlFktnjy3A5Ww==" />
       <button type="submit" class="Header-link mr-0 mr-lg-3 py-2 py-lg-3 border-top border-lg-top-0 border-white-fade-15 d-lg-none btn-link d-block width-full text-left" data-ga-click="Header, sign out, icon:logout" style="padding-left: 2px;">
         <svg class="octicon octicon-sign-out v-align-middle" viewBox="0 0 16 17" version="1.1" width="16" height="17" aria-hidden="true"><path fill-rule="evenodd" d="M12 9V7H8V5h4V3l4 3-4 3zm-2 3H6V3L2 1h8v3h1V1c0-.55-.45-1-1-1H1C.45 0 0 .45 0 1v11.38c0 .39.22.73.55.91L6 16.01V13h4c.55 0 1-.45 1-1V8h-1v4z"></path></svg>
         Sign out
@@ -412,7 +412,7 @@
   " data-team-hovercards-enabled>
   <details class="js-user-status-details details-reset details-overlay details-overlay-dark">
     <summary class="btn-link btn-block link-gray no-underline js-toggle-user-status-edit toggle-user-status-edit "
-      role="menuitem" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.click&quot;,&quot;payload&quot;:{&quot;profile_user_id&quot;:24953710,&quot;target&quot;:&quot;EDIT_USER_STATUS&quot;,&quot;user_id&quot;:37193018,&quot;originating_url&quot;:&quot;https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_event.php&quot;}}" data-hydro-click-hmac="a2d7fb7912a6cb5c69c77c96c6526aa1e82b92742c50c0c5a0e71ea43b6d703e">
+      role="menuitem" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.click&quot;,&quot;payload&quot;:{&quot;profile_user_id&quot;:24953710,&quot;target&quot;:&quot;EDIT_USER_STATUS&quot;,&quot;user_id&quot;:37193018,&quot;originating_url&quot;:&quot;https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_attraction.php&quot;}}" data-hydro-click-hmac="89307c90ff61bed9b01a3df0f4a1ce925dd5ea7e7d5cd92bfd0026ed6864ee61">
       <div class="d-flex">
         <div class="f6 lh-condensed user-status-header
           d-inline-block v-align-middle
@@ -439,7 +439,7 @@
       </div>
     </summary>
     <details-dialog class="details-dialog rounded-1 anim-fade-in fast Box Box--overlay" role="dialog" tabindex="-1">
-      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="position-relative flex-auto js-user-status-form" action="/users/status?compact=1&amp;link_mentions=0&amp;truncate=1" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="zdjBrXrIHVCpn0E56HvHNYuspHXs/+iEgocosv05wXkfBmAql++8BVInf+0f9ajlsGOkLlBqgzVM1PDrBgXU1g==" />
+      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="position-relative flex-auto js-user-status-form" action="/users/status?compact=1&amp;link_mentions=0&amp;truncate=1" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="0XqsyeE40ymh5tF51gkXavPt3acEue3rjNC/UwjbSDQDpA1ODB9yfFpe760hh3i6yCLd/LgshlpCg2cK8+ddmw==" />
         <div class="Box-header bg-gray border-bottom p-3">
           <button class="Box-btn-octicon js-toggle-user-status-edit btn-octicon float-right" type="reset" aria-label="Close dialog" data-close-dialog>
             <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
@@ -557,17 +557,17 @@
       </li>
       <li class="dropdown-divider" role="none"></li>
         <li>
-          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 30 minutes" value="2020-05-02T00:19:46-05:00">
+          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 30 minutes" value="2020-05-02T00:19:37-05:00">
             in 30 minutes
           </button>
         </li>
         <li>
-          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 1 hour" value="2020-05-02T00:49:46-05:00">
+          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 1 hour" value="2020-05-02T00:49:37-05:00">
             in 1 hour
           </button>
         </li>
         <li>
-          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 4 hours" value="2020-05-02T03:49:46-05:00">
+          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 4 hours" value="2020-05-02T03:49:37-05:00">
             in 4 hours
           </button>
         </li>
@@ -624,10 +624,10 @@
     class="dropdown-item btn-link"
     role="menuitem"
     data-feature-preview-trigger-url="/users/jikaizhang/feature_previews"
-    data-feature-preview-close-details="{&quot;event_type&quot;:&quot;feature_preview.clicks.close_modal&quot;,&quot;payload&quot;:{&quot;originating_url&quot;:&quot;https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_event.php&quot;,&quot;user_id&quot;:37193018}}"
-    data-feature-preview-close-hmac="6e1246a520f7623bf50458c31af09d3cad3f30ac85f67924e8f87b9d5ea75cbe"
-    data-hydro-click="{&quot;event_type&quot;:&quot;feature_preview.clicks.open_modal&quot;,&quot;payload&quot;:{&quot;link_location&quot;:&quot;user_dropdown&quot;,&quot;originating_url&quot;:&quot;https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_event.php&quot;,&quot;user_id&quot;:37193018}}"
-    data-hydro-click-hmac="b499e7a91402591c930b146fe28d2f5225937b4ff2b20620faca061a15b91493"
+    data-feature-preview-close-details="{&quot;event_type&quot;:&quot;feature_preview.clicks.close_modal&quot;,&quot;payload&quot;:{&quot;originating_url&quot;:&quot;https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_attraction.php&quot;,&quot;user_id&quot;:37193018}}"
+    data-feature-preview-close-hmac="18a24ff26d4ce2358d0967af37e62be8326e0511f6f5b1a378587d48cfae6082"
+    data-hydro-click="{&quot;event_type&quot;:&quot;feature_preview.clicks.open_modal&quot;,&quot;payload&quot;:{&quot;link_location&quot;:&quot;user_dropdown&quot;,&quot;originating_url&quot;:&quot;https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_attraction.php&quot;,&quot;user_id&quot;:37193018}}"
+    data-hydro-click-hmac="7f30ae968dc08159ae0857118060a4c0f76df84fcebca58cc4f04b55b74eb915"
   >
     Feature preview
   </button>
@@ -636,12 +636,12 @@
 
     <a role="menuitem" class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">Help</a>
     <a role="menuitem" class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">Settings</a>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="fRc+50SsHfhJKpYeFgNejZoOSgxSOzZxb0ggjo3M6w462c8RfpgR9iOh7iAvpF12sc2B/F1iaNblh4jWfphKow==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="Xn6QDaGrOqtjgKVDq3X9cOyi9aO6ddEp3cNJvbwozMwZsGH7m582pQkL3X2S0v6Lx2E+U7Usj45XDOHlT3xtYQ==" />
       
       <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout" role="menuitem">
         Sign out
       </button>
-      <input type="text" name="required_field_9baa" hidden="hidden" class="form-control" /><input type="hidden" name="timestamp" value="1588394986168" class="form-control" /><input type="hidden" name="timestamp_secret" value="576999758e33bf5a5306dcb01ea5d62bec51354b1d29749f8fc86ccccf83a37e" class="form-control" />
+      <input type="text" name="required_field_24dc" hidden="hidden" class="form-control" /><input type="hidden" name="timestamp" value="1588394977550" class="form-control" /><input type="hidden" name="timestamp_secret" value="d6f4ca15903f24b2757212cb68758258367f5d8b7c7042dc05b1dda21e9f1dc3" class="form-control" />
 </form>  </details-menu>
 </details>
 
@@ -698,10 +698,10 @@
       <p class="shelf-lead">
           Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
       </p>
-      <a class="btn btn-primary shelf-cta" target="_blank" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;READ_GUIDE&quot;,&quot;repository_id&quot;:244774036,&quot;originating_url&quot;:&quot;https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_event.php&quot;,&quot;user_id&quot;:37193018}}" data-hydro-click-hmac="680b9900349303f4627536e01a1793dd059f3e45bdda0acd11caa0764d4f55ef" href="https://guides.github.com/activities/hello-world/">Read the guide</a>
+      <a class="btn btn-primary shelf-cta" target="_blank" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;READ_GUIDE&quot;,&quot;repository_id&quot;:244774036,&quot;originating_url&quot;:&quot;https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_attraction.php&quot;,&quot;user_id&quot;:37193018}}" data-hydro-click-hmac="08e84df0b977836e4261724a9fe8fcfafa0ff21bfbba9856f1e58180a60596cf" href="https://guides.github.com/activities/hello-world/">Read the guide</a>
     </div>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="shelf-dismiss js-notice-dismiss" action="/dashboard/dismiss_bootcamp" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="delete" /><input type="hidden" name="authenticity_token" value="VrtzsaQzp1ddN1pAOxhbGZLK1tth38jZ5N71vItz7n4KDzAKgzAicf3707re3axnk9EPcGsjET+pZ57ElgbVQg==" />
-      <button name="button" type="submit" class="mr-1 close-button tooltipped tooltipped-w" aria-label="Hide this notice forever" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;DISMISS_BANNER&quot;,&quot;repository_id&quot;:244774036,&quot;originating_url&quot;:&quot;https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_event.php&quot;,&quot;user_id&quot;:37193018}}" data-hydro-click-hmac="3ab38e59d5aab86a84456827dba290956eaa469ff2684ad9865c4c7e805325b4">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="shelf-dismiss js-notice-dismiss" action="/dashboard/dismiss_bootcamp" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="delete" /><input type="hidden" name="authenticity_token" value="fyWXHuGz8TFlfvaf19sX4uoQ0cyxiPBiPC1iZJj+XLQjkdSlxrB0F8Wyf2UyHuCc6wsIZ7t0KYRxlAkchYtniA==" />
+      <button name="button" type="submit" class="mr-1 close-button tooltipped tooltipped-w" aria-label="Hide this notice forever" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;DISMISS_BANNER&quot;,&quot;repository_id&quot;:244774036,&quot;originating_url&quot;:&quot;https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_attraction.php&quot;,&quot;user_id&quot;:37193018}}" data-hydro-click-hmac="ab2931f2a7874ccb29f68ecf7fc2fe83bfd44789e655b477830f81666240bc68">
         <svg aria-label="Hide this notice forever" class="octicon octicon-x v-align-text-top" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
 </button></form>  </div>
 </div>
@@ -744,10 +744,10 @@
 
   <li>
     
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="clearfix js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="qhfPnL0Go1RKiJULRrfyMMqL9hHT17COltr1YzMsAP8pc4rO3BJm0PPRtKwz1wQV8/9KY1iigGQqt36l8f+m5A==" />      <input type="hidden" name="repository_id" value="244774036">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="clearfix js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="Ixv3ERxOJFPX4N17CwO84iTKLPzfz49soFfXZoqqbIGgf7JDfVrh1265/Nx+Y0rHHb6QjlS6v4YcOlygSHnKmg==" />      <input type="hidden" name="repository_id" value="244774036">
 
       <details class="details-reset details-overlay select-menu float-left">
-        <summary class="select-menu-button float-left btn btn-sm btn-with-count" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;WATCH_BUTTON&quot;,&quot;repository_id&quot;:244774036,&quot;originating_url&quot;:&quot;https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_event.php&quot;,&quot;user_id&quot;:37193018}}" data-hydro-click-hmac="52039c43b6505c64d92afe8af6b8f75d8f672f1c788fed168df9b7b837257f86" data-ga-click="Repository, click Watch settings, action:blob#show">          <span data-menu-button>
+        <summary class="select-menu-button float-left btn btn-sm btn-with-count" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;WATCH_BUTTON&quot;,&quot;repository_id&quot;:244774036,&quot;originating_url&quot;:&quot;https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_attraction.php&quot;,&quot;user_id&quot;:37193018}}" data-hydro-click-hmac="3f656c4caa8e8d4fd78ac70cb3f6874c7556efe75928ec6e5a67406231a6834a" data-ga-click="Repository, click Watch settings, action:blob#show">          <span data-menu-button>
               <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
               Watch
           </span>
@@ -818,9 +818,9 @@
 
   <li>
       <div class="js-toggler-container js-social-container starring-container ">
-    <form class="starred js-social-form" action="/susieux/MadTour/unstar" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="PkmPFu8+JaWCxGkCKt5L9/thN00vcSq/e4/2PppphCU+M1CStDp4wsES1iUDza9Zj9HaWHbyHuBdZv9PjapS8Q==" />
+    <form class="starred js-social-form" action="/susieux/MadTour/unstar" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="MK8CxYoiZQCLk7Z30qxRFRHx31pOI0nxb+N3toQd1sYw1d1B0SY4Z8hFCVD7v7W7ZUEyTxegfa5JCn7Hk94AEg==" />
       <input type="hidden" name="context" value="repository"></input>
-      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Unstar susieux/MadTour" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;UNSTAR_BUTTON&quot;,&quot;repository_id&quot;:244774036,&quot;originating_url&quot;:&quot;https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_event.php&quot;,&quot;user_id&quot;:37193018}}" data-hydro-click-hmac="3d75c7af1af8916d8aac6eb89cac3ee6d251d3625a9e66046f717e0cb8aea0d7" data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">        <svg height="16" class="octicon octicon-star v-align-text-bottom" vertical_align="text_bottom" viewBox="0 0 14 16" version="1.1" width="14" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
+      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Unstar susieux/MadTour" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;UNSTAR_BUTTON&quot;,&quot;repository_id&quot;:244774036,&quot;originating_url&quot;:&quot;https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_attraction.php&quot;,&quot;user_id&quot;:37193018}}" data-hydro-click-hmac="1f6e93a31806a3c87eb00b73adaebda134bad37eeccf748cd18c5b748fbe4d32" data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">        <svg height="16" class="octicon octicon-star v-align-text-bottom" vertical_align="text_bottom" viewBox="0 0 14 16" version="1.1" width="14" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
 
         Unstar
 </button>        <a class="social-count js-social-count" href="/susieux/MadTour/stargazers"
@@ -828,9 +828,9 @@
            0
         </a>
 </form>
-    <form class="unstarred js-social-form" action="/susieux/MadTour/star" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="yGFHRKC2n4JZ738MTl6QCsoq417qmcUeF9cRSjYtSTURKSsQzpQyhDXE7TPF8NPtUt5F8kWMrkEgAz3zuY5JyQ==" />
+    <form class="unstarred js-social-form" action="/susieux/MadTour/star" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="7xDjgih4NNlfGFMUH11WdQ7CD1mSPjcQYM8IXJ10j+I2WI/WRlqZ3zMzwSuU8xWSljap9T0rXE9XGyTlEtePHg==" />
       <input type="hidden" name="context" value="repository"></input>
-      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Star susieux/MadTour" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;STAR_BUTTON&quot;,&quot;repository_id&quot;:244774036,&quot;originating_url&quot;:&quot;https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_event.php&quot;,&quot;user_id&quot;:37193018}}" data-hydro-click-hmac="a0a823a81b6598acdae922feec76603086ccbdded6a76342a71d34ab09eadcf6" data-ga-click="Repository, click star button, action:blob#show; text:Star">        <svg height="16" class="octicon octicon-star v-align-text-bottom" vertical_align="text_bottom" viewBox="0 0 14 16" version="1.1" width="14" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
+      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Star susieux/MadTour" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;STAR_BUTTON&quot;,&quot;repository_id&quot;:244774036,&quot;originating_url&quot;:&quot;https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_attraction.php&quot;,&quot;user_id&quot;:37193018}}" data-hydro-click-hmac="7070b54a3a0994ad6c2a6202546e7395fe6e618d9b89eac0dc7f95ab2bb01ed9" data-ga-click="Repository, click star button, action:blob#show; text:Star">        <svg height="16" class="octicon octicon-star v-align-text-bottom" vertical_align="text_bottom" viewBox="0 0 14 16" version="1.1" width="14" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
 
         Star
 </button>        <a class="social-count js-social-count" href="/susieux/MadTour/stargazers"
@@ -842,8 +842,8 @@
   </li>
 
   <li>
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="btn-with-count" action="/susieux/MadTour/fork" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="A5AN7QSna0QSkU93uCMpE3w1jK3kiNSD8qqolvGQZSSv8jLAy9ENf8RJae+5Qix1fACl4yWolPrHwEiaLfzo/Q==" />
-            <button class="btn btn-sm btn-with-count" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FORK_BUTTON&quot;,&quot;repository_id&quot;:244774036,&quot;originating_url&quot;:&quot;https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_event.php&quot;,&quot;user_id&quot;:37193018}}" data-hydro-click-hmac="e094b32d64320dfd7f5c1adf5e6d1e07be213d39fd6a5775e2f2d6bf7f8f300d" data-ga-click="Repository, show fork modal, action:blob#show; text:Fork" type="submit" title="Fork your own copy of susieux/MadTour to your account" aria-label="Fork your own copy of susieux/MadTour to your account">              <svg class="octicon octicon-repo-forked v-align-text-bottom" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 00-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 002 1a1.993 1.993 0 00-1 3.72V6.5l3 3v1.78A1.993 1.993 0 005 15a1.993 1.993 0 001-3.72V9.5l3-3V4.72A1.993 1.993 0 008 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="btn-with-count" action="/susieux/MadTour/fork" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="x/W3RXXhW5xua/GoTunhk06lQ+8mj69x1WIygc6+MBJrl4houpc9p7iz1zBPiOT1TpBqoeev7wjgCNKNEtK9yw==" />
+            <button class="btn btn-sm btn-with-count" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FORK_BUTTON&quot;,&quot;repository_id&quot;:244774036,&quot;originating_url&quot;:&quot;https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_attraction.php&quot;,&quot;user_id&quot;:37193018}}" data-hydro-click-hmac="faad3900d7f515b58020c3ebc7916d1c456b51a80f05e85e29326463ac13d713" data-ga-click="Repository, show fork modal, action:blob#show; text:Fork" type="submit" title="Fork your own copy of susieux/MadTour to your account" aria-label="Fork your own copy of susieux/MadTour to your account">              <svg class="octicon octicon-repo-forked v-align-text-bottom" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 00-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 002 1a1.993 1.993 0 00-1 3.72V6.5l3 3v1.78A1.993 1.993 0 005 15a1.993 1.993 0 001-3.72V9.5l3-3V4.72A1.993 1.993 0 008 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
               Fork
 </button></form>
     <a href="/susieux/MadTour/network/members" class="social-count"
@@ -995,9 +995,9 @@
   
 
 
-    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/susieux/MadTour/blob/022a903a483890b19b5da928aa5904c475f38793/cPanel/json_mysql_event.php">Permalink</a>
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/susieux/MadTour/blob/022a903a483890b19b5da928aa5904c475f38793/cPanel/json_mysql_attraction.php">Permalink</a>
 
-    <!-- blob contrib key: blob_contributors:v22:ea054ffa9751c78f472ee7c2408937a9 -->
+    <!-- blob contrib key: blob_contributors:v22:a20957c4544736862d76efe575105188 -->
     
 
     <div class="d-flex flex-items-start flex-shrink-0 flex-column flex-md-row pb-3">
@@ -1012,7 +1012,7 @@
     <span class="dropdown-caret"></span>
   </summary>
 
-  <details-menu class="SelectMenu SelectMenu--hasFilter" src="/susieux/MadTour/refs/Lixing/cPanel/json_mysql_event.php?source_action=show&amp;source_controller=blob" preload>
+  <details-menu class="SelectMenu SelectMenu--hasFilter" src="/susieux/MadTour/refs/Lixing/cPanel/json_mysql_attraction.php?source_action=show&amp;source_controller=blob" preload>
     <div class="SelectMenu-modal">
       <include-fragment class="SelectMenu-loading" aria-label="Menu is loading">
         <svg class="octicon octicon-octoface anim-pulse" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M14.7 5.34c.13-.32.55-1.59-.13-3.31 0 0-1.05-.33-3.44 1.3-1-.28-2.07-.32-3.13-.32s-2.13.04-3.13.32c-2.39-1.64-3.44-1.3-3.44-1.3-.68 1.72-.26 2.99-.13 3.31C.49 6.21 0 7.33 0 8.69 0 13.84 3.33 15 7.98 15S16 13.84 16 8.69c0-1.36-.49-2.48-1.3-3.35zM8 14.02c-3.3 0-5.98-.15-5.98-3.35 0-.76.38-1.48 1.02-2.07 1.07-.98 2.9-.46 4.96-.46 2.07 0 3.88-.52 4.96.46.65.59 1.02 1.3 1.02 2.07 0 3.19-2.68 3.35-5.98 3.35zM5.49 9.01c-.66 0-1.2.8-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.54-1.78-1.2-1.78zm5.02 0c-.66 0-1.2.79-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.53-1.78-1.2-1.78z"></path></svg>
@@ -1028,15 +1028,15 @@
                 data-hotkey="t">
             Find file
           </a>
-          <clipboard-copy value="cPanel/json_mysql_event.php" class="btn btn-sm BtnGroup-item">
+          <clipboard-copy value="cPanel/json_mysql_attraction.php" class="btn btn-sm BtnGroup-item">
             Copy path
           </clipboard-copy>
         </div>
       </span>
       <h2 id="blob-path" class="breadcrumb flex-auto min-width-0 text-normal flex-md-self-center ml-md-2 mr-md-3 my-2 my-md-0">
-        <span class="js-repo-root text-bold"><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="true" href="/susieux/MadTour/tree/Lixing"><span>MadTour</span></a></span></span><span class="separator">/</span><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="true" href="/susieux/MadTour/tree/Lixing/cPanel"><span>cPanel</span></a></span><span class="separator">/</span><strong class="final-path">json_mysql_event.php</strong>
+        <span class="js-repo-root text-bold"><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="true" href="/susieux/MadTour/tree/Lixing"><span>MadTour</span></a></span></span><span class="separator">/</span><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="true" href="/susieux/MadTour/tree/Lixing/cPanel"><span>cPanel</span></a></span><span class="separator">/</span><strong class="final-path">json_mysql_attraction.php</strong>
           <span class="separator">/</span><details class="details-reset details-overlay d-inline" id="jumpto-symbol-select-menu">
-  <summary class="btn-link link-gray css-truncate" aria-haspopup="true" data-hotkey="r" data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.click_on_blob_definitions&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;click_on_blob_definitions&quot;,&quot;repository_id&quot;:244774036,&quot;ref&quot;:&quot;Lixing&quot;,&quot;language&quot;:&quot;PHP&quot;,&quot;originating_url&quot;:&quot;https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_event.php&quot;,&quot;user_id&quot;:37193018}}" data-hydro-click-hmac="df53058f73e831bc9ed7267b7f2e470a2979580fe2deb47bc3a2eb9444d27e99">
+  <summary class="btn-link link-gray css-truncate" aria-haspopup="true" data-hotkey="r" data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.click_on_blob_definitions&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;click_on_blob_definitions&quot;,&quot;repository_id&quot;:244774036,&quot;ref&quot;:&quot;Lixing&quot;,&quot;language&quot;:&quot;PHP&quot;,&quot;originating_url&quot;:&quot;https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_attraction.php&quot;,&quot;user_id&quot;:37193018}}" data-hydro-click-hmac="2993e860d3bec244b73dc687ba5a95f701db0cfa1e86ed5b6fb78c927a969b30">
       <svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"></path></svg>
     <span data-menu-button>Jump to</span>
     <span class="dropdown-caret"></span>
@@ -1083,7 +1083,7 @@
               data-hotkey="t">
           Find file
         </a>
-        <clipboard-copy value="cPanel/json_mysql_event.php" class="btn btn-sm BtnGroup-item">
+        <clipboard-copy value="cPanel/json_mysql_attraction.php" class="btn btn-sm BtnGroup-item">
           Copy path
         </clipboard-copy>
       </div>
@@ -1091,7 +1091,7 @@
 
 
 
-    <include-fragment src="/susieux/MadTour/contributors/Lixing/cPanel/json_mysql_event.php" class="Box Box--condensed commit-loader">
+    <include-fragment src="/susieux/MadTour/contributors/Lixing/cPanel/json_mysql_attraction.php" class="Box Box--condensed commit-loader">
       <div class="Box-body bg-blue-light f6">
         Fetching contributors&hellip;
       </div>
@@ -1112,36 +1112,36 @@
 <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
   <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
 
-      24 lines (20 sloc)
+      25 lines (21 sloc)
       <span class="file-info-divider"></span>
-    758 Bytes
+    799 Bytes
   </div>
 
   <div class="d-flex py-1 py-md-0 flex-auto flex-order-1 flex-md-order-2 flex-sm-grow-0 flex-justify-between">
 
     <div class="BtnGroup">
-      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/susieux/MadTour/raw/Lixing/cPanel/json_mysql_event.php">Raw</a>
-        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/susieux/MadTour/blame/Lixing/cPanel/json_mysql_event.php">Blame</a>
-      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/susieux/MadTour/commits/Lixing/cPanel/json_mysql_event.php">History</a>
+      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/susieux/MadTour/raw/Lixing/cPanel/json_mysql_attraction.php">Raw</a>
+        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/susieux/MadTour/blame/Lixing/cPanel/json_mysql_attraction.php">Blame</a>
+      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/susieux/MadTour/commits/Lixing/cPanel/json_mysql_attraction.php">History</a>
     </div>
 
 
     <div>
           <a class="btn-octicon tooltipped tooltipped-nw js-remove-unless-platform"
              data-platforms="windows,mac"
-             href="x-github-client://openRepo/https://github.com/susieux/MadTour?branch=Lixing&amp;filepath=cPanel%2Fjson_mysql_event.php"
+             href="x-github-client://openRepo/https://github.com/susieux/MadTour?branch=Lixing&amp;filepath=cPanel%2Fjson_mysql_attraction.php"
              aria-label="Open this file in GitHub Desktop"
              data-ga-click="Repository, open with desktop">
               <svg class="octicon octicon-device-desktop" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"></path></svg>
           </a>
 
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/susieux/MadTour/edit/Lixing/cPanel/json_mysql_event.php" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="1YAEmj3Mf55cXuBdJLCYxv94/EI59QrZLNM5Dhaa+8kHPnV6YqWG8xkJtu96W7y3Re66NT391fusvkJ61AT6ew==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/susieux/MadTour/edit/Lixing/cPanel/json_mysql_attraction.php" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="3iQDxZT3SsadmKLSdxiJdzTZKmsVs6z1yqi9+ieFw5ok/E9H8FqGweV2vTTIQv4Do9H3Tcbud5uojGwl2qfv8Q==" />
             <button class="btn-octicon tooltipped tooltipped-nw" type="submit"
               aria-label="Edit this file" data-hotkey="e" data-disable-with>
               <svg class="octicon octicon-pencil" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 011.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"></path></svg>
             </button>
 </form>
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/susieux/MadTour/delete/Lixing/cPanel/json_mysql_event.php" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="XVcv9gvoKuwWwTzv3OYfQvcMVSyCF3hXAeR6UmqrUJAHnFW8Hy77Xs09Xf1bCNQ0Lsc5SfedkXqlMRWY/oPR/w==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/susieux/MadTour/delete/Lixing/cPanel/json_mysql_attraction.php" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="z0T8bq/S0VHrKzUOx6z5hN2OUyg58rg5yl2t9EZB+2F9NeO32UlmMQpNcNltIJglfRSvTbvwOzs+zvRZTHAcUA==" />
             <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
               aria-label="Delete this file" data-disable-with>
               <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"></path></svg>
@@ -1163,7 +1163,7 @@
               </p>
             </div>
             <div class="col-6 p-2 text-right code-navigation-banner-illo">
-              <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-notice-dismiss" action="/settings/dismiss-notice/aleph_code_navigation_banner" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="MafZUuubqWRXQQkTj7aRvk6NRWXB3GENxQ0hkppzAD30QykbfeJ/ld6sgIzF0YRQh6JuvyNCXSvA/Slsi5m+MQ==" />
+              <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-notice-dismiss" action="/settings/dismiss-notice/aleph_code_navigation_banner" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="TsxYGC6uC65JE7qo9MPsP4rPkTnqtw4PjWFW/KAj6tGLKKhRuNfdX8D+Mze+pPnRQ+C64wgpMimIkV4CsclU3Q==" />
                 <button name="button" type="submit" class="btn-link link-gray" aria-label="Dismiss">
                   <svg width="20" height="20" class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
 </button></form>            </div>
@@ -1190,89 +1190,93 @@
       </tr>
       <tr>
         <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
-        <td id="LC4" class="blob-code blob-code-inner js-file-line">for (<span class=pl-s1><span class=pl-c1>$</span>i</span> = <span class=pl-c1>1</span>; <span class=pl-s1><span class=pl-c1>$</span>i</span> &lt;= <span class=pl-c1>5</span>; <span class=pl-s1><span class=pl-c1>$</span>i</span>++)</td>
+        <td id="LC4" class="blob-code blob-code-inner js-file-line"><span class=pl-s1><span class=pl-c1>$</span>id</span> = <span class=pl-c1>0</span>;</td>
       </tr>
       <tr>
         <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
-        <td id="LC5" class="blob-code blob-code-inner js-file-line">{</td>
+        <td id="LC5" class="blob-code blob-code-inner js-file-line">for (<span class=pl-s1><span class=pl-c1>$</span>i</span> = <span class=pl-c1>1</span>; <span class=pl-s1><span class=pl-c1>$</span>i</span> &lt;= <span class=pl-c1>3</span>; <span class=pl-s1><span class=pl-c1>$</span>i</span>++)</td>
       </tr>
       <tr>
         <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
-        <td id="LC6" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1><span class=pl-c1>$</span>filename</span> = <span class=pl-s>&quot;events/event$i.json&quot;</span>;</td>
+        <td id="LC6" class="blob-code blob-code-inner js-file-line">{</td>
       </tr>
       <tr>
         <td id="L7" class="blob-num js-line-number" data-line-number="7"></td>
-        <td id="LC7" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1><span class=pl-c1>$</span>data</span> = <span class=pl-en>file_get_contents</span>(<span class=pl-s1><span class=pl-c1>$</span>filename</span>);</td>
+        <td id="LC7" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1><span class=pl-c1>$</span>filename</span> = <span class=pl-s>&quot;attractions/$i.json&quot;</span>;</td>
       </tr>
       <tr>
         <td id="L8" class="blob-num js-line-number" data-line-number="8"></td>
-        <td id="LC8" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1><span class=pl-c1>$</span>array</span> = <span class=pl-en>json_decode</span>(<span class=pl-s1><span class=pl-c1>$</span>data</span>, <span class=pl-c1>true</span>)[<span class=pl-s>&quot;docs&quot;</span>][<span class=pl-s>&quot;docs&quot;</span>];</td>
+        <td id="LC8" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1><span class=pl-c1>$</span>data</span> = <span class=pl-en>file_get_contents</span>(<span class=pl-s1><span class=pl-c1>$</span>filename</span>);</td>
       </tr>
       <tr>
         <td id="L9" class="blob-num js-line-number" data-line-number="9"></td>
-        <td id="LC9" class="blob-code blob-code-inner js-file-line">    </td>
+        <td id="LC9" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1><span class=pl-c1>$</span>array</span> = <span class=pl-en>json_decode</span>(<span class=pl-s1><span class=pl-c1>$</span>data</span>, <span class=pl-c1>true</span>);</td>
       </tr>
       <tr>
         <td id="L10" class="blob-num js-line-number" data-line-number="10"></td>
-        <td id="LC10" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>foreach</span> (<span class=pl-s1><span class=pl-c1>$</span>array</span> <span class=pl-k>as</span> <span class=pl-s1><span class=pl-c1>$</span>row</span>)</td>
+        <td id="LC10" class="blob-code blob-code-inner js-file-line">    </td>
       </tr>
       <tr>
         <td id="L11" class="blob-num js-line-number" data-line-number="11"></td>
-        <td id="LC11" class="blob-code blob-code-inner js-file-line">    {</td>
+        <td id="LC11" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>foreach</span> (<span class=pl-s1><span class=pl-c1>$</span>array</span> <span class=pl-k>as</span> <span class=pl-s1><span class=pl-c1>$</span>row</span>)</td>
       </tr>
       <tr>
         <td id="L12" class="blob-num js-line-number" data-line-number="12"></td>
-        <td id="LC12" class="blob-code blob-code-inner js-file-line">        <span class=pl-s1><span class=pl-c1>$</span>sql</span> = <span class=pl-s>&quot;INSERT INTO event(id, address, zip, start_date, type, end_date, </span></td>
+        <td id="LC12" class="blob-code blob-code-inner js-file-line">    {</td>
       </tr>
       <tr>
         <td id="L13" class="blob-num js-line-number" data-line-number="13"></td>
-        <td id="LC13" class="blob-code blob-code-inner js-file-line"><span class=pl-s>        location, start_time, end_time, title) VALUES(&#39;&quot;</span>.<span class=pl-s1><span class=pl-c1>$</span>row</span>[<span class=pl-s>&quot;_id&quot;</span>].<span class=pl-s>&quot;&#39;, </span></td>
+        <td id="LC13" class="blob-code blob-code-inner js-file-line">        <span class=pl-s1><span class=pl-c1>$</span>category</span> = <span class=pl-s1><span class=pl-c1>$</span>row</span>[<span class=pl-s>&quot;categories&quot;</span>];</td>
       </tr>
       <tr>
         <td id="L14" class="blob-num js-line-number" data-line-number="14"></td>
-        <td id="LC14" class="blob-code blob-code-inner js-file-line"><span class=pl-s>        &#39;&quot;</span>.<span class=pl-en>addslashes</span>(<span class=pl-s1><span class=pl-c1>$</span>row</span>[<span class=pl-s>&quot;address1&quot;</span>]).<span class=pl-s>&quot;&#39;, &#39;&quot;</span>.<span class=pl-s1><span class=pl-c1>$</span>row</span>[<span class=pl-s>&quot;zip&quot;</span>].<span class=pl-s>&quot;&#39;, &#39;&quot;</span>.<span class=pl-s1><span class=pl-c1>$</span>row</span>[<span class=pl-s>&quot;startDate&quot;</span>].<span class=pl-s>&quot;&#39;, </span></td>
+        <td id="LC14" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>foreach</span> (<span class=pl-s1><span class=pl-c1>$</span>category</span> <span class=pl-k>as</span> <span class=pl-s1><span class=pl-c1>$</span>cat</span>)</td>
       </tr>
       <tr>
         <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
-        <td id="LC15" class="blob-code blob-code-inner js-file-line"><span class=pl-s>        &#39;&quot;</span>.<span class=pl-s1><span class=pl-c1>$</span>row</span>[<span class=pl-s>&quot;typeName&quot;</span>].<span class=pl-s>&quot;&#39;, &#39;&quot;</span>.<span class=pl-s1><span class=pl-c1>$</span>row</span>[<span class=pl-s>&quot;endDate&quot;</span>].<span class=pl-s>&quot;&#39;, &#39;&quot;</span>.<span class=pl-en>addslashes</span>(<span class=pl-s1><span class=pl-c1>$</span>row</span>[<span class=pl-s>&quot;location&quot;</span>]).<span class=pl-s>&quot;&#39;, </span></td>
+        <td id="LC15" class="blob-code blob-code-inner js-file-line">        {</td>
       </tr>
       <tr>
         <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
-        <td id="LC16" class="blob-code blob-code-inner js-file-line"><span class=pl-s>        &#39;&quot;</span>.<span class=pl-s1><span class=pl-c1>$</span>row</span>[<span class=pl-s>&quot;startTime&quot;</span>].<span class=pl-s>&quot;&#39;, &#39;&quot;</span>.<span class=pl-s1><span class=pl-c1>$</span>row</span>[<span class=pl-s>&quot;endTime&quot;</span>].<span class=pl-s>&quot;&#39;, &#39;&quot;</span>.<span class=pl-en>addslashes</span>(<span class=pl-s1><span class=pl-c1>$</span>row</span>[<span class=pl-s>&quot;title&quot;</span>]).<span class=pl-s>&quot;&#39;)&quot;</span>;</td>
+        <td id="LC16" class="blob-code blob-code-inner js-file-line">            <span class=pl-s1><span class=pl-c1>$</span>sql</span> = <span class=pl-s>&quot;INSERT INTO attraction(attrId, attrName, url, address, zip, phone, catName, catId, id) VALUES(&#39;&quot;</span>.<span class=pl-s1><span class=pl-c1>$</span>row</span>[<span class=pl-s>&quot;_id&quot;</span>].<span class=pl-s>&quot;&#39;, &#39;&quot;</span>.<span class=pl-en>addslashes</span>(<span class=pl-s1><span class=pl-c1>$</span>row</span>[<span class=pl-s>&quot;title&quot;</span>]).<span class=pl-s>&quot;&#39;, &#39;&quot;</span>.<span class=pl-s1><span class=pl-c1>$</span>row</span>[<span class=pl-s>&quot;absolute_url&quot;</span>].<span class=pl-s>&quot;&#39;,&#39;&quot;</span>.<span class=pl-en>addslashes</span>(<span class=pl-s1><span class=pl-c1>$</span>row</span>[<span class=pl-s>&quot;address1&quot;</span>]).<span class=pl-s>&quot;&#39;, &#39;&quot;</span>.<span class=pl-s1><span class=pl-c1>$</span>row</span>[<span class=pl-s>&quot;zip&quot;</span>].<span class=pl-s>&quot;&#39;, &#39;&quot;</span>.<span class=pl-s1><span class=pl-c1>$</span>row</span>[<span class=pl-s>&quot;phone&quot;</span>].<span class=pl-s>&quot;&#39;, &#39;&quot;</span>.<span class=pl-en>addslashes</span>(<span class=pl-s1><span class=pl-c1>$</span>cat</span>[<span class=pl-s>&quot;subcatname&quot;</span>]).<span class=pl-s>&quot;&#39;, &#39;&quot;</span>.<span class=pl-s1><span class=pl-c1>$</span>cat</span>[<span class=pl-s>&quot;subcatid&quot;</span>].<span class=pl-s>&quot;&#39;, &#39;&quot;</span>.<span class=pl-s1><span class=pl-c1>$</span>id</span>.<span class=pl-s>&quot;&#39;)&quot;</span>;</td>
       </tr>
       <tr>
         <td id="L17" class="blob-num js-line-number" data-line-number="17"></td>
-        <td id="LC17" class="blob-code blob-code-inner js-file-line">        <span class=pl-en>mysqli_query</span>(<span class=pl-s1><span class=pl-c1>$</span>conn</span>, <span class=pl-s1><span class=pl-c1>$</span>sql</span>);</td>
+        <td id="LC17" class="blob-code blob-code-inner js-file-line">            <span class=pl-en>mysqli_query</span>(<span class=pl-s1><span class=pl-c1>$</span>conn</span>, <span class=pl-s1><span class=pl-c1>$</span>sql</span>);</td>
       </tr>
       <tr>
         <td id="L18" class="blob-num js-line-number" data-line-number="18"></td>
-        <td id="LC18" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>echo</span> <span class=pl-s>&quot;$sql &lt;br&gt;&quot;</span>;</td>
+        <td id="LC18" class="blob-code blob-code-inner js-file-line">            <span class=pl-s1><span class=pl-c1>$</span>id</span> = <span class=pl-s1><span class=pl-c1>$</span>id</span> + <span class=pl-c1>1</span>;</td>
       </tr>
       <tr>
         <td id="L19" class="blob-num js-line-number" data-line-number="19"></td>
-        <td id="LC19" class="blob-code blob-code-inner js-file-line">    }</td>
+        <td id="LC19" class="blob-code blob-code-inner js-file-line">        }</td>
       </tr>
       <tr>
         <td id="L20" class="blob-num js-line-number" data-line-number="20"></td>
-        <td id="LC20" class="blob-code blob-code-inner js-file-line">}</td>
+        <td id="LC20" class="blob-code blob-code-inner js-file-line">    }</td>
       </tr>
       <tr>
         <td id="L21" class="blob-num js-line-number" data-line-number="21"></td>
-        <td id="LC21" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC21" class="blob-code blob-code-inner js-file-line">}</td>
       </tr>
       <tr>
         <td id="L22" class="blob-num js-line-number" data-line-number="22"></td>
-        <td id="LC22" class="blob-code blob-code-inner js-file-line"><span class=pl-k>echo</span> <span class=pl-s>&quot;Event Data Inserted&quot;</span>;</td>
-      </tr>
-      <tr>
-        <td id="L23" class="blob-num js-line-number" data-line-number="23"></td>
-        <td id="LC23" class="blob-code blob-code-inner js-file-line">
+        <td id="LC22" class="blob-code blob-code-inner js-file-line">
 </td>
       </tr>
       <tr>
+        <td id="L23" class="blob-num js-line-number" data-line-number="23"></td>
+        <td id="LC23" class="blob-code blob-code-inner js-file-line"><span class=pl-k>echo</span> <span class=pl-s1><span class=pl-c1>$</span>id</span>, <span class=pl-s>&quot; Event Data Inserted&quot;</span>;</td>
+      </tr>
+      <tr>
         <td id="L24" class="blob-num js-line-number" data-line-number="24"></td>
-        <td id="LC24" class="blob-code blob-code-inner js-file-line"><span class=pl-ent>?&gt;</span></td>
+        <td id="LC24" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L25" class="blob-num js-line-number" data-line-number="25"></td>
+        <td id="LC25" class="blob-code blob-code-inner js-file-line"><span class=pl-ent>?&gt;</span></td>
       </tr>
 </table>
 
@@ -1292,7 +1296,7 @@
             Copy permalink
           </clipboard-copy>
         </li>
-        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/susieux/MadTour/blame/022a903a483890b19b5da928aa5904c475f38793/cPanel/json_mysql_event.php">View git blame</a></li>
+        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/susieux/MadTour/blame/022a903a483890b19b5da928aa5904c475f38793/cPanel/json_mysql_attraction.php">View git blame</a></li>
           <li><a class="dropdown-item" id="js-new-issue" role="menuitem" href="/susieux/MadTour/issues/new">Reference in new issue</a></li>
       </ul>
     </details-menu>
@@ -1317,10 +1321,10 @@
      hidden
      data-tagsearch-url="/susieux/MadTour/find-symbols"
      data-tagsearch-ref="Lixing"
-     data-tagsearch-path="cPanel/json_mysql_event.php"
+     data-tagsearch-path="cPanel/json_mysql_attraction.php"
      data-tagsearch-lang="PHP"
-     data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.click_on_symbol&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;click_on_symbol&quot;,&quot;repository_id&quot;:244774036,&quot;ref&quot;:&quot;Lixing&quot;,&quot;language&quot;:&quot;PHP&quot;,&quot;originating_url&quot;:&quot;https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_event.php&quot;,&quot;user_id&quot;:37193018}}"
-     data-hydro-click-hmac="6a6d8777e4df19a1efd90d3fcb95029ed1c48a1fdad67ae8397ff285ceac9d8d">
+     data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.click_on_symbol&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;click_on_symbol&quot;,&quot;repository_id&quot;:244774036,&quot;ref&quot;:&quot;Lixing&quot;,&quot;language&quot;:&quot;PHP&quot;,&quot;originating_url&quot;:&quot;https://github.com/susieux/MadTour/blob/Lixing/cPanel/json_mysql_attraction.php&quot;,&quot;user_id&quot;:37193018}}"
+     data-hydro-click-hmac="5e014f7bb3ea0f474f9968e3996d8342347e16d17ec801d961c5a4d8c619f57a">
   <div class="Popover-message Popover-message--large Popover-message--top-left TagsearchPopover mt-1 mb-4 mx-auto Box box-shadow-large">
     <div class="TagsearchPopover-content js-tagsearch-popover-content overflow-auto" style="will-change:transform;">
     </div>
